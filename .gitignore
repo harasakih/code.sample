@@ -1,0 +1,8 @@
+# ingore folder
+.svn/
+
+# ignore file
+*.DS_Store
+*.swp
+*.svnignore
+*._*
