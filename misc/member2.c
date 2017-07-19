@@ -9,8 +9,8 @@ void	usage(void);
 
 
 void	usage() {
-	fprintf(stderr, "usage: member¥n");
-	fprintf(stderr, "  lib,member,memberﾒｲ-ﾋｮｳｼﾞ ｦ ﾄｲｱﾜｾ¥n");
+	fprintf(stderr, "usage: member\n");
+	fprintf(stderr, "  lib,member,memberﾒｲ-ﾋｮｳｼﾞ ｦ ﾄｲｱﾜｾ\n");
 }
 
 
@@ -31,23 +31,23 @@ int		flg;
 		exit(-1);
 	}
 	
-	printf("member Ver.1.0 2000/05 Copyright Hiroshi Harasaki¥n");
-	printf("  BMUPO2PSの出力などから，先頭８バイト指定で抽出¥n");
+	printf("member Ver.1.0 2000/05 Copyright Hiroshi Harasaki\n");
+	printf("  BMUPO2PSの出力などから，先頭８バイト指定で抽出\n");
 	
-	printf("¥n入力ファイル名        ==> ");
+	printf("\n入力ファイル名        ==> ");
 	scanf("%s", fnIn);
 	
-	printf("出力ディレクトリ(.¥¥/?)==> ");
+	printf("出力ディレクトリ(.\\/?)==> ");
 	scanf("%s", dest);
 
 	yn		=	'Y';
 	while( yn	==	'Y') {
 		if( (fpIn	=	fopen(fnIn, "r")) == NULL ) {
-			fprintf(stderr, "In file error[%s]¥n", fnIn);
+			fprintf(stderr, "In file error[%s]\n", fnIn);
 			exit(-1);
 		}
 	
-		printf("¥n");
+		printf("\n");
 		printf("メンバ名(先頭８バイト) ==> ");
 		scanf("%s",		member);
 		printf("メンバ名付加(Y/N)      ==> ");
@@ -59,13 +59,13 @@ int		flg;
 		strcat(fnOut, member);
 		strcat(fnOut, ".txt");
 		if( (fpOut	=	fopen(fnOut, "w")) == NULL ) {
-			fprintf(stderr, "Out file error[%s]¥n", fnOut);
+			fprintf(stderr, "Out file error[%s]\n", fnOut);
 		}
 		/* 指定ファイルの処理 */
 		flg	=	0;
 		while( fgets(buf, MAXBUF, fpIn) != NULL && flg != 2) {
 /*
-			printf("%d:%s¥n", flg, buf);
+			printf("%d:%s\n", flg, buf);
 */
 			if( strncmp(member, buf, l) == 0 ) {
 				if(yn == 'Y') {

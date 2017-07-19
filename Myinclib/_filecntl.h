@@ -201,7 +201,7 @@ int		f_close(struct FileControl *fcntl)
 	o		->eof		eofの時，FCNTL_EOFを設定
 	i		length	writeするbufの長さ
 注意
-	bufは¥x00で終端されていなくてもかまわない．
+	bufは\x00で終端されていなくてもかまわない．
 ---------------------------------------------------------------------------- */
 int		f_read(char *buf, int length, struct FileControl *fcntl)
 {
@@ -587,12 +587,12 @@ int entry_chkset(char *line, struct Entry *cktbl)
 	struct Entry	*wk_pointer;
 
 	wk_pointer = cktbl;
-	key = strtok(line, " =¥t\n");
+	key = strtok(line, " =\t\n");
 	while(strcmp(wk_pointer->key,"") != 0) {
 											/* keyが一致したら	*/
 		if(strcmp(key, wk_pointer->key) == 0) {
 			wk_pointer->sitei = 1;
-			value = strtok(NULL, " =¥t\n");			/* 次のトークンは値	*/
+			value = strtok(NULL, " =\t\n");			/* 次のトークンは値	*/
 			if( value != NULL) {
 				strcpy(wk_pointer->value, value);	/* 値をセットして	*/
 			} else {
@@ -645,7 +645,7 @@ char	*entry_gets(char *buf, int length, FILE *fp)
 	 *	空行か（ＮＵＬＬ），空行以外か
 	 *	　トークンが見つからないとき strtok() はNULLを返す
 	 */
-	if( (token = strtok(buf, " ¥t\n")) != NULL )
+	if( (token = strtok(buf, " \t\n")) != NULL )
 	{
 		return ret;
 	}
@@ -674,7 +674,7 @@ char	*entry_gets(char *buf, int length, FILE *fp)
 		 *	　空行以外はBreakして戻る
 		 *	　空行は次の読込
 		 */
-		if( (token = strtok(buf, " ¥t\n")) != NULL)
+		if( (token = strtok(buf, " \t\n")) != NULL)
 		{
 			break;
 		}

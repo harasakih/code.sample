@@ -3,7 +3,7 @@
 	出力は，０バイト目か８バイト目からのいづれか
 	
 History
-	2000/05/12	ホストファイル名に「¥」が使用可能なので，
+	2000/05/12	ホストファイル名に「\」が使用可能なので，
 				￥⇒＿へ変換
 	2000/06/24	￥⇒＿の変換が，先頭１文字だけだっのを，メンバ名全体に修正
 */
@@ -19,7 +19,7 @@ History
 void	usage(void);
 
 void	usage() {
-	fprintf(stderr, "usage: split source-file dest-dir member-yn¥n");
+	fprintf(stderr, "usage: split source-file dest-dir member-yn\n");
 }
 
 
@@ -42,7 +42,7 @@ int		i;
 	}
 	
 	if( (fpIn	=	fopen(argv[1], "r")) == NULL ) {
-		fprintf(stderr, "In file error[%s]¥n", argv[1]);
+		fprintf(stderr, "In file error[%s]\n", argv[1]);
 	}
 	
 	yn	=	toupper( *argv[3] );
@@ -54,27 +54,27 @@ int		i;
 	while( fgets(buf, MAXBUF, fpIn) != NULL ) {
 		sscanf(buf, "%8s", member);
 		if( strlen( member ) == 0 ) { continue; }
-		for(i = 0; i < 8 && member[i] != '¥0'; i++) {
-			if(member[i] == '¥¥') {
+		for(i = 0; i < 8 && member[i] != '\0'; i++) {
+			if(member[i] == '\\') {
 				member[i]	=	'_';	/* メンバ名の「￥⇒＿」置換 */
 			}
 		}
 /*
-		printf("%s:%d¥n", member,l);
+		printf("%s:%d\n", member,l);
 */
 											/* member替わり */
 		if( strcmp(old_member, member) != 0) {
 				fclose(fpOut);
 
 				strcpy(fn_out, dest_dir);
-				strcat(fn_out, "¥¥");
+				strcat(fn_out, "\\");
 				strcat(fn_out, member);
 				strcat(fn_out, ".txt");
 /* DBG-Disp */
-				fprintf(stderr, "%s¥n", fn_out);
+				fprintf(stderr, "%s\n", fn_out);
 
 				if( (fpOut	=	fopen(fn_out, "w")) == NULL ) {
-					fprintf(stderr, "Out file error[%s/%s]¥n", argv[2], member);
+					fprintf(stderr, "Out file error[%s/%s]\n", argv[2], member);
 				}
 				strcpy(old_member, member);
 		}

@@ -51,12 +51,12 @@ int	main(int argc, char *argv[])
 	}
 	
 	if(f_open(&infile, "rb")) { 
-		printf("infile open error [%s]¥n", infile.fname);
+		printf("infile open error [%s]\n", infile.fname);
 		exit(-1);
 	}
 	
 	if(f_open(&outfile, "wb")) {
-		printf("outfile open error [%]¥n", outfile.fname);
+		printf("outfile open error [%]\n", outfile.fname);
 		exit(-1);
 	}
 	
