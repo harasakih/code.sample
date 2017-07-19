@@ -1,0 +1,74 @@
+#
+# $(Id) : $
+#	マクロ定義
+#		$@	ターゲット（サフィックスあり）
+#		$*	ターゲット（サフィックスなし）
+#		$<	最初の依存 ファイル
+#		$^	全ての依存 ファイル
+#
+# 新たに追加するサフィックス(.c .o .h .a)以外
+ifeq (Windows_NT,$(filter Windows_NT, $(OS)))
+  MY_OS = Windows
+  SUF_C   = .c
+  SUF_OBJ = .obj
+  SUF_EXE = .exe
+else
+  MY_OS = linux
+  SUF_C   = .c
+  SUF_OBJ = .o
+  SUF_EXE =
+endif
+
+.SUFFIXES: $(SUF_OBJ) $(SUF_EXE)
+
+#	コマンドの定義
+CC		= gcc
+RM		= rm
+ECHO	= 
+
+#	コンパイルオプション
+C_FLGS		= -Wall		; gcc warn-all
+# C_FLGS	= /Wall		; vc++ warn-all
+
+ifeq (Windows,$(MY_OS))
+  C_FLGS_D	= --input-charset=CP932 --exec-charset=CP932 -mno-cygwin -ggdb
+  C_FLGS_R	= --input-charset=CP932 --exec-charset=CP932 -mno-cygwin
+  LD_FLGS	=
+else
+  C_FLGS_D	= -ggdb
+  C_FLGS_R	= 
+  LD_FLGLS	=
+endif
+
+
+#	デフォルト生成規則
+#
+$(SUF_C)$(SUF_OBJ):
+	@echo "### implicit rules .c -> .o ###"
+	$(CC) -c $(C_FLGS_D) $<
+
+$(SUF_OBJ)$(SUF_EXE):
+	@echo "### implicit rules .o -> .exe ###"
+	$(CC) $(LD_FLGS) -o $@ $< $(LIBS)
+
+$(SUF_C)$(SUF_EXE):
+	$(CC) $(C_FLGS_D) $(LD_FLGS) -o $@ $< $(LIBS)
+
+#	このファイルのターゲット＆ソース
+ALL_EXE	= $(SUF_EXE)
+ALL_OBJ = $(SUF_OBJ)
+
+dummy: 
+	@echo  "########################################################"
+	@echo  "##                                                    ##"
+	@echo  "##   makefile for gcc $(MY_OS) version                   ##"
+	@echo  "##                                                    ##"
+	@echo  "########################################################"
+
+all: $(ALL_EXE)
+
+clean: 
+	$(RM) $(ALL_EXE)
+
+rebuild:  clean all
+

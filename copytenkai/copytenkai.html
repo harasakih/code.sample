@@ -1,0 +1,49 @@
+<html>
+<head>
+	<title>コピー句展開のＣＧＩ起動 via Perl</title>
+</head>
+<body>
+<form action="copytenkai.cgi.pl" method="POST" target="blank">
+	[copytenkai.html]<br>
+	指定されたメンバをコピー句展開する<br>
+
+	<table>
+
+	<tr><td>展開対象メンバ</td>
+		<td><input type="text" name="copymember"></td>
+	</tr>
+
+	<tr><td></td>
+		<td>
+			<input type="submit" value="検索開始">
+			<input type="reset" value="クリア">
+		</td>
+	</tr>
+	
+	<tr><td>最上位ＬＩＢ</td>
+	    <td><input type="text" name="copylib0"></td>
+	</tr>
+
+	<tr><td>コンカチ１</td>
+	<td>
+	<select name="copylib1" method="post">
+		<option value="COPYLIB1-1" selected>COPYLIB1-1
+		<option value="COPYLIB1-2">COPYLIB1-2
+		<option value="COPYLIB1-3">COPYLIB1-3
+	</select>
+	</td></tr>
+
+	<tr><td>コンカチ２</td>
+	<td>
+	<select name="copylib2" method="post">
+		<option value="COPYLIB2-1" selected>COPYLIB2-1
+		<option value="COPYLIB2-2">COPYLIB2-2
+		<option value="COPYLIB2-3">COPYLIB2-3
+	</select>
+	</td></tr>
+
+	</table>
+
+</form>
+</body>
+</html>
