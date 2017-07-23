@@ -1,0 +1,141 @@
+#
+#   明示的な変数宣言
+#
+    use strict "vars";
+    my  ($var1, $var2);
+
+
+#
+#   引数がないときは、問合せする
+#
+    print   "¥n¥nＨＯＰＳＳのネットジョブリストをＣＳＶ化する¥n";
+    if($ARGV[0] eq "") {
+        print   "ＨＯＰＳＳネットジョブリスト：";
+        chop($in1 = <STDIN>);
+    } else {
+        $in1    =   $ARGV[0];
+    }
+
+    if($ARGV[1] eq "") {
+        print   "結果出力ファイル：";
+        chop($ot1 = <STDIN>);
+    } else {
+        $ot1    =   $ARGV[1];
+    }
+    open(IN1, $in1)     || die $in1;
+    open(OT1, ">$ot1")  || die $ot1;
+#
+#   spplit
+#
+    ($ret1, $ret2, $ret3) = split(/PATTERN/,EXPR,LIMIT)
+#
+#   置換
+#
+    $arg    =‾  s/PATERN1/PATERN2/g;
+    $arg    =‾  tr/PATERN1/PATERN2/;
+                tr/a-z/A-Z/;
+#
+#   substr
+#
+    $val    =   substr(EXP, start, length);
+
+#
+#   特殊変数
+#
+ $.      最後に読まれたファイルの現在の入力行番号
+ $&      最後に成功したパタンマッ チでマッチした文字列
+ $`      最後に成功したパタンマッチでマッチしたものの前の文字列
+ $'      最後に成功したパタンマッチでマッチしたものの後の文字列
+ $+      最後のパタンサーチで最後の括弧にマッチした文字列。
+         これは、二者択一的なパタンのどちらがマッチしたかわからない時に便利です
+
+ $0      実行される perl のスクリプトを含むファイル名
+
+ $<digit>    最後にマッチしたパタンの中で対応する括弧のセットからのサブ・パタンを含みますが、
+         すでに抜け出た、ネストしたブロック 中でマッチしたパタンは含 みません。（記憶
+         法: ¥digit に似ている。）
+
+    <ex> GREP結果の分解
+        while( <IN1> ) {
+            $line   =   $_;
+
+            /(^[0-9a-zA-Z]+)¥.cob: [0-9]{6}(¥*?)(.*)$/ ;
+            ↑ﾌｧｲﾙ名         .cob: ↑数字６桁
+
+            printf OT1 "$1/$2/$3¥n";
+        }
+
+ $ARGV       <>から読み込んでい る時の現在のファイル名が入っています。
+
+ @ARGV       配列 ARGV にはコマンド行の引数が入ります。 $#ARGV は
+         一般に 引数の数から1を 引いたものになり ます。なぜな
+         ら、 $ARGV[0] は、一番目の引数であって、コマンド名で
+         はないからです。コマンド 名については、 $0を見て下さ
+         い。
+
+#
+#   正規表現
+#
+ *  ０回以上の繰返し。
+ {0,}   同上
+
+ +  １回以上の繰返し
+ {1,}   同上
+
+ ?  ０または１回
+ {0,1}  同上
+
+ {n,m}  任意の正規表現の後ろに {n,m}  というかたちで中括弧の中に数字をいれて
+    マッチの回数を指定できます
+
+#
+#	指定ディレクトリ配下の全ファイルを処理する
+#
+
+print	"¥n¥nJCLのXML化&生SYSIN分離処理¥n";
+if( $ARGV[0] eq "" ) {
+	print	"JCLﾌｧｲﾙのﾃﾞｨﾚｸﾄﾘ(入力) : ";
+	chop($gIn_Dir 	= <STDIN>);
+} else {
+	$gIn_Dir 		= $ARGV[0];
+}
+opendir(DIR1, $gIn_Dir) || die "Directory error $gIn_Dir";
+
+if( $ARGV[1] eq "" ) {
+	print	"JCLﾌｧｲﾙのﾃﾞｨﾚｸﾄﾘ(出力) : ";
+	chop($gOt_Dir 	= <STDIN>);
+} else {
+	$gOt_Dir		= $ARGV[1];
+}
+opendir(DIR2, $gOt_Dir) || die "Directory error $gOt_Dir";
+
+if( $ARGV[2] eq "" ) {
+	print	"SYSIN分離ﾌｧｲﾙの出力先(出力) : ";
+	chop($gSysin_Dir 	= <STDIN>);
+} else {
+	$gSysin_Dir			= $ARGV[2];
+}
+
+if( $ARGV[3] eq "" ) {
+	print	"DBG情報のﾌｧｲﾙ名(出力) : ";
+	chop($gOt_Dbg 	= <STDIN>);
+} else {
+	$gOt_Dbg		= $ARGV[3];
+}
+open(DBG, ">$gOt_Dbg")	|| die "DBG file error $gOt_Dbg¥n";
+
+
+LBL_DIR:
+while($gIn_Fname = readdir(DIR1)) {
+	$gIn_Path	=	"$gIn_Dir¥/$gIn_Fname";
+	next LBL_DIR if -d $gIn_Path;
+	next LBL_DIR if ($gIn_Fname =‾ /^[#@]/);
+
+	$gOt_Fname	=	$gIn_Fname;
+	$gOt_Fname	=‾	s/¥.j1/¥.j2/g;
+	$gOt_Path	=	"$gOt_Dir¥/$gOt_Fname";
+	print "$gIn_Path -> $gOt_Path¥n";
+	&jclpp3($gIn_Path, $gOt_Path);
+}
+
+closedir(DIR1);

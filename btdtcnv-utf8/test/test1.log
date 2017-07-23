@@ -1,0 +1,42 @@
+JOB[bdtcnv  ] STRT 2005/10/19/00:22:50 
+JOB[bdtcnv  ] ARG  2005/10/19/00:22:50 -jtest1.jcl -mtest1.map -ltest1.log -itest1.in.bin -otest1.o.bin 
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50 [infile]
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   fname=test1.in.bin
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   iocnt=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   recfm=1
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   lrecl=16
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   blksz=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   eof  =0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   bklp =0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   cr   =0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   delim=
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   recfm=F
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   mode =rb
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   han  =EBC
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   zen  =KEIS83
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50 [outfile]
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   fname=test1.o.bin
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   iocnt=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   recfm=5
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   lrecl=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   blksz=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   eof  =0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   bklp =0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   cr   =2
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   delim=,
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   recfm=T
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   mode =wb
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   han  =ASC
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   zen  =SJIS
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50 [codetbl]
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   han_path =..\hantbl.csv
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   zen_path =..\zentbl.csv
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   abend_han=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   abend_zen=0
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   rep_han  =@:40
+JOB[bdtcnv  ] MSG  2005/10/19/00:22:50   rep_zen  =:8140
+JOB[bdtcnv  ] CNT  2005/10/19/00:22:50 test1.jcl=0
+JOB[bdtcnv  ] CNT  2005/10/19/00:22:50 test1.map=0
+JOB[bdtcnv  ] CNT  2005/10/19/00:22:50 test1.in.bin=2
+JOB[bdtcnv  ] CNT  2005/10/19/00:22:50 test1.o.bin=2
+JOB[bdtcnv  ] END  2005/10/19/00:22:50 

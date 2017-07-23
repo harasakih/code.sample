@@ -1,0 +1,44 @@
+JOB[bdtcnv  ] STRT 2006/06/26/00:46:23 
+JOB[bdtcnv  ] ARG  2006/06/26/00:46:23 -jtest3.jcl -mtest3.map -ltest3.log -itest3.in.bin -otest3.o.bin 
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23 [infile]
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   fname=test3.in.bin
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   iocnt=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   recfm=3
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   lrecl=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   blksz=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   eof  =0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   bklp =0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   cr   =0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   delim=
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   recfm=V
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   mode =rb
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   han  =EBC
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   zen  =KEIS83
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   vbtyp=host
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23 [outfile]
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   fname=test3.o.bin
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   iocnt=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   recfm=3
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   lrecl=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   blksz=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   eof  =0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   bklp =0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   cr   =0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   delim=
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   recfm=V
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   mode =wb
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   han  =ASC
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   zen  =SJIS
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   vbtyp=netcl
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23 [codetbl]
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   han_path =..\hantbl.csv
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   zen_path =..\zentbl.csv
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   abend_han=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   abend_zen=0
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   rep_han  =@:40
+JOB[bdtcnv  ] MSG  2006/06/26/00:46:23   rep_zen  =:8140
+JOB[bdtcnv  ] CNT  2006/06/26/00:46:23 test3.jcl=0
+JOB[bdtcnv  ] CNT  2006/06/26/00:46:23 test3.map=0
+JOB[bdtcnv  ] CNT  2006/06/26/00:46:23 test3.in.bin=4
+JOB[bdtcnv  ] CNT  2006/06/26/00:46:23 test3.o.bin=3
+JOB[bdtcnv  ] END  2006/06/26/00:46:23 
