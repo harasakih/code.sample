@@ -1,0 +1,10 @@
+# gnuplot script
+#
+# sample of gnuplot to post script file
+#
+
+set terminal postscript color
+set output "graph1.ps"
+
+plot sin(x) with line, cos(x) with line
+

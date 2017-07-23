@@ -1,0 +1,29 @@
+# terminal
+set terminal x11
+
+# axis label
+set xlabel "Record Count"
+set ylabel "CPUTIME(sec)"
+set zlabel "ELAPS(min)"
+
+# axis range
+# gp('set xrange [1:100000000]')
+# gp('set yrange [0.01:1000]')
+set autoscale
+set logscale x
+set logscale y
+unset logscale x
+unset logscale y
+
+
+# グリッドを表示
+set grid
+
+set output "hoge.png" 
+
+# with points で散布図として描画
+plot "hoge.dat" with points pointtype 5
+
+# 3d-plot
+splot "hoge.dat" with points pointtype 5
+
