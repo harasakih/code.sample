@@ -27,7 +27,7 @@ sub	main {
 	my	($host, $user, $pass);
 	my	($local_file, $remote_file);
 	
-	print	"¥n¥n指定ディレクトリ配下の全ファイルをｆｔｐする¥n";
+	print	"\n\n指定ディレクトリ配下の全ファイルをｆｔｐする\n";
 	if( $ARGV[0] eq "" ) {
 		print	"ｆｔｐ対象ディレクトリ :";
 		chop($gIn_Dir 	= <STDIN>);
@@ -60,28 +60,28 @@ sub	main {
 	my $ftp = Net::FTP->new($host)	||	die "can not connection: $@";	# Connect
 	$ftp->login($user, $pass) 		||	die $ftp->message;				# ログイン
 	$ftp->ascii						||	die $ftp->message;				# アスキーモードに変更
-	print "pwd is " . $ftp->pwd() . "¥n";
+	print "pwd is " . $ftp->pwd() . "\n";
 
 
 LBL_DIR:
 	while($gIn_Fname = readdir(INDIR)) {
-		$gIn_Path	=	"$gIn_Dir¥/$gIn_Fname";
+		$gIn_Path	=	"$gIn_Dir\/$gIn_Fname";
 		next LBL_DIR if -d $gIn_Path;
 
 		$gOt_Fname	=	$gIn_Fname;
-		$gOt_Path	=	"$gOt_Dir¥/$gOt_Fname";
+		$gOt_Path	=	"$gOt_Dir\/$gOt_Fname";
 
 		print    "$gIn_Path -> $gOt_Path : ";
 		print LG "$gIn_Path -> $gOt_Path : ";
 		if( $ftp->put($gIn_Path, $gOt_Path) )							# ファイル転送
 		{
-			print    "success¥n";
-			print LG "success¥n";
+			print    "success\n";
+			print LG "success\n";
 		}
 		else
 		{
-			print    "failed¥n";
-			print LG "failed¥n";
+			print    "failed\n";
+			print LG "failed\n";
 			warn $ftp->message;
 		}
 	}

@@ -26,25 +26,25 @@ open( OUT, ">$out_file" ) || die ;
 
 # 検索対象文字列一覧を内部テーブルに
 $i = 0;
-print OUT "*** ﾃﾞｨﾚｸﾄﾘ[$dir1]で以下の文字列を検索 ***¥n";
+print OUT "*** ﾃﾞｨﾚｸﾄﾘ[$dir1]で以下の文字列を検索 ***\n";
 while( <SRCH> ) {
-    split(/¥s+/);
+    split(/\s+/);
     $srch[ $i ] = $_[0];
-    print OUT "$srch[ $i ]¥n";
+    print OUT "$srch[ $i ]\n";
     $i++;
 }
 $srch_cnt = $i;
 
 
 # ﾃﾞｨﾚｸﾄﾘ単位のﾙｰﾌﾟ
-print OUT "*** 検索結果 ***¥n";
+print OUT "*** 検索結果 ***\n";
 LBL_DIR:
 while($in_fname = readdir(DIR1)) {
-    $fname = "$dir1¥/$in_fname";
+    $fname = "$dir1\/$in_fname";
     next LBL_DIR if -d $fname;
 
 # ﾌｧｲﾙ単位の処理
-    print "$fname¥n";
+    print "$fname\n";
     &srch_in_file();
 }
 

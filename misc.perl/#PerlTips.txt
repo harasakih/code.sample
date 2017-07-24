@@ -8,7 +8,7 @@
 #
 #   引数がないときは、問合せする
 #
-    print   "¥n¥nＨＯＰＳＳのネットジョブリストをＣＳＶ化する¥n";
+    print   "\n\nＨＯＰＳＳのネットジョブリストをＣＳＶ化する\n";
     if($ARGV[0] eq "") {
         print   "ＨＯＰＳＳネットジョブリスト：";
         chop($in1 = <STDIN>);
@@ -53,16 +53,16 @@
 
  $<digit>    最後にマッチしたパタンの中で対応する括弧のセットからのサブ・パタンを含みますが、
          すでに抜け出た、ネストしたブロック 中でマッチしたパタンは含 みません。（記憶
-         法: ¥digit に似ている。）
+         法: \digit に似ている。）
 
     <ex> GREP結果の分解
         while( <IN1> ) {
             $line   =   $_;
 
-            /(^[0-9a-zA-Z]+)¥.cob: [0-9]{6}(¥*?)(.*)$/ ;
+            /(^[0-9a-zA-Z]+)\.cob: [0-9]{6}(\*?)(.*)$/ ;
             ↑ﾌｧｲﾙ名         .cob: ↑数字６桁
 
-            printf OT1 "$1/$2/$3¥n";
+            printf OT1 "$1/$2/$3\n";
         }
 
  $ARGV       <>から読み込んでい る時の現在のファイル名が入っています。
@@ -92,7 +92,7 @@
 #	指定ディレクトリ配下の全ファイルを処理する
 #
 
-print	"¥n¥nJCLのXML化&生SYSIN分離処理¥n";
+print	"\n\nJCLのXML化&生SYSIN分離処理\n";
 if( $ARGV[0] eq "" ) {
 	print	"JCLﾌｧｲﾙのﾃﾞｨﾚｸﾄﾘ(入力) : ";
 	chop($gIn_Dir 	= <STDIN>);
@@ -122,19 +122,19 @@ if( $ARGV[3] eq "" ) {
 } else {
 	$gOt_Dbg		= $ARGV[3];
 }
-open(DBG, ">$gOt_Dbg")	|| die "DBG file error $gOt_Dbg¥n";
+open(DBG, ">$gOt_Dbg")	|| die "DBG file error $gOt_Dbg\n";
 
 
 LBL_DIR:
 while($gIn_Fname = readdir(DIR1)) {
-	$gIn_Path	=	"$gIn_Dir¥/$gIn_Fname";
+	$gIn_Path	=	"$gIn_Dir\/$gIn_Fname";
 	next LBL_DIR if -d $gIn_Path;
 	next LBL_DIR if ($gIn_Fname =‾ /^[#@]/);
 
 	$gOt_Fname	=	$gIn_Fname;
-	$gOt_Fname	=‾	s/¥.j1/¥.j2/g;
-	$gOt_Path	=	"$gOt_Dir¥/$gOt_Fname";
-	print "$gIn_Path -> $gOt_Path¥n";
+	$gOt_Fname	=‾	s/\.j1/\.j2/g;
+	$gOt_Path	=	"$gOt_Dir\/$gOt_Fname";
+	print "$gIn_Path -> $gOt_Path\n";
 	&jclpp3($gIn_Path, $gOt_Path);
 }
 
