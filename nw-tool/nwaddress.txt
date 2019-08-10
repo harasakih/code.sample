@@ -1,0 +1,36 @@
+形式
+ipwild		ip-address/wild-card-mask	ex. 192.168.1.0/0.0.0.255
+wild		wild-card-mask				ex. 0.0.0.255
+maskl		subnet prefix length		ex. 24
+
+ipinnet(ip As String, net As String) As Boolean
+	ipアドレスが、ネットワークアドレス(ip/wild形式)に含まれるか否か
+
+ipwild2broadaddr(ipwild As String) As String
+	ip/wildのブロードキャストアドレスを返却
+	ホストアドレス部はビットオン（１）
+
+ipwild2nwaddress(ipwild As String) As String
+	ip/wildのＮＷアドレスを返却
+	ホストアドレス部はビットオフ（ゼロ）
+	
+wild2subnetmask(sWild As String) As String
+	wild-card-maskをビット反転し、subnetmaskに変換
+
+ipwild2ipmaskl(sNetwork As String) As String
+	ip/wildをip/prefixに変換
+
+ipmaskl2ipwild(sNetwork As String) As String
+	ip/prefixをip/wildに変換
+
+Ip2Int(sIp As String) As Variant
+	ipアドレスを４バイト整数に変換
+
+wild2maskl(sWild As String) As Integer
+	wild-card-maskをprefix-lengthに変換
+
+maskl2wild(sMaskl As Variant) As String
+	prefix-lengthをwild-card-maskに変換
+
+maskl2wildoct(iMaskl As Variant) As String
+	１バイト分のマスク長（０－８）を０－２５５に変換
