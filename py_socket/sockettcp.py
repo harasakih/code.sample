@@ -136,7 +136,7 @@ class   MyTcpServer(object):
                 print("conn-closed & waiting for connected")
                 conn = self.server_connect()
                 cnt = 0
-                print("conn-connected from %s:%s" %(self.client_ip, self.client_port))
+                print("conn-connected from %s:%s" % (self.client_ip, self.client_port))
                 rmsg = ""
     
             if rmsg == "quit":
