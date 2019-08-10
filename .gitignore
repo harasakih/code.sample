@@ -6,3 +6,4 @@
 *.swp
 *.svnignore
 *._*
+*.o
