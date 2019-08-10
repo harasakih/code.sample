@@ -1,5 +1,6 @@
 # ingore folder
 .svn/
+.git/
 
 # ignore file
 *.DS_Store
@@ -7,3 +8,4 @@
 *.svnignore
 *._*
 *.o
+*.pyc
