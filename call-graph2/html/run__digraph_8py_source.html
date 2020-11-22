@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Call-Graph2: run_digraph.py ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Call-Graph2
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">run_digraph.py</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="run__digraph_8py.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html">    1</a></span>&#160;<span class="comment">#!/usr/local/bin/python</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"># -*- coding: utf-8 -*-</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="stringliteral">&quot;&quot;&quot; GvKakeizuを利用して、edgeのネットワーク図を作成する</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="stringliteral">&quot;&quot;&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">import</span> sys</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">from</span> Gvkakeizu <span class="keyword">import</span> GvKakeizu</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div><div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html#a7dee4c9e3fc392c374216833217d26b1">    9</a></span>&#160;<span class="keyword">def </span><a class="code" href="namespacerun__digraph.html#a7dee4c9e3fc392c374216833217d26b1">usage</a>():</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="stringliteral">&quot;&quot;&quot; usage &quot;&quot;&quot;</span></div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">print</span> <span class="stringliteral">&quot;usage:&quot;</span></div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">print</span> <span class="stringliteral">&quot;  %s PC|CP EDGE&quot;</span> % sys.argv[0]</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"># --+----1----+----2----+----3</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"># main</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"># --+----1----+----2----+----3</span></div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html#ac2771b4df1d39518612851292ace8c41">   17</a></span>&#160;argc = len(sys.argv)</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordflow">if</span> argc != 3:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="namespacerun__digraph.html#a7dee4c9e3fc392c374216833217d26b1">usage</a>()</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    exit(1)</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html#ae03d95cb70f05f13d6eca7212f6fe493">   23</a></span>&#160;flg = sys.argv[1]</div><div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html#aaf516f539cdc45d77794983a7cdbcbfb">   24</a></span>&#160;csvfile = sys.argv[2]</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordflow">if</span> flg != <span class="stringliteral">&quot;CP&quot;</span> <span class="keywordflow">and</span> flg != <span class="stringliteral">&quot;PC&quot;</span>:</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="namespacerun__digraph.html#a7dee4c9e3fc392c374216833217d26b1">usage</a>()</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    exit(1)</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html#ab791bd38d027e6efb8dcb226695a425c">   30</a></span>&#160;GVKAKE = <a class="code" href="class_gvkakeizu_1_1_gv_kakeizu.html">GvKakeizu</a>()</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;GVKAKE.edge_read(csvfile, flg)</div><div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="namespacerun__digraph.html#a3144dcb4968ea896add5c467219bfea5">   33</a></span>&#160;GVKAKE.gvnetwork_pdf(GVKAKE.edges, wkdir=<span class="stringliteral">&quot;./otdir/&quot;</span>, gvformat=<span class="stringliteral">&#39;pdf&#39;</span>)</div><div class="ttc" id="class_gvkakeizu_1_1_gv_kakeizu_html"><div class="ttname"><a href="class_gvkakeizu_1_1_gv_kakeizu.html">Gvkakeizu.GvKakeizu</a></div><div class="ttdef"><b>Definition:</b> <a href="_gvkakeizu_8py_source.html#l00022">Gvkakeizu.py:22</a></div></div>
+<div class="ttc" id="namespacerun__digraph_html_a7dee4c9e3fc392c374216833217d26b1"><div class="ttname"><a href="namespacerun__digraph.html#a7dee4c9e3fc392c374216833217d26b1">run_digraph.usage</a></div><div class="ttdeci">def usage()</div><div class="ttdef"><b>Definition:</b> <a href="run__digraph_8py_source.html#l00009">run_digraph.py:9</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
