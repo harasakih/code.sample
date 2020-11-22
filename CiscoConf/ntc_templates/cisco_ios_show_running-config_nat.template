@@ -1,0 +1,47 @@
+#
+# show run から ^ip natを抽出する
+#
+Value INOUT_POOL (inside|outside|pool)
+Value PROTOCOL (tcp|udp)
+Value SOURCE (source\s+(list|static))
+Value FROM_IP (\d+\.\d+\.\d+\.\d+)
+Value FROM_PORT (\d+)
+Value TO_IP (\d+\.\d+\.\d+\.\d+)
+Value TO_PORT (\d+)
+Value MASK (\d+)
+Value ACL (\S+)
+Value POOL_NAME (\S+(\s+overload)?)
+Value POOL_SIP (\d+\.\d+\.\d+\.\d+)
+Value POOL_EIP (\d+\.\d+\.\d+\.\d+)
+Value POOL_MASK ((\d+\.\d+\.\d+\.\d+)|(\d+))
+Value RMAP_NAME (\S+(\s+extendable)?)
+
+Start
+  #
+  # ip nat POOL POOL_NAME                   prefix-length POOL_MASK
+  # ip nat POOL POOL_NAME POOL_SIP POOL_EIP prefix-length POOL_MASK
+  ^ip\s+nat\s+${INOUT_POOL}\s+${POOL_NAME}\s+(${POOL_SIP}\s+|)(${POOL_EIP}\s+|)prefix-length\s+${POOL_MASK} -> Record
+  # ip nat inside source list ACL pool POOL_NAME [overload]
+  ^ip\s+nat\s+${INOUT_POOL}\s+${SOURCE}\s+${ACL}\s+pool\s+${POOL_NAME} -> Record
+  # ip nat INSIDE SOURCE STATIC IP1      IP2      route-map RMAP_NAME [extendable]
+  # ip nat INSIDE SOURCE STATIC IP1 PORT IP2 PORT route-map RMAP_NAME [extendable]
+  ^ip\s+nat\s+${INOUT_POOL}\s${SOURCE}\s+${PROTOCOL}\s+${FROM_IP}\s+${FROM_PORT}\s+${TO_IP}\s+${TO_PORT}\s+route-map\s+${RMAP_NAME} -> Record
+  ^ip\s+nat\s+${INOUT_POOL}\s${SOURCE}\s+${FROM_IP}\s+${TO_IP}\s+route-map\s+${RMAP_NAME} -> Record
+  # ip nat INSIDE SOURCE STATIC TCP         IP1 PORT IP2 PORT
+  # ip nat INSIDE SOURCE STATIC TCP network IP1 PORT IP2 PORT /MASK
+  ^ip\s+nat\s+${INOUT_POOL}\s+${SOURCE}\s+${PROTOCOL}\s+((network\s+)|)${FROM_IP}\s+${FROM_PORT}\s+${TO_IP}\s+${TO_PORT}((\s+\/${MASK})|) -> Record
+  ## Without PORT + without route-map
+  # ip nat INSIDE SOURCE STATIC         IP1 IP2
+  # ip nat INSIDE SOURCE STATIC network IP1 IP2 /MASK
+  ^ip\s+nat\s+${INOUT_POOL}\s+${SOURCE}\s+((network\s+)|)${FROM_IP}\s+${TO_IP}((\s+\/${MASK})|) -> Record
+  # skip
+  ^ip\s+nat\s+(translation) -> Next
+  # Un expectd ^ip nat
+  ^ip\s+nat -> Error "Could not parse ip nat lines:"
+  # skip
+  #^!
+  # Error out if raw data does not match any above rules.
+  # ^.* -> Error "Could not parse line:"
+  ^.* -> Next
+
+EOF

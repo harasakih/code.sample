@@ -1,0 +1,864 @@
+\hypertarget{classCTextFsm_1_1CTextFsm}{}\section{C\+Text\+Fsm.\+C\+Text\+Fsm クラス}
+\label{classCTextFsm_1_1CTextFsm}\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+
+
+C\+Text\+Fsm.\+C\+Text\+Fsm の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classCTextFsm_1_1CTextFsm__inherit__graph}
+\end{center}
+\end{figure}
+
+
+C\+Text\+Fsm.\+C\+Text\+Fsm 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{classCTextFsm_1_1CTextFsm__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ae888a03cec9e1bb808d590dc35a9ec6b}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a4248a8d77fdc84c340d4d9d1f5b2790e}{ismatch\+\_\+acl}} (self, testptn, aclobjs, tfonly=False)
+\begin{DoxyCompactList}\small\item\em testptnの項目数チェック \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a6043d2a3f369ecd76cdbd636e6c2e035}{read\+\_\+conf}} (self, fname)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_af4bf12c19b9be216a0a2c8c9ae8f0459}{parse\+\_\+racl}} (self, confobj, tdir=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_aadf519d7468e4b3d2237e3b189d3514c}{parse\+\_\+acl}} (self, confobj, tdir=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a4d6ef30a6341006802ebacf2d3fa5fc1}{parse}} (self, confobj, templ=None, tdir=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a8b07c128e0344d13bb92a318a25ab625}{parsed2acl}} (self, acls)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a96df9cf7587763ba97a1c1299ff687e4}{conf\+\_\+csvprint}} (self, \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_afaf1b7c90c7fc6173ecc700966132c5c}{confname}}, templ, isheader=True, headding=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a1ecfc2994e306a0ae4a8670e651f8258}{logsplit}} (self, fname, otdir=\textquotesingle{}./\textquotesingle{}, otfbase=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a4cc7b93a2ff3e94d32f2387530c89895}{norm\+\_\+ipmask}} (self, ipmask)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_afba04726b4663e2a7d3ec4d4804af277}{is\+\_\+port}} (self, port, ope, range)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ad5accc7ec3e821ff02e9cdf3f06b1355}{set\+\_\+parsed}} (self, fname=None, templ=None, tdir=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a6e940ba9e9159eef2513342466e2fb11}{set\+\_\+acl}} (self, fname=None, tdir=None)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_af6338783bf6b3879a1e522d534602a96}{set\+\_\+racl}} (self, fname=None, tdir=None)
+\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a807b340e6b101f17f1b851bf6272ee52}\label{classCTextFsm_1_1CTextFsm_a807b340e6b101f17f1b851bf6272ee52}} 
+def {\bfseries dbgprint} (self, level, pgm, msg)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a9cec3d73733c16ef6bb8d83724454b32}{ut\+\_\+is\+\_\+port}} (self, expect, port, ope, range)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a2e1e78dbb799c91a8174c09aab2ca30b}{ut\+\_\+is\+\_\+ipinnetw}} (self, expect, ip, net)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ad48b822b0ee1c57c37e671a1b380d0bb}{ut\+\_\+is\+\_\+ipinnet}} (self, expect, ip, net)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a9708d882f46a66cee6ae8c47766ef50b}{ut\+\_\+ismatch\+\_\+acl}} (self, expect, test, aclobj)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ae3ecec0b7d2f27e81faee975998bd860}{ut\+\_\+ismatch\+\_\+acl2}} (self, expect, aclname, test, aclobj)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a82616f58ed71035bc1b443e934692361}{ut\+\_\+ismatch\+\_\+aclstd}} (self, expect, test, a\+\_\+aclobj)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ac5a745b22a0fb24ebcfc2a77bf430429}{ut\+\_\+ismatch\+\_\+aclext}} (self, expect, test, a\+\_\+aclobj)
+\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a9440c97d6fa11decc6aa29a1112157d8}\label{classCTextFsm_1_1CTextFsm_a9440c97d6fa11decc6aa29a1112157d8}} 
+def {\bfseries get\+\_\+enum} (self)
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a2d26ded29b0a795000470f2f9d9186cb}{is\+\_\+prot}} (tprot, fprot)
+\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ac33bf15e285e10cb094a5aaa179f1824}\label{classCTextFsm_1_1CTextFsm_ac33bf15e285e10cb094a5aaa179f1824}} 
+def {\bfseries infprint} (pgm, caller, msg, out=None)
+\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_af5fa599194aea3773d6e903b5fded7be}\label{classCTextFsm_1_1CTextFsm_af5fa599194aea3773d6e903b5fded7be}} 
+def {\bfseries errprint} (pgm, caller, msg)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a06b5d47fdfe2bf0bd79ba735e941c343}{csvprint}} (ll, header=None, headding=None)
+\end{DoxyCompactItemize}
+\subsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_afaf1b7c90c7fc6173ecc700966132c5c}{confname}}
+\begin{DoxyCompactList}\small\item\em Cisco\+Configのファイル名 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ad5b28ccc7a1aee160094fde5c304a74b}\label{classCTextFsm_1_1CTextFsm_ad5b28ccc7a1aee160094fde5c304a74b}} 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ad5b28ccc7a1aee160094fde5c304a74b}{templfname}}
+\begin{DoxyCompactList}\small\item\em テンプレートファイル名 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ae4a6e9fb950ddd34ce0078bbbce4bb61}{aclnames}}
+\begin{DoxyCompactList}\small\item\em dic\+:aclobjのキー一覧 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a821e94401ea692f24c0ee2f64d7a0a04}{testpattern}}
+\begin{DoxyCompactList}\small\item\em 処理中のテストパターン \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a4056398c8eeffd96560aad7265eb1dee}\label{classCTextFsm_1_1CTextFsm_a4056398c8eeffd96560aad7265eb1dee}} 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a4056398c8eeffd96560aad7265eb1dee}{acl\+\_\+statement}}
+\begin{DoxyCompactList}\small\item\em 処理中のacl-\/statement \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a1e3f702dc6832495689001245994913a}{parse\+\_\+statement}}
+\begin{DoxyCompactList}\small\item\em 処理中のparsed-\/statement \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a40438368fa1a2fd8858d2960713caeff}\label{classCTextFsm_1_1CTextFsm_a40438368fa1a2fd8858d2960713caeff}} 
+\mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a40438368fa1a2fd8858d2960713caeff}{ipnet\+\_\+strict}}
+\begin{DoxyCompactList}\small\item\em is\+\_\+ipinnetで、ホストビットオンをチェックするか否か \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{静的公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+list \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_aaae27a35f146f70f11ec0d40df0c8cdb}{Split\+\_\+\+Header}}
+\begin{DoxyCompactList}\small\item\em namedtuple ciscoのcommand-\/logを分割するヘッダ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_abdcfff561e440d13d71126a84a9bfeab}\label{classCTextFsm_1_1CTextFsm_abdcfff561e440d13d71126a84a9bfeab}} 
+string \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_abdcfff561e440d13d71126a84a9bfeab}{Ntc\+\_\+\+Dir}} = \textquotesingle{}/usr/lib/python2.\+7/site-\/packages/ntc\+\_\+templates-\/1.\+1.\+0-\/py2.\+7.\+egg/ntc\+\_\+templates/templates/\textquotesingle{}
+\begin{DoxyCompactList}\small\item\em ntc-\/templatesのディレクトリ \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a38d02993201dbf1e37d4025693d9a225}{Port\+\_\+mnemonic}}
+\begin{DoxyCompactList}\small\item\em P\+O\+RT mnemonic \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_afb88b6e8121f75c289acca130ebf33ab}{Templ\+\_\+fname}}
+\begin{DoxyCompactList}\small\item\em ntc\+\_\+templatesのファイル名 \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_acb48a0e8aa2360c087892d749792389a}{Csv\+\_\+\+Header}}
+\begin{DoxyCompactList}\small\item\em テンプレートで解析したリストをcsv出力用するヘッダタイトル \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ac148270354b58b267ac87e23761b20e4}{If\+Action}}
+\begin{DoxyCompactList}\small\item\em Aclのactionに許可される語句 \end{DoxyCompactList}\item 
+dictionary \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_a6c193f4c315d94b59475cb6f1debefe6}{If\+Ip\+Protocol}}
+\begin{DoxyCompactList}\small\item\em I\+P-\/\+Protocols、\+I\+Pの上位プロトコルなので、\+I\+Pのフィルタをチェックする \end{DoxyCompactList}\item 
+list \mbox{\hyperlink{classCTextFsm_1_1CTextFsm_ac535afde8ac9c209d0a4c3ecee65e4b0}{Dbg\+Level}}
+\begin{DoxyCompactList}\small\item\em D\+B\+Gログの出力レベル \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+\begin{DoxyVerb}Cisco ConfをParseするクラス
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 386 行目に定義があります。
+
+
+
+\subsection{構築子と解体子}
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ae888a03cec9e1bb808d590dc35a9ec6b}\label{classCTextFsm_1_1CTextFsm_ae888a03cec9e1bb808d590dc35a9ec6b}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Constructor
+\end{DoxyVerb}
+ 
+
+\mbox{\hyperlink{classCiscoConf_1_1CiscoAcl_a84104a6a25dd68d24474d15985702ab6}{Cisco\+Conf.\+Cisco\+Acl}}, \mbox{\hyperlink{classCiscoConf_1_1CiscoRoute_a1f0e3788e7f8459ea9de2f8bd21c1b05}{Cisco\+Conf.\+Cisco\+Route}}, \mbox{\hyperlink{classCiscoConf_1_1CiscoCommon_a67ee86ca701af50e95bed0abfcd09dda}{Cisco\+Conf.\+Cisco\+Common}}, \mbox{\hyperlink{classCTextFsm__acl_1_1test_a8d24ace55d8eae0649e764d4ae4ac882}{C\+Text\+Fsm\+\_\+acl.\+test}}, \mbox{\hyperlink{classCTextFsm__ut_1_1test_aa74780257a0e74f90ebdaf0982486dcd}{C\+Text\+Fsm\+\_\+ut.\+test}}で再実装されています。
+
+
+
+ C\+Text\+Fsm.\+py の 494 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a96df9cf7587763ba97a1c1299ff687e4}\label{classCTextFsm_1_1CTextFsm_a96df9cf7587763ba97a1c1299ff687e4}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!conf\_csvprint@{conf\_csvprint}}
+\index{conf\_csvprint@{conf\_csvprint}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{conf\_csvprint()}{conf\_csvprint()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+conf\+\_\+csvprint (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{confname,  }\item[{}]{templ,  }\item[{}]{isheader = {\ttfamily True},  }\item[{}]{headding = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cisco configファイルをCSV出力する
+
+:param confname :str,  confのファイル名
+:param templ    :str,  template名
+:param isheader :bool, CSVヘッダを出力するか否か
+:param headding :str,  先頭カラムに出力する文字列、confnameを想定。
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1010 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a06b5d47fdfe2bf0bd79ba735e941c343}\label{classCTextFsm_1_1CTextFsm_a06b5d47fdfe2bf0bd79ba735e941c343}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!csvprint@{csvprint}}
+\index{csvprint@{csvprint}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{csvprint()}{csvprint()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+csvprint (\begin{DoxyParamCaption}\item[{}]{ll,  }\item[{}]{header = {\ttfamily None},  }\item[{}]{headding = {\ttfamily None} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}リストをTSV出力する。タイトルヘッダ、１カラム目にheaddingを出力可
+
+:param ll       :list, [[row1,row2,row3,],[row1,row2,row3,],[row1,row2,row3,],]
+:param header   :list, CSVヘッダ
+:param headding :str,
+\end{DoxyVerb}
+\begin{DoxyVerb}headerの出力
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1441 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_afba04726b4663e2a7d3ec4d4804af277}\label{classCTextFsm_1_1CTextFsm_afba04726b4663e2a7d3ec4d4804af277}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!is\_port@{is\_port}}
+\index{is\_port@{is\_port}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{is\_port()}{is\_port()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+is\+\_\+port (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{port,  }\item[{}]{ope,  }\item[{}]{range }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cisco access-listのPORT番号が、合致するか否かを検査
+
+:param  port  :str, テスト対象のPORT番号。数字
+:param  ope   :str, eq/range/gt/lt/established or null
+:param  range :str, テスト対象のPORT範囲。like 'xxx yyy'
+:return :bool
+----
+port    ope     range       is_port
+CASE1   value   OPE     value       check : rangeをチェック
+CASE2   ANY     OPE     value       False : any > value なのでFalse
+CASE3   value   ANY     --          True  : value < any なのでTrue
+CASE4   ANY     ANY     --          True  : any = any   なのでTrue
+CASE21  EST     EST     --          True  : EST == EST
+CASE22  EST     OPE    value        False : EST != not est
+CASE23  else    EST     --          False : not est != establieshed
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1184 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a2d26ded29b0a795000470f2f9d9186cb}\label{classCTextFsm_1_1CTextFsm_a2d26ded29b0a795000470f2f9d9186cb}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!is\_prot@{is\_prot}}
+\index{is\_prot@{is\_prot}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{is\_prot()}{is\_prot()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+is\+\_\+prot (\begin{DoxyParamCaption}\item[{}]{tprot,  }\item[{}]{fprot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}プロトコルが一致するか
+
+:param  tprot:str, test-port
+:param  fprot:str, acl-port
+:return :bool
+
+チェック概要
+    tprot   fprot       is_prot PORTCK
+    ip      ip          ok      no
+    eigrp   ip,eigrp    ok      no
+    ospf    ip,ospf     ok      no
+    tcp     ip          ok      no
+    udp     ip          ok      no
+    hoge    ip          ng      no
+    hoge    hoge        ok      no
+----
+    tcp     tcp         ok      yes
+    tcp     !tcp        ng      -
+    udp     udp         ok      yes
+    udp     !udp        ng      -
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1262 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a4248a8d77fdc84c340d4d9d1f5b2790e}\label{classCTextFsm_1_1CTextFsm_a4248a8d77fdc84c340d4d9d1f5b2790e}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ismatch\_acl@{ismatch\_acl}}
+\index{ismatch\_acl@{ismatch\_acl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ismatch\_acl()}{ismatch\_acl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ismatch\+\_\+acl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{testptn,  }\item[{}]{aclobjs,  }\item[{}]{tfonly = {\ttfamily False} }\end{DoxyParamCaption})}
+
+
+
+testptnの項目数チェック 
+
+\begin{DoxyVerb}ACLフィルタを格納した辞書を受け取り、テストする
+
+:param testptn :str, テスト対象の通信パターン.[ACL名, プロトコル, 送信元IP, 送信元PORT, 送信先IP, 送信先PORT]
+:param aclobjs :dic Aclobj, Coisco Configをパースした辞書、parsed2aclで作成
+       aclobjs[ acl名 ] = [ (Aclobj),(Aclobj),() ]
+:param tfonly  :bool, True/False（access-listに合致したか否か）のみ返却か、合致したaclも返却するか
+:return : list,
+  [
+  bool   : is_match
+  str    : acl名 or ERR/DENY
+  str    : aclのaction(permit/deny/'')
+  Aclobj : 合致したacl-statement
+  ]
+:modify: 2019/08/04,性能対策
+  namedtupleは関数間IFのみで使用、関数内は変数に代入して使用する
+\end{DoxyVerb}
+ testptnの単項目チェック(\+P\+R\+O\+T\+O\+C\+O\+L) testptnの単項目チェック(S\+R\+C-\/\+IP,D\+S\+T-\/\+IP) testptnの単項目チェック(S\+R\+C-\/\+P\+O\+RT)
+
+any, established, \textbackslash{}d+ testptnの単項目チェック(D\+S\+T-\/\+P\+O\+RT)
+
+any, established, \textbackslash{}d+ A\+C\+L分を繰り返し検査 
+
+ C\+Text\+Fsm.\+py の 676 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a1ecfc2994e306a0ae4a8670e651f8258}\label{classCTextFsm_1_1CTextFsm_a1ecfc2994e306a0ae4a8670e651f8258}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!logsplit@{logsplit}}
+\index{logsplit@{logsplit}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{logsplit()}{logsplit()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+logsplit (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fname,  }\item[{}]{otdir = {\ttfamily \textquotesingle{}./\textquotesingle{}},  }\item[{}]{otfbase = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Ciscoの各種照会コマンドログをコマンド単位で分割する
+fnameを分割し、fname.ext.txtを作成する。extは、Split_Header[]で指定され、ドットを含む。
+
+:param fname   :str, コマンドログのファイル名
+:param otdir   :str, 出力先ディレクトリ
+:param otfbase :str, 出力ファイルのファイル名ベース（デフォルトは入力ファイル名）
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1043 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a4cc7b93a2ff3e94d32f2387530c89895}\label{classCTextFsm_1_1CTextFsm_a4cc7b93a2ff3e94d32f2387530c89895}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!norm\_ipmask@{norm\_ipmask}}
+\index{norm\_ipmask@{norm\_ipmask}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{norm\_ipmask()}{norm\_ipmask()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+norm\+\_\+ipmask (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{ipmask }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}'ip-address wildcard-mask'を正規化する
+
+:param ipmask :str, like 'ip wildmask'
+:return :2*str ip-address, wildcard-mask
+
+変換概要
+[ERR]
+    ''          ''                          !ERR! /-1
+[any] ipmask    norm_ipmask                 ipwild2ip
+    any         0.0.0.0 255.255.255.255     0.0.0.0/0
+    
+[host]              norm_ipmask             ipwild2ip
+    w.x.y.z         w.x.y.z 0.0.0.0         w.x.y.z/32
+    host w.x.y..z   w.x.y.z 0.0.0.0         w.x.y.z/32
+    
+[network]           norm_ipmask             ipwild2ip
+    w.x.y.z, wildcard bits W.X.Y.Z          
+            w.x.y.z W.X.Y.Z         w.x.y.z/nn
+    w.x.y.z W.X.Y.Z w.x.y.z W.X.Y.Z         w.x.y.z/nn
+[ERROE]
+    ELSE(ERROR) -> None
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1126 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a4d6ef30a6341006802ebacf2d3fa5fc1}\label{classCTextFsm_1_1CTextFsm_a4d6ef30a6341006802ebacf2d3fa5fc1}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!parse@{parse}}
+\index{parse@{parse}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{parse()}{parse()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+parse (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{confobj,  }\item[{}]{templ = {\ttfamily None},  }\item[{}]{tdir = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cisco Confをntc_templatesでパースし、ntc_templatesの形式で返却
+confはtemplにあったもの
+
+:param  confobj :list, templにあったもの
+:param  templ   :str, テンプレート名
+:param  tdir    :str, テンプレートのディレクトリ
+:return :list, テンプレート形式のリスト。confobjをテンプレートで解析した結果
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 831 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_aadf519d7468e4b3d2237e3b189d3514c}\label{classCTextFsm_1_1CTextFsm_aadf519d7468e4b3d2237e3b189d3514c}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!parse\_acl@{parse\_acl}}
+\index{parse\_acl@{parse\_acl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{parse\_acl()}{parse\_acl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+parse\+\_\+acl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{confobj,  }\item[{}]{tdir = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cisco Confをntc_templatesでパースし、ntc_templatesの形式で返却
+confは、[show ip access-list]
+
+:param confobj :list, 'show ip access-list'の結果を読みこんだリスト
+:param tdir    :str, テンプレートのディレクトリ
+:return :list, テンプレート形式のリスト
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 805 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_af4bf12c19b9be216a0a2c8c9ae8f0459}\label{classCTextFsm_1_1CTextFsm_af4bf12c19b9be216a0a2c8c9ae8f0459}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!parse\_racl@{parse\_racl}}
+\index{parse\_racl@{parse\_racl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{parse\_racl()}{parse\_racl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+parse\+\_\+racl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{confobj,  }\item[{}]{tdir = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Cisco Confをntc_templatesでパースし、ntc_templatesの形式で返却。
+confは、[show runのaccess-list部分]
+
+:param confobj :list, 'show run'のaccess-list部分を読みこんだリスト
+:param tdir    :str, テンプレートのディレクトリ
+:return :list, テンプレート形式のリスト
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 787 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a8b07c128e0344d13bb92a318a25ab625}\label{classCTextFsm_1_1CTextFsm_a8b07c128e0344d13bb92a318a25ab625}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!parsed2acl@{parsed2acl}}
+\index{parsed2acl@{parsed2acl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{parsed2acl()}{parsed2acl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+parsed2acl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{acls }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}parse_acl()を編集する。wildcard-maskを/nnに変換、PORT番号のMnemonicを数値化
+
+:param  acls  :list, parse_acl()でテンプレート化したリスト
+:return :dic Aclobj,
+  dic[ acl-name ] = [ Aclobj, Aclobj, ] を返却する。
+  Aclobj = [name, no, action, protocol, src, srcport, srcrange, dst, dstport, dstrange]
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 867 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a6043d2a3f369ecd76cdbd636e6c2e035}\label{classCTextFsm_1_1CTextFsm_a6043d2a3f369ecd76cdbd636e6c2e035}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!read\_conf@{read\_conf}}
+\index{read\_conf@{read\_conf}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{read\_conf()}{read\_conf()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+read\+\_\+conf (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fname }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}ファイルを読込み、リストで返却する
+:param str fname : ファイル名
+:return list     : .read()で返却されたリスト。ファイル全体を返却。
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 776 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a6e940ba9e9159eef2513342466e2fb11}\label{classCTextFsm_1_1CTextFsm_a6e940ba9e9159eef2513342466e2fb11}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!set\_acl@{set\_acl}}
+\index{set\_acl@{set\_acl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{set\_acl()}{set\_acl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+set\+\_\+acl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fname = {\ttfamily None},  }\item[{}]{tdir = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}confnameを入力し、template(acl)でパースしたリストを返却
+:param  fname :str, confname
+:param  tdir  :str, templateのディレクトリ
+:return :list, 'acl'でparseしたリスト
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1301 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ad5accc7ec3e821ff02e9cdf3f06b1355}\label{classCTextFsm_1_1CTextFsm_ad5accc7ec3e821ff02e9cdf3f06b1355}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!set\_parsed@{set\_parsed}}
+\index{set\_parsed@{set\_parsed}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{set\_parsed()}{set\_parsed()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+set\+\_\+parsed (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fname = {\ttfamily None},  }\item[{}]{templ = {\ttfamily None},  }\item[{}]{tdir = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}confnameを入力し、templateでパースしたリストを返却
+:param fname :str, confname
+:param templ :str, template-NAME
+:param tdir  :str, templateのディレクトリ
+:return :list, tenpateでparseしたリスト
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1292 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_af6338783bf6b3879a1e522d534602a96}\label{classCTextFsm_1_1CTextFsm_af6338783bf6b3879a1e522d534602a96}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!set\_racl@{set\_racl}}
+\index{set\_racl@{set\_racl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{set\_racl()}{set\_racl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+set\+\_\+racl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{fname = {\ttfamily None},  }\item[{}]{tdir = {\ttfamily None} }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}confnameを入力し、template(racl)でパースしたリストを返却
+:param  fname :str, confname
+:param  tdir  :str, templateのディレクトリ
+:return list :list, 'racl'でparseしたリスト
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1309 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ad48b822b0ee1c57c37e671a1b380d0bb}\label{classCTextFsm_1_1CTextFsm_ad48b822b0ee1c57c37e671a1b380d0bb}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_is\_ipinnet@{ut\_is\_ipinnet}}
+\index{ut\_is\_ipinnet@{ut\_is\_ipinnet}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_is\_ipinnet()}{ut\_is\_ipinnet()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+is\+\_\+ipinnet (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{ip,  }\item[{}]{net }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver for ut_is_ipinnet
+
+:param expect :bool, UT結果の期待値
+:param ip     :str, ip-address   'w.x.y.z'
+:param net    :str, network like 'W.X.Y.Z/L'
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1368 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a2e1e78dbb799c91a8174c09aab2ca30b}\label{classCTextFsm_1_1CTextFsm_a2e1e78dbb799c91a8174c09aab2ca30b}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_is\_ipinnetw@{ut\_is\_ipinnetw}}
+\index{ut\_is\_ipinnetw@{ut\_is\_ipinnetw}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_is\_ipinnetw()}{ut\_is\_ipinnetw()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+is\+\_\+ipinnetw (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{ip,  }\item[{}]{net }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver for ut_is_ipinnet
+
+:param expect :bool, UT結果の期待値
+:param ip     :str, ip-address   'w.x.y.z'
+:param net    :str, network like 'W.X.Y.Z/s.t.u.v'
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1352 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a9cec3d73733c16ef6bb8d83724454b32}\label{classCTextFsm_1_1CTextFsm_a9cec3d73733c16ef6bb8d83724454b32}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_is\_port@{ut\_is\_port}}
+\index{ut\_is\_port@{ut\_is\_port}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_is\_port()}{ut\_is\_port()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+is\+\_\+port (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{port,  }\item[{}]{ope,  }\item[{}]{range }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver for is_port()
+
+:param expect :bool, UT結果の期待値
+:param port   :str, port
+:param ope    :str, ope
+:param range  :str, range
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1340 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a9708d882f46a66cee6ae8c47766ef50b}\label{classCTextFsm_1_1CTextFsm_a9708d882f46a66cee6ae8c47766ef50b}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_ismatch\_acl@{ut\_ismatch\_acl}}
+\index{ut\_ismatch\_acl@{ut\_ismatch\_acl}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_ismatch\_acl()}{ut\_ismatch\_acl()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+ismatch\+\_\+acl (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{test,  }\item[{}]{aclobj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver for ismatch_acl
+
+:param expect :bool, UT結果の期待値
+:param test   :str,  test-pattern with aclname。'WAN-out eigrp 10.246.0.1 any 10.246.0.1 any'
+:param aclobj :list,　.parsed2acl(confobj)の返却
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1383 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ae3ecec0b7d2f27e81faee975998bd860}\label{classCTextFsm_1_1CTextFsm_ae3ecec0b7d2f27e81faee975998bd860}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_ismatch\_acl2@{ut\_ismatch\_acl2}}
+\index{ut\_ismatch\_acl2@{ut\_ismatch\_acl2}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_ismatch\_acl2()}{ut\_ismatch\_acl2()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+ismatch\+\_\+acl2 (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{aclname,  }\item[{}]{test,  }\item[{}]{aclobj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver for ismatch_acl2
+aclname,testを別パラメタ
+
+:param expect  :bool, UT結果の期待値
+:param aclname :str,  aclobjからaclnameをチェック対象とする。'WAN-out'
+:param test    :str,  test-pattern。'ip    10.246.0.1 any 10.246.0.1 any'
+:param aclobj  :list, .parsed2acl(confobj)の返却
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1394 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ac5a745b22a0fb24ebcfc2a77bf430429}\label{classCTextFsm_1_1CTextFsm_ac5a745b22a0fb24ebcfc2a77bf430429}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_ismatch\_aclext@{ut\_ismatch\_aclext}}
+\index{ut\_ismatch\_aclext@{ut\_ismatch\_aclext}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_ismatch\_aclext()}{ut\_ismatch\_aclext()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+ismatch\+\_\+aclext (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{test,  }\item[{}]{a\+\_\+aclobj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver _ismatch_aclext
+
+:param expect   :bool, UT結果の期待値
+:param test     :str,
+:param a_aclobj :namedobj Aclobj
+  Aclobj('_dmy', '60', 'permit', 'tcp', '10.246.0.0/17', '', '', '172.20.1.0/24', '', '', '')
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1421 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a82616f58ed71035bc1b443e934692361}\label{classCTextFsm_1_1CTextFsm_a82616f58ed71035bc1b443e934692361}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!ut\_ismatch\_aclstd@{ut\_ismatch\_aclstd}}
+\index{ut\_ismatch\_aclstd@{ut\_ismatch\_aclstd}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{ut\_ismatch\_aclstd()}{ut\_ismatch\_aclstd()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+C\+Text\+Fsm.\+ut\+\_\+ismatch\+\_\+aclstd (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{expect,  }\item[{}]{test,  }\item[{}]{a\+\_\+aclobj }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}UT-driver for _ismatch_aclstd
+
+:param expect   :bool, UT結果の期待値
+:param test     :str, 'WAN-out tcp 10.246.0.100 any 172.20.1.0 80'
+:param a_aclobj :namedtuple Aclobj
+  Aclobj('_dmy', '60', 'permit', '', '10.246.0.0/17', '', '', '172.20.1.0/24', '', '', 'log')
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 1408 行目に定義があります。
+
+
+
+\subsection{メンバ詳解}
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ae4a6e9fb950ddd34ce0078bbbce4bb61}\label{classCTextFsm_1_1CTextFsm_ae4a6e9fb950ddd34ce0078bbbce4bb61}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!aclnames@{aclnames}}
+\index{aclnames@{aclnames}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{aclnames}{aclnames}}
+{\footnotesize\ttfamily C\+Text\+Fsm.\+C\+Text\+Fsm.\+aclnames}
+
+
+
+dic\+:aclobjのキー一覧 
+
+src-\/\+Port
+
+src-\/range Modifierを、(dstport, dstrange, other)に分解する hiroshi aclobjの返却 
+
+ C\+Text\+Fsm.\+py の 502 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_afaf1b7c90c7fc6173ecc700966132c5c}\label{classCTextFsm_1_1CTextFsm_afaf1b7c90c7fc6173ecc700966132c5c}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!confname@{confname}}
+\index{confname@{confname}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{confname}{confname}}
+{\footnotesize\ttfamily C\+Text\+Fsm.\+C\+Text\+Fsm.\+confname}
+
+
+
+Cisco\+Configのファイル名 
+
+open cisco-\/cfg(showrun) 
+
+ C\+Text\+Fsm.\+py の 498 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_acb48a0e8aa2360c087892d749792389a}\label{classCTextFsm_1_1CTextFsm_acb48a0e8aa2360c087892d749792389a}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!Csv\_Header@{Csv\_Header}}
+\index{Csv\_Header@{Csv\_Header}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{Csv\_Header}{Csv\_Header}}
+{\footnotesize\ttfamily dictionary C\+Text\+Fsm.\+C\+Text\+Fsm.\+Csv\+\_\+\+Header\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'racl'}: [\textcolor{stringliteral}{'ACLNAME'}, \textcolor{stringliteral}{'ACLTYPE'}, \textcolor{stringliteral}{'COMMENT'}, \textcolor{stringliteral}{'ACTION'}, \textcolor{stringliteral}{'PROTOCOL'}, \textcolor{stringliteral}{'SHOST'}, \textcolor{stringliteral}{'SANY'}, \textcolor{stringliteral}{'SNETWORK'}, \textcolor{stringliteral}{'SWILDCARD'},}
+\DoxyCodeLine{                 \textcolor{stringliteral}{'SPORTMATCH'}, \textcolor{stringliteral}{'SPORT'}, \textcolor{stringliteral}{'SPORTRANGESTART'}, \textcolor{stringliteral}{'SPORTRANGEEND'}, \textcolor{stringliteral}{'DHOST'}, \textcolor{stringliteral}{'DANY'}, \textcolor{stringliteral}{'DNETWORK'}, \textcolor{stringliteral}{'DWILDCARD'},}
+\DoxyCodeLine{                 \textcolor{stringliteral}{'DPORTMATCH'}, \textcolor{stringliteral}{'DPORT'}, \textcolor{stringliteral}{'DPORTRANGESTART'}, \textcolor{stringliteral}{'DPORTRANGEEND'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'acl'}: [\textcolor{stringliteral}{'NAME'}, \textcolor{stringliteral}{'SN'}, \textcolor{stringliteral}{'ACTION'}, \textcolor{stringliteral}{'PROTOCOL'}, \textcolor{stringliteral}{'SOURCE'}, \textcolor{stringliteral}{'PORT'}, \textcolor{stringliteral}{'RANGE'}, \textcolor{stringliteral}{'DESTINATION'}, \textcolor{stringliteral}{'MODIFIER'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'int'}: [\textcolor{stringliteral}{'INTERFACE'}, \textcolor{stringliteral}{'LINK\_STATUS'}, \textcolor{stringliteral}{'PROTOCOL\_STATUS'}, \textcolor{stringliteral}{'HARDWARE\_TYPE'}, \textcolor{stringliteral}{'ADDRESS'}, \textcolor{stringliteral}{'BIA'}, \textcolor{stringliteral}{'DESCRIPTION'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'IP\_ADDRESS'}, \textcolor{stringliteral}{'MTU'}, \textcolor{stringliteral}{'DUPLEX'}, \textcolor{stringliteral}{'SPEED'}, \textcolor{stringliteral}{'BANDWIDTH'}, \textcolor{stringliteral}{'DELAY'}, \textcolor{stringliteral}{'ENCAPSULATION'}, \textcolor{stringliteral}{'LAST\_INPUT'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'LAST\_OUTPUT'}, \textcolor{stringliteral}{'LAST\_OUTPUT\_HANG'}, \textcolor{stringliteral}{'QUEUE\_STRATEGY'}, \textcolor{stringliteral}{'INPUT\_RATE'}, \textcolor{stringliteral}{'OUTPUT\_RATE'}, \textcolor{stringliteral}{'INPUT\_PACKETS'},}
+\DoxyCodeLine{                \textcolor{stringliteral}{'OUTPUT\_PACKETS'}, \textcolor{stringliteral}{'INPUT\_ERRORS'}, \textcolor{stringliteral}{'OUTPUT\_ERRORS'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'intstatus'}: [\textcolor{stringliteral}{'PORT'}, \textcolor{stringliteral}{'NAME'}, \textcolor{stringliteral}{'STATUS'}, \textcolor{stringliteral}{'VLAN'}, \textcolor{stringliteral}{'DUPLEX'}, \textcolor{stringliteral}{'SPEED'}, \textcolor{stringliteral}{'TYPE'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'eigrptop'}: [\textcolor{stringliteral}{'AS'}, \textcolor{stringliteral}{'ROUTER\_ID'}, \textcolor{stringliteral}{'CODE'}, \textcolor{stringliteral}{'ROUTE'}, \textcolor{stringliteral}{'MASK'}, \textcolor{stringliteral}{'SUCCESSORS'}, \textcolor{stringliteral}{'FD'}, \textcolor{stringliteral}{'TAG'}, \textcolor{stringliteral}{'SERNO'}, \textcolor{stringliteral}{'FD\_AD'}, \textcolor{stringliteral}{'IF'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'eigrpnei'}: [\textcolor{stringliteral}{'AS'}, \textcolor{stringliteral}{'ADDRESS'}, \textcolor{stringliteral}{'INTERFACE'}, \textcolor{stringliteral}{'HOLD'}, \textcolor{stringliteral}{'UPTIME'}, \textcolor{stringliteral}{'SRTT'}, \textcolor{stringliteral}{'RTO'}, \textcolor{stringliteral}{'Q\_CNT'}, \textcolor{stringliteral}{'SEQ\_NUM'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'vlan'}: [\textcolor{stringliteral}{'VLAN\_ID'}, \textcolor{stringliteral}{'NAME'}, \textcolor{stringliteral}{'STATUS'}, \textcolor{stringliteral}{'INTERFACES'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'iprou'}: [\textcolor{stringliteral}{'PROTCOL'}, \textcolor{stringliteral}{'TYPE'}, \textcolor{stringliteral}{'NETWORK'}, \textcolor{stringliteral}{'MASK'}, \textcolor{stringliteral}{'AD'}, \textcolor{stringliteral}{'METRIC'}, \textcolor{stringliteral}{'NEXT-IP'}, \textcolor{stringliteral}{'NEXT-IF'}, \textcolor{stringliteral}{'UPTIME'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'net4'}: [\textcolor{stringliteral}{'NAME'}, \textcolor{stringliteral}{'SN'}, \textcolor{stringliteral}{'ACTION'}, \textcolor{stringliteral}{'PROTOCOL'}, \textcolor{stringliteral}{'SRC'}, \textcolor{stringliteral}{'SPORT'}, \textcolor{stringliteral}{'SRANGE'}, \textcolor{stringliteral}{'DST'}, \textcolor{stringliteral}{'DPORT'}, \textcolor{stringliteral}{'DRANGE'}, \textcolor{stringliteral}{'OTHER'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'int2'}: [\textcolor{stringliteral}{'INTERFACE'}, \textcolor{stringliteral}{'LINK\_STATUS'}, \textcolor{stringliteral}{'PROTOCOL\_STATUS'}, \textcolor{stringliteral}{'ADDRESS'}, \textcolor{stringliteral}{'DESCRIPTION'}, \textcolor{stringliteral}{'IP\_ADDRESS'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'rnat'}: [\textcolor{stringliteral}{'INOUT\_POOL'}, \textcolor{stringliteral}{'PROTOCOL'}, \textcolor{stringliteral}{'SOURCE'}, \textcolor{stringliteral}{'FROM\_IP'}, \textcolor{stringliteral}{'FROM\_PORT'}, \textcolor{stringliteral}{'TO\_IP'}, \textcolor{stringliteral}{'TO\_PORT'}, \textcolor{stringliteral}{'MASK'}, \textcolor{stringliteral}{'ACL'},}
+\DoxyCodeLine{                 \textcolor{stringliteral}{'POOL\_NAME'}, \textcolor{stringliteral}{'POOL\_SIP'}, \textcolor{stringliteral}{'POOL\_EIP'}, \textcolor{stringliteral}{'POOL\_MASK'}, \textcolor{stringliteral}{'RMAP\_NAME'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'cdpnei'}: [\textcolor{stringliteral}{'NEIGHBOR'}, \textcolor{stringliteral}{'LOCAL\_INTERFACE'}, \textcolor{stringliteral}{'CAPABILITY'}, \textcolor{stringliteral}{'PLATFORM'}, \textcolor{stringliteral}{'NEIGHBOR\_INTERFACE'}],}
+\DoxyCodeLine{        \textcolor{stringliteral}{'rint'}: [\textcolor{stringliteral}{'INTERFACE'}, \textcolor{stringliteral}{'DESC'}, \textcolor{stringliteral}{'IPADR'}, \textcolor{stringliteral}{'IPMASK'}, \textcolor{stringliteral}{'SHUT'}, \textcolor{stringliteral}{'ACLG'}, \textcolor{stringliteral}{'ACLDIR'}]}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+テンプレートで解析したリストをcsv出力用するヘッダタイトル 
+
+
+
+ C\+Text\+Fsm.\+py の 445 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ac535afde8ac9c209d0a4c3ecee65e4b0}\label{classCTextFsm_1_1CTextFsm_ac535afde8ac9c209d0a4c3ecee65e4b0}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!DbgLevel@{DbgLevel}}
+\index{DbgLevel@{DbgLevel}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{DbgLevel}{DbgLevel}}
+{\footnotesize\ttfamily list C\+Text\+Fsm.\+C\+Text\+Fsm.\+Dbg\+Level\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        0,  \textcolor{comment}{\# LV0   何も出力しない。}}
+\DoxyCodeLine{        0,  \textcolor{comment}{\# LV1    ismatch\_aclで、テストパターン毎に情報を出力}}
+\DoxyCodeLine{        0,  \textcolor{comment}{\# LV2    ismatch\_aclで、access-list毎に情報を出力}}
+\DoxyCodeLine{        0,  \textcolor{comment}{\# LV3    複数ファイル検索で、検索対象ファイル名を出力}}
+\DoxyCodeLine{        0  \textcolor{comment}{\# LV4}}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+D\+B\+Gログの出力レベル 
+
+
+
+ C\+Text\+Fsm.\+py の 486 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_ac148270354b58b267ac87e23761b20e4}\label{classCTextFsm_1_1CTextFsm_ac148270354b58b267ac87e23761b20e4}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!IfAction@{IfAction}}
+\index{IfAction@{IfAction}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{IfAction}{IfAction}}
+{\footnotesize\ttfamily dictionary C\+Text\+Fsm.\+C\+Text\+Fsm.\+If\+Action\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'permit'}: 0,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'deny'}: 1}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+Aclのactionに許可される語句 
+
+
+
+ C\+Text\+Fsm.\+py の 467 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a6c193f4c315d94b59475cb6f1debefe6}\label{classCTextFsm_1_1CTextFsm_a6c193f4c315d94b59475cb6f1debefe6}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!IfIpProtocol@{IfIpProtocol}}
+\index{IfIpProtocol@{IfIpProtocol}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{IfIpProtocol}{IfIpProtocol}}
+{\footnotesize\ttfamily dictionary C\+Text\+Fsm.\+C\+Text\+Fsm.\+If\+Ip\+Protocol\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ip'}: 0,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'icmp'}: 1,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'igmp'}: 2,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'tcp'}: 6,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'udp'}: 17,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'esp'}: 50,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ahp'}: 51,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'eigrp'}: 88,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ospf'}: 89,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'pim'}: 103}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+I\+P-\/\+Protocols、\+I\+Pの上位プロトコルなので、\+I\+Pのフィルタをチェックする 
+
+
+
+ C\+Text\+Fsm.\+py の 472 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a1e3f702dc6832495689001245994913a}\label{classCTextFsm_1_1CTextFsm_a1e3f702dc6832495689001245994913a}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!parse\_statement@{parse\_statement}}
+\index{parse\_statement@{parse\_statement}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{parse\_statement}{parse\_statement}}
+{\footnotesize\ttfamily C\+Text\+Fsm.\+C\+Text\+Fsm.\+parse\+\_\+statement}
+
+
+
+処理中のparsed-\/statement 
+
+D\+B\+G-\/\+I\+NF 
+
+ C\+Text\+Fsm.\+py の 508 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a38d02993201dbf1e37d4025693d9a225}\label{classCTextFsm_1_1CTextFsm_a38d02993201dbf1e37d4025693d9a225}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!Port\_mnemonic@{Port\_mnemonic}}
+\index{Port\_mnemonic@{Port\_mnemonic}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{Port\_mnemonic}{Port\_mnemonic}}
+{\footnotesize\ttfamily dictionary C\+Text\+Fsm.\+C\+Text\+Fsm.\+Port\+\_\+mnemonic\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ftp-data'}: 20,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ftp'}: 21,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ssh'}: 22,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'telnet'}: 23,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'smtp'}: 25,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'domain'}: 53,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'bootps'}: 67,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'bootpc'}: 68,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'tftp'}: 69,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'www'}: 80,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'ntp'}: 123,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'netbios-ns'}: 137,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'netbios-dgm'}: 138,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'netbios\_ssn'}: 139,  \textcolor{comment}{\# 未確認}}
+\DoxyCodeLine{        \textcolor{stringliteral}{'snmp'}: 161,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'snmptrap'}: 162,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'bgp'}: 179,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'https'}: 443,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'isakmp'}: 500,}
+\DoxyCodeLine{        \textcolor{stringliteral}{'lpd'}: 515}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+P\+O\+RT mnemonic 
+
+
+
+ C\+Text\+Fsm.\+py の 409 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_aaae27a35f146f70f11ec0d40df0c8cdb}\label{classCTextFsm_1_1CTextFsm_aaae27a35f146f70f11ec0d40df0c8cdb}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!Split\_Header@{Split\_Header}}
+\index{Split\_Header@{Split\_Header}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{Split\_Header}{Split\_Header}}
+{\footnotesize\ttfamily list C\+Text\+Fsm.\+C\+Text\+Fsm.\+Split\+\_\+\+Header\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  [}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+run[ ]*\$'}, \textcolor{stringliteral}{'.shrun'}],  \textcolor{comment}{\# sh run}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+ip[ ]+access\(\backslash\)-list[ ]*\$'}, \textcolor{stringliteral}{'.shipacl'}],  \textcolor{comment}{\# sh ip access-list}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+int[ ]+status[ ]*\$'}, \textcolor{stringliteral}{'.shintstatus'}],  \textcolor{comment}{\# sh int status}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+vlan[ ]*\$'}, \textcolor{stringliteral}{'.shvlan'}],  \textcolor{comment}{\# sh vlan}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+ip[ ]+int[ ]+brief[ ]*\$'}, \textcolor{stringliteral}{'.shipintbrief'}],  \textcolor{comment}{\# sh ip int brief}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+ip[ ]+rou[ ]*\$'}, \textcolor{stringliteral}{'.shiprou'}],  \textcolor{comment}{\# sh ip rou}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+ip[ ]+eigrp[ ]+top[ ]+all\(\backslash\)-links[ ]*\$'}, \textcolor{stringliteral}{'.shipeigrptop'}],  \textcolor{comment}{\# sh eigrp top all-links}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+ip[ ]+eigrp[ ]+nei[ ]*\$'}, \textcolor{stringliteral}{'.shipeigrpnei'}],  \textcolor{comment}{\# sh eigrp nei}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+int[ ]*\$'}, \textcolor{stringliteral}{'.shint'}],  \textcolor{comment}{\# sh int}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+proc[ ]+cpu[ ]*\$'}, \textcolor{stringliteral}{'.shproccpu'}],  \textcolor{comment}{\# sh proc cpu}}
+\DoxyCodeLine{        [\textcolor{stringliteral}{r'\string^.+\(\backslash\)\#[ ]*sh[ ]+cdp[ ]+nei[ ]*\$'}, \textcolor{stringliteral}{'.shcdpnei'}]  \textcolor{comment}{\# sh cdp nei}}
+\DoxyCodeLine{}
+\DoxyCodeLine{    ]}
+
+\end{DoxyCode}
+
+
+namedtuple ciscoのcommand-\/logを分割するヘッダ 
+
+
+
+ C\+Text\+Fsm.\+py の 391 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_afb88b6e8121f75c289acca130ebf33ab}\label{classCTextFsm_1_1CTextFsm_afb88b6e8121f75c289acca130ebf33ab}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!Templ\_fname@{Templ\_fname}}
+\index{Templ\_fname@{Templ\_fname}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{Templ\_fname}{Templ\_fname}}
+{\footnotesize\ttfamily dictionary C\+Text\+Fsm.\+C\+Text\+Fsm.\+Templ\+\_\+fname\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries 初期値\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=  \{}
+\DoxyCodeLine{        \textcolor{stringliteral}{'racl'}: \textcolor{stringliteral}{'cisco\_ios\_show\_running-config\_partition\_access-list.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'acl'}: \textcolor{stringliteral}{'cisco\_ios\_show\_access-list.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'int'}: \textcolor{stringliteral}{'cisco\_ios\_show\_interfaces.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'intstatus'}: \textcolor{stringliteral}{'cisco\_ios\_show\_interfaces\_status.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'eigrptop'}: \textcolor{stringliteral}{'cisco\_ios\_show\_ip\_eigrp\_topology.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'eigrpnei'}: \textcolor{stringliteral}{'cisco\_ios\_show\_ip\_eigrp\_neighbors.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'vlan'}: \textcolor{stringliteral}{'cisco\_ios\_show\_vlan.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'iprou'}: \textcolor{stringliteral}{'cisco\_ios\_show\_ip\_route.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'rnat'}: \textcolor{stringliteral}{'cisco\_ios\_show\_running-config\_nat.template'},}
+\DoxyCodeLine{        \textcolor{stringliteral}{'cdpnei'}: \textcolor{stringliteral}{'cisco\_ios\_show\_cdp\_neighbors.template'}}
+\DoxyCodeLine{    \}}
+
+\end{DoxyCode}
+
+
+ntc\+\_\+templatesのファイル名 
+
+
+
+ C\+Text\+Fsm.\+py の 432 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1CTextFsm_a821e94401ea692f24c0ee2f64d7a0a04}\label{classCTextFsm_1_1CTextFsm_a821e94401ea692f24c0ee2f64d7a0a04}} 
+\index{CTextFsm.CTextFsm@{CTextFsm.CTextFsm}!testpattern@{testpattern}}
+\index{testpattern@{testpattern}!CTextFsm.CTextFsm@{CTextFsm.CTextFsm}}
+\subsubsection{\texorpdfstring{testpattern}{testpattern}}
+{\footnotesize\ttfamily C\+Text\+Fsm.\+C\+Text\+Fsm.\+testpattern}
+
+
+
+処理中のテストパターン 
+
+D\+B\+G-\/\+I\+NF
+
+20190804\+:性能対策のため、変数に代入して使用 単項目チェック(\+N\+A\+M\+E) 
+
+ C\+Text\+Fsm.\+py の 504 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+Text\+Fsm.\+py\end{DoxyCompactItemize}

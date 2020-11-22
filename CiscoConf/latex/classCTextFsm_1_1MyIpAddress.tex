@@ -1,0 +1,141 @@
+\hypertarget{classCTextFsm_1_1MyIpAddress}{}\section{C\+Text\+Fsm.\+My\+Ip\+Address クラス}
+\label{classCTextFsm_1_1MyIpAddress}\index{CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}}
+
+
+C\+Text\+Fsm.\+My\+Ip\+Address の継承関係図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classCTextFsm_1_1MyIpAddress__inherit__graph}
+\end{center}
+\end{figure}
+
+
+C\+Text\+Fsm.\+My\+Ip\+Address 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{classCTextFsm_1_1MyIpAddress__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_aedba27b663b3d844b2740e8b4d3e18dd}\label{classCTextFsm_1_1MyIpAddress_aedba27b663b3d844b2740e8b4d3e18dd}} 
+def {\bfseries \+\_\+\+\_\+init\+\_\+\+\_\+} (self)
+\end{DoxyCompactItemize}
+\subsection*{静的公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_a918b0f563af505067145bc00ba7663aa}\label{classCTextFsm_1_1MyIpAddress_a918b0f563af505067145bc00ba7663aa}} 
+def {\bfseries errprint} (pgm, caller, msg)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1MyIpAddress_a84a3bcaa73683ebca8d3202734b3c98b}{ipwild2ip}} (ip, wild)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1MyIpAddress_a70adbc4f3faf89e98425a1799c13b231}{is\+\_\+ipinnet}} (sip, snet, isstrict=False)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1MyIpAddress_ac1dbadf1089b19f5c735e8b76e66dbc0}{is\+\_\+ipinnetw}} (sip, snet, isstrict=False)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1MyIpAddress_aee7d732ce8da8657add80c4d3ec1cb0f}{is\+\_\+ipaddress}} (sip)
+\item 
+def \mbox{\hyperlink{classCTextFsm_1_1MyIpAddress_aa0f274c5ef3ea6e3cf86f4a58469ab51}{is\+\_\+digit}} (num)
+\end{DoxyCompactItemize}
+
+
+\subsection{詳解}
+
+
+ C\+Text\+Fsm.\+py の 42 行目に定義があります。
+
+
+
+\subsection{関数詳解}
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_a84a3bcaa73683ebca8d3202734b3c98b}\label{classCTextFsm_1_1MyIpAddress_a84a3bcaa73683ebca8d3202734b3c98b}} 
+\index{CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}!ipwild2ip@{ipwild2ip}}
+\index{ipwild2ip@{ipwild2ip}!CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}}
+\subsubsection{\texorpdfstring{ipwild2ip()}{ipwild2ip()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+My\+Ip\+Address.\+ipwild2ip (\begin{DoxyParamCaption}\item[{}]{ip,  }\item[{}]{wild }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}any   -> 0.0.0.0/255.255.255.255 -> 0.0.0.0/0
+host  -> w.x.y.z/0.0.0.0         -> w.x.y.z/32
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 54 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_aa0f274c5ef3ea6e3cf86f4a58469ab51}\label{classCTextFsm_1_1MyIpAddress_aa0f274c5ef3ea6e3cf86f4a58469ab51}} 
+\index{CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}!is\_digit@{is\_digit}}
+\index{is\_digit@{is\_digit}!CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}}
+\subsubsection{\texorpdfstring{is\_digit()}{is\_digit()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+My\+Ip\+Address.\+is\+\_\+digit (\begin{DoxyParamCaption}\item[{}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}Numericチェック。[0-9]+
+
+:param num:str, チェック対象
+:return :bool
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 191 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_aee7d732ce8da8657add80c4d3ec1cb0f}\label{classCTextFsm_1_1MyIpAddress_aee7d732ce8da8657add80c4d3ec1cb0f}} 
+\index{CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}!is\_ipaddress@{is\_ipaddress}}
+\index{is\_ipaddress@{is\_ipaddress}!CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}}
+\subsubsection{\texorpdfstring{is\_ipaddress()}{is\_ipaddress()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+My\+Ip\+Address.\+is\+\_\+ipaddress (\begin{DoxyParamCaption}\item[{}]{sip }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}ipaddressが有効化否か
+:param sip : str, w.x.y.z
+:return :bool
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 170 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_a70adbc4f3faf89e98425a1799c13b231}\label{classCTextFsm_1_1MyIpAddress_a70adbc4f3faf89e98425a1799c13b231}} 
+\index{CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}!is\_ipinnet@{is\_ipinnet}}
+\index{is\_ipinnet@{is\_ipinnet}!CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}}
+\subsubsection{\texorpdfstring{is\_ipinnet()}{is\_ipinnet()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+My\+Ip\+Address.\+is\+\_\+ipinnet (\begin{DoxyParamCaption}\item[{}]{sip,  }\item[{}]{snet,  }\item[{}]{isstrict = {\ttfamily False} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}ip-addressがnetwork-addressに含まれるか否かを検査
+
+:param  sip  :str, like '192.168.0.1'
+:param  snet :str, like '192.168.0.0/24'
+:param  isstrict:bool, IPv4Network-strict
+:return bool :
+
+:modify 20190724:
+  net = ipaddress.IPv4Network()に、strict=Falseを追加。ホストビットオンを無視する。
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 83 行目に定義があります。
+
+\mbox{\Hypertarget{classCTextFsm_1_1MyIpAddress_ac1dbadf1089b19f5c735e8b76e66dbc0}\label{classCTextFsm_1_1MyIpAddress_ac1dbadf1089b19f5c735e8b76e66dbc0}} 
+\index{CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}!is\_ipinnetw@{is\_ipinnetw}}
+\index{is\_ipinnetw@{is\_ipinnetw}!CTextFsm.MyIpAddress@{CTextFsm.MyIpAddress}}
+\subsubsection{\texorpdfstring{is\_ipinnetw()}{is\_ipinnetw()}}
+{\footnotesize\ttfamily def C\+Text\+Fsm.\+My\+Ip\+Address.\+is\+\_\+ipinnetw (\begin{DoxyParamCaption}\item[{}]{sip,  }\item[{}]{snet,  }\item[{}]{isstrict = {\ttfamily False} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyVerb}ip-addressがnetwork-addressに含まれるか否かを検査
+
+:param  sip  :str, like '192.168.0.1'
+:param  snet :str, like '192.168.0.0/0.0.0.255'
+:param  isstrict:bool, IPv4Network-strict
+:return bool :
+
+:modify 20190811:
+  wildcardbitとして作成
+\end{DoxyVerb}
+ 
+
+ C\+Text\+Fsm.\+py の 117 行目に定義があります。
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+C\+Text\+Fsm.\+py\end{DoxyCompactItemize}

@@ -1,0 +1,13 @@
+# 正常系
+WAN-in eigrp 10.0.0.1 any 192.168.0.0 any
+WAN-in icmp  10.0.0.1 any 192.168.0.0 any
+WAN-in udp   10.0.0.1 any 192.168.0.120 123
+WAN-in udp   10.0.0.1 any 192.168.0.120 53
+WAN-in tcp   10.0.0.1 any 192.168.0.0 established
+WAN-in tcp   10.0.0.1    any 192.168.0.120 23
+WAN-in udp   192.168.0.1 any 192.168.1.1   80
+WAN-in tcp   10.0.0.1    any 10.0.0.2      138
+WAN-in tcp   10.0.0.1    any 192.168.0.120 2222
+WAN-in tcp   10.0.0.1    any 192.168.0.120 443
+WAN-in tcp   10.0.0.255  any 172.20.1.1    80
+WAN-in tcp   10.0.0.255  any 172.20.1.1    25

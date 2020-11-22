@@ -1,0 +1,33 @@
+Standard IP access list 5
+   10 permit 192.168.0.0, wildcard bits 0.0.3.255
+Standard IP access list 6
+   10 permit 192.168.0.88
+   20 permit 192.168.0.120
+   30 permit 192.168.0.1
+Extended IP access list WAN-in
+   10  permit eigrp any any
+   20  permit icmp any any
+   30  permit udp any 192.168.0.120 0.0.0.0 eq 123
+   31  deny   udp any any
+   40  permit tcp any any established
+   50  permit tcp any any eq telnet
+   60  permit ip 192.168.0.0 0.0.255.255 192.168.0.0 0.0.255.255
+   100 deny   tcp any range 137 139 any
+   110 deny   tcp any               any range 137 139
+   120 permit tcp any               192.168.0.120 0.0.0.0 eq 2222
+   130 permit tcp any               192.168.0.120 0.0.0.0 eq https
+   140 permit tcp any               172.20.1.0 0.0.0.255 eq www
+Extended IP access list WAN-out
+    10 permit eigrp any any
+    20 permit icmp any any
+    30 permit udp any any (1 match)
+    40 permit tcp any any established (5 matches)
+    50 permit tcp any any eq telnet
+    60 permit ip 10.246.0.0  0.0.127.255 10.246.0.0 0.0.255.255
+    70 permit ip 10.246.0.0  0.0.127.255 192.168.1.0 0.0.0.255
+    80 permit ip 10.246.0.0  0.0.127.255 192.168.2.0 0.0.0.255
+   140 permit tcp 10.246.2.0 0.0.0.255   172.16.0.0 0.15.255.255 eq 100
+   150 permit tcp 10.246.2.0 0.0.0.255   172.16.0.0 0.15.255.255 eq 200
+   160 permit tcp 10.246.3.0 0.0.0.255   172.32.0.0 0.15.255.255
+   170 permit tcp 10.246.4.0 0.0.0.255   10.0.0.0 0.0.0.255 range 1000 3000
+   180 permit tcp 10.246.100.0 0.0.0.255 100.100.100.100 0.0.0.0 eq 9999

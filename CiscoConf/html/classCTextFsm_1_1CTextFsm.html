@@ -1,0 +1,1578 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.15"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>My Project: CTextFsm.CTextFsm クラス</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">My Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.15 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>CTextFsm</b></li><li class="navelem"><a class="el" href="classCTextFsm_1_1CTextFsm.html">CTextFsm</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">公開メンバ関数</a> &#124;
+<a href="#pub-static-methods">静的公開メンバ関数</a> &#124;
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="#pub-static-attribs">静的公開変数類</a> &#124;
+<a href="classCTextFsm_1_1CTextFsm-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle">
+<div class="title">CTextFsm.CTextFsm クラス</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+CTextFsm.CTextFsm の継承関係図</div>
+<div class="dyncontent">
+<div class="center"><img src="classCTextFsm_1_1CTextFsm__inherit__graph.png" border="0" usemap="#CTextFsm_8CTextFsm_inherit__map" alt="Inheritance graph"/></div>
+<map name="CTextFsm_8CTextFsm_inherit__map" id="CTextFsm_8CTextFsm_inherit__map">
+<area shape="rect"  title=" " alt="" coords="263,79,408,104"/>
+<area shape="rect"  href="classCiscoConf_1_1CiscoCommon.html" title=" " alt="" coords="73,152,247,177"/>
+<area shape="rect"  href="classCTextFsm__acl_1_1test.html" title=" " alt="" coords="270,152,401,177"/>
+<area shape="rect"  href="classCTextFsm__ut_1_1test.html" title=" " alt="" coords="425,152,550,177"/>
+<area shape="rect"  title=" " alt="" coords="307,5,364,31"/>
+<area shape="rect"  href="classCiscoConf_1_1CiscoAcl.html" title=" " alt="" coords="5,225,144,251"/>
+<area shape="rect"  href="classCiscoConf_1_1CiscoRoute.html" title=" " alt="" coords="167,225,323,251"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<div class="dynheader">
+CTextFsm.CTextFsm 連携図</div>
+<div class="dyncontent">
+<div class="center"><img src="classCTextFsm_1_1CTextFsm__coll__graph.png" border="0" usemap="#CTextFsm_8CTextFsm_coll__map" alt="Collaboration graph"/></div>
+<map name="CTextFsm_8CTextFsm_coll__map" id="CTextFsm_8CTextFsm_coll__map">
+<area shape="rect"  title=" " alt="" coords="5,79,150,104"/>
+<area shape="rect"  title=" " alt="" coords="49,5,106,31"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">凡例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+公開メンバ関数</h2></td></tr>
+<tr class="memitem:ae888a03cec9e1bb808d590dc35a9ec6b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ae888a03cec9e1bb808d590dc35a9ec6b">__init__</a> (self)</td></tr>
+<tr class="separator:ae888a03cec9e1bb808d590dc35a9ec6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4248a8d77fdc84c340d4d9d1f5b2790e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a4248a8d77fdc84c340d4d9d1f5b2790e">ismatch_acl</a> (self, testptn, aclobjs, tfonly=False)</td></tr>
+<tr class="memdesc:a4248a8d77fdc84c340d4d9d1f5b2790e"><td class="mdescLeft">&#160;</td><td class="mdescRight">testptnの項目数チェック  <a href="#a4248a8d77fdc84c340d4d9d1f5b2790e">[詳解]</a><br /></td></tr>
+<tr class="separator:a4248a8d77fdc84c340d4d9d1f5b2790e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6043d2a3f369ecd76cdbd636e6c2e035"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a6043d2a3f369ecd76cdbd636e6c2e035">read_conf</a> (self, fname)</td></tr>
+<tr class="separator:a6043d2a3f369ecd76cdbd636e6c2e035"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4bf12c19b9be216a0a2c8c9ae8f0459"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#af4bf12c19b9be216a0a2c8c9ae8f0459">parse_racl</a> (self, confobj, tdir=None)</td></tr>
+<tr class="separator:af4bf12c19b9be216a0a2c8c9ae8f0459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aadf519d7468e4b3d2237e3b189d3514c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#aadf519d7468e4b3d2237e3b189d3514c">parse_acl</a> (self, confobj, tdir=None)</td></tr>
+<tr class="separator:aadf519d7468e4b3d2237e3b189d3514c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d6ef30a6341006802ebacf2d3fa5fc1"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a4d6ef30a6341006802ebacf2d3fa5fc1">parse</a> (self, confobj, templ=None, tdir=None)</td></tr>
+<tr class="separator:a4d6ef30a6341006802ebacf2d3fa5fc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b07c128e0344d13bb92a318a25ab625"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a8b07c128e0344d13bb92a318a25ab625">parsed2acl</a> (self, acls)</td></tr>
+<tr class="separator:a8b07c128e0344d13bb92a318a25ab625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a96df9cf7587763ba97a1c1299ff687e4"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a96df9cf7587763ba97a1c1299ff687e4">conf_csvprint</a> (self, <a class="el" href="classCTextFsm_1_1CTextFsm.html#afaf1b7c90c7fc6173ecc700966132c5c">confname</a>, templ, isheader=True, headding=None)</td></tr>
+<tr class="separator:a96df9cf7587763ba97a1c1299ff687e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ecfc2994e306a0ae4a8670e651f8258"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a1ecfc2994e306a0ae4a8670e651f8258">logsplit</a> (self, fname, otdir='./', otfbase=None)</td></tr>
+<tr class="separator:a1ecfc2994e306a0ae4a8670e651f8258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cc7b93a2ff3e94d32f2387530c89895"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a4cc7b93a2ff3e94d32f2387530c89895">norm_ipmask</a> (self, ipmask)</td></tr>
+<tr class="separator:a4cc7b93a2ff3e94d32f2387530c89895"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afba04726b4663e2a7d3ec4d4804af277"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#afba04726b4663e2a7d3ec4d4804af277">is_port</a> (self, port, ope, range)</td></tr>
+<tr class="separator:afba04726b4663e2a7d3ec4d4804af277"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5accc7ec3e821ff02e9cdf3f06b1355"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ad5accc7ec3e821ff02e9cdf3f06b1355">set_parsed</a> (self, fname=None, templ=None, tdir=None)</td></tr>
+<tr class="separator:ad5accc7ec3e821ff02e9cdf3f06b1355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e940ba9e9159eef2513342466e2fb11"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a6e940ba9e9159eef2513342466e2fb11">set_acl</a> (self, fname=None, tdir=None)</td></tr>
+<tr class="separator:a6e940ba9e9159eef2513342466e2fb11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6338783bf6b3879a1e522d534602a96"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#af6338783bf6b3879a1e522d534602a96">set_racl</a> (self, fname=None, tdir=None)</td></tr>
+<tr class="separator:af6338783bf6b3879a1e522d534602a96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a807b340e6b101f17f1b851bf6272ee52"><td class="memItemLeft" align="right" valign="top"><a id="a807b340e6b101f17f1b851bf6272ee52"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>dbgprint</b> (self, level, pgm, msg)</td></tr>
+<tr class="separator:a807b340e6b101f17f1b851bf6272ee52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cec3d73733c16ef6bb8d83724454b32"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a9cec3d73733c16ef6bb8d83724454b32">ut_is_port</a> (self, expect, port, ope, range)</td></tr>
+<tr class="separator:a9cec3d73733c16ef6bb8d83724454b32"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e1e78dbb799c91a8174c09aab2ca30b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a2e1e78dbb799c91a8174c09aab2ca30b">ut_is_ipinnetw</a> (self, expect, ip, net)</td></tr>
+<tr class="separator:a2e1e78dbb799c91a8174c09aab2ca30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad48b822b0ee1c57c37e671a1b380d0bb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ad48b822b0ee1c57c37e671a1b380d0bb">ut_is_ipinnet</a> (self, expect, ip, net)</td></tr>
+<tr class="separator:ad48b822b0ee1c57c37e671a1b380d0bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9708d882f46a66cee6ae8c47766ef50b"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a9708d882f46a66cee6ae8c47766ef50b">ut_ismatch_acl</a> (self, expect, test, aclobj)</td></tr>
+<tr class="separator:a9708d882f46a66cee6ae8c47766ef50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3ecec0b7d2f27e81faee975998bd860"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ae3ecec0b7d2f27e81faee975998bd860">ut_ismatch_acl2</a> (self, expect, aclname, test, aclobj)</td></tr>
+<tr class="separator:ae3ecec0b7d2f27e81faee975998bd860"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82616f58ed71035bc1b443e934692361"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a82616f58ed71035bc1b443e934692361">ut_ismatch_aclstd</a> (self, expect, test, a_aclobj)</td></tr>
+<tr class="separator:a82616f58ed71035bc1b443e934692361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a745b22a0fb24ebcfc2a77bf430429"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ac5a745b22a0fb24ebcfc2a77bf430429">ut_ismatch_aclext</a> (self, expect, test, a_aclobj)</td></tr>
+<tr class="separator:ac5a745b22a0fb24ebcfc2a77bf430429"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9440c97d6fa11decc6aa29a1112157d8"><td class="memItemLeft" align="right" valign="top"><a id="a9440c97d6fa11decc6aa29a1112157d8"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>get_enum</b> (self)</td></tr>
+<tr class="separator:a9440c97d6fa11decc6aa29a1112157d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静的公開メンバ関数</h2></td></tr>
+<tr class="memitem:a2d26ded29b0a795000470f2f9d9186cb"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a2d26ded29b0a795000470f2f9d9186cb">is_prot</a> (tprot, fprot)</td></tr>
+<tr class="separator:a2d26ded29b0a795000470f2f9d9186cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac33bf15e285e10cb094a5aaa179f1824"><td class="memItemLeft" align="right" valign="top"><a id="ac33bf15e285e10cb094a5aaa179f1824"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>infprint</b> (pgm, caller, msg, out=None)</td></tr>
+<tr class="separator:ac33bf15e285e10cb094a5aaa179f1824"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5fa599194aea3773d6e903b5fded7be"><td class="memItemLeft" align="right" valign="top"><a id="af5fa599194aea3773d6e903b5fded7be"></a>
+def&#160;</td><td class="memItemRight" valign="bottom"><b>errprint</b> (pgm, caller, msg)</td></tr>
+<tr class="separator:af5fa599194aea3773d6e903b5fded7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06b5d47fdfe2bf0bd79ba735e941c343"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a06b5d47fdfe2bf0bd79ba735e941c343">csvprint</a> (ll, header=None, headding=None)</td></tr>
+<tr class="separator:a06b5d47fdfe2bf0bd79ba735e941c343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:afaf1b7c90c7fc6173ecc700966132c5c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#afaf1b7c90c7fc6173ecc700966132c5c">confname</a></td></tr>
+<tr class="memdesc:afaf1b7c90c7fc6173ecc700966132c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">CiscoConfigのファイル名  <a href="#afaf1b7c90c7fc6173ecc700966132c5c">[詳解]</a><br /></td></tr>
+<tr class="separator:afaf1b7c90c7fc6173ecc700966132c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b28ccc7a1aee160094fde5c304a74b"><td class="memItemLeft" align="right" valign="top"><a id="ad5b28ccc7a1aee160094fde5c304a74b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ad5b28ccc7a1aee160094fde5c304a74b">templfname</a></td></tr>
+<tr class="memdesc:ad5b28ccc7a1aee160094fde5c304a74b"><td class="mdescLeft">&#160;</td><td class="mdescRight">テンプレートファイル名 <br /></td></tr>
+<tr class="separator:ad5b28ccc7a1aee160094fde5c304a74b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4a6e9fb950ddd34ce0078bbbce4bb61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ae4a6e9fb950ddd34ce0078bbbce4bb61">aclnames</a></td></tr>
+<tr class="memdesc:ae4a6e9fb950ddd34ce0078bbbce4bb61"><td class="mdescLeft">&#160;</td><td class="mdescRight">dic:aclobjのキー一覧  <a href="#ae4a6e9fb950ddd34ce0078bbbce4bb61">[詳解]</a><br /></td></tr>
+<tr class="separator:ae4a6e9fb950ddd34ce0078bbbce4bb61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a821e94401ea692f24c0ee2f64d7a0a04"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a821e94401ea692f24c0ee2f64d7a0a04">testpattern</a></td></tr>
+<tr class="memdesc:a821e94401ea692f24c0ee2f64d7a0a04"><td class="mdescLeft">&#160;</td><td class="mdescRight">処理中のテストパターン  <a href="#a821e94401ea692f24c0ee2f64d7a0a04">[詳解]</a><br /></td></tr>
+<tr class="separator:a821e94401ea692f24c0ee2f64d7a0a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4056398c8eeffd96560aad7265eb1dee"><td class="memItemLeft" align="right" valign="top"><a id="a4056398c8eeffd96560aad7265eb1dee"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a4056398c8eeffd96560aad7265eb1dee">acl_statement</a></td></tr>
+<tr class="memdesc:a4056398c8eeffd96560aad7265eb1dee"><td class="mdescLeft">&#160;</td><td class="mdescRight">処理中のacl-statement <br /></td></tr>
+<tr class="separator:a4056398c8eeffd96560aad7265eb1dee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e3f702dc6832495689001245994913a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a1e3f702dc6832495689001245994913a">parse_statement</a></td></tr>
+<tr class="memdesc:a1e3f702dc6832495689001245994913a"><td class="mdescLeft">&#160;</td><td class="mdescRight">処理中のparsed-statement  <a href="#a1e3f702dc6832495689001245994913a">[詳解]</a><br /></td></tr>
+<tr class="separator:a1e3f702dc6832495689001245994913a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40438368fa1a2fd8858d2960713caeff"><td class="memItemLeft" align="right" valign="top"><a id="a40438368fa1a2fd8858d2960713caeff"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a40438368fa1a2fd8858d2960713caeff">ipnet_strict</a></td></tr>
+<tr class="memdesc:a40438368fa1a2fd8858d2960713caeff"><td class="mdescLeft">&#160;</td><td class="mdescRight">is_ipinnetで、ホストビットオンをチェックするか否か <br /></td></tr>
+<tr class="separator:a40438368fa1a2fd8858d2960713caeff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+静的公開変数類</h2></td></tr>
+<tr class="memitem:aaae27a35f146f70f11ec0d40df0c8cdb"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#aaae27a35f146f70f11ec0d40df0c8cdb">Split_Header</a></td></tr>
+<tr class="memdesc:aaae27a35f146f70f11ec0d40df0c8cdb"><td class="mdescLeft">&#160;</td><td class="mdescRight">namedtuple ciscoのcommand-logを分割するヘッダ  <a href="#aaae27a35f146f70f11ec0d40df0c8cdb">[詳解]</a><br /></td></tr>
+<tr class="separator:aaae27a35f146f70f11ec0d40df0c8cdb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdcfff561e440d13d71126a84a9bfeab"><td class="memItemLeft" align="right" valign="top"><a id="abdcfff561e440d13d71126a84a9bfeab"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#abdcfff561e440d13d71126a84a9bfeab">Ntc_Dir</a> = '/usr/lib/python2.7/site-packages/ntc_templates-1.1.0-py2.7.egg/ntc_templates/templates/'</td></tr>
+<tr class="memdesc:abdcfff561e440d13d71126a84a9bfeab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ntc-templatesのディレクトリ <br /></td></tr>
+<tr class="separator:abdcfff561e440d13d71126a84a9bfeab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38d02993201dbf1e37d4025693d9a225"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a38d02993201dbf1e37d4025693d9a225">Port_mnemonic</a></td></tr>
+<tr class="memdesc:a38d02993201dbf1e37d4025693d9a225"><td class="mdescLeft">&#160;</td><td class="mdescRight">PORT mnemonic  <a href="#a38d02993201dbf1e37d4025693d9a225">[詳解]</a><br /></td></tr>
+<tr class="separator:a38d02993201dbf1e37d4025693d9a225"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb88b6e8121f75c289acca130ebf33ab"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#afb88b6e8121f75c289acca130ebf33ab">Templ_fname</a></td></tr>
+<tr class="memdesc:afb88b6e8121f75c289acca130ebf33ab"><td class="mdescLeft">&#160;</td><td class="mdescRight">ntc_templatesのファイル名  <a href="#afb88b6e8121f75c289acca130ebf33ab">[詳解]</a><br /></td></tr>
+<tr class="separator:afb88b6e8121f75c289acca130ebf33ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb48a0e8aa2360c087892d749792389a"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#acb48a0e8aa2360c087892d749792389a">Csv_Header</a></td></tr>
+<tr class="memdesc:acb48a0e8aa2360c087892d749792389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">テンプレートで解析したリストをcsv出力用するヘッダタイトル  <a href="#acb48a0e8aa2360c087892d749792389a">[詳解]</a><br /></td></tr>
+<tr class="separator:acb48a0e8aa2360c087892d749792389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac148270354b58b267ac87e23761b20e4"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ac148270354b58b267ac87e23761b20e4">IfAction</a></td></tr>
+<tr class="memdesc:ac148270354b58b267ac87e23761b20e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aclのactionに許可される語句  <a href="#ac148270354b58b267ac87e23761b20e4">[詳解]</a><br /></td></tr>
+<tr class="separator:ac148270354b58b267ac87e23761b20e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c193f4c315d94b59475cb6f1debefe6"><td class="memItemLeft" align="right" valign="top">dictionary&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#a6c193f4c315d94b59475cb6f1debefe6">IfIpProtocol</a></td></tr>
+<tr class="memdesc:a6c193f4c315d94b59475cb6f1debefe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">IP-Protocols、IPの上位プロトコルなので、IPのフィルタをチェックする  <a href="#a6c193f4c315d94b59475cb6f1debefe6">[詳解]</a><br /></td></tr>
+<tr class="separator:a6c193f4c315d94b59475cb6f1debefe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac535afde8ac9c209d0a4c3ecee65e4b0"><td class="memItemLeft" align="right" valign="top">list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCTextFsm_1_1CTextFsm.html#ac535afde8ac9c209d0a4c3ecee65e4b0">DbgLevel</a></td></tr>
+<tr class="memdesc:ac535afde8ac9c209d0a4c3ecee65e4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">DBGログの出力レベル  <a href="#ac535afde8ac9c209d0a4c3ecee65e4b0">[詳解]</a><br /></td></tr>
+<tr class="separator:ac535afde8ac9c209d0a4c3ecee65e4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><pre class="fragment">Cisco ConfをParseするクラス
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00386">386</a> 行目に定義があります。</p>
+</div><h2 class="groupheader">構築子と解体子</h2>
+<a id="ae888a03cec9e1bb808d590dc35a9ec6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae888a03cec9e1bb808d590dc35a9ec6b">&#9670;&nbsp;</a></span>__init__()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.__init__ </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Constructor
+</pre> 
+<p><a class="el" href="classCiscoConf_1_1CiscoAcl.html#a84104a6a25dd68d24474d15985702ab6">CiscoConf.CiscoAcl</a>, <a class="el" href="classCiscoConf_1_1CiscoRoute.html#a1f0e3788e7f8459ea9de2f8bd21c1b05">CiscoConf.CiscoRoute</a>, <a class="el" href="classCiscoConf_1_1CiscoCommon.html#a67ee86ca701af50e95bed0abfcd09dda">CiscoConf.CiscoCommon</a>, <a class="el" href="classCTextFsm__acl_1_1test.html#a8d24ace55d8eae0649e764d4ae4ac882">CTextFsm_acl.test</a>, <a class="el" href="classCTextFsm__ut_1_1test.html#aa74780257a0e74f90ebdaf0982486dcd">CTextFsm_ut.test</a>で再実装されています。</p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00494">494</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a96df9cf7587763ba97a1c1299ff687e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a96df9cf7587763ba97a1c1299ff687e4">&#9670;&nbsp;</a></span>conf_csvprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.conf_csvprint </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>confname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>templ</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>isheader</em> = <code>True</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>headding</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Cisco configファイルをCSV出力する
+
+:param confname :str,  confのファイル名
+:param templ    :str,  template名
+:param isheader :bool, CSVヘッダを出力するか否か
+:param headding :str,  先頭カラムに出力する文字列、confnameを想定。
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01010">1010</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a06b5d47fdfe2bf0bd79ba735e941c343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06b5d47fdfe2bf0bd79ba735e941c343">&#9670;&nbsp;</a></span>csvprint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.csvprint </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ll</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>header</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>headding</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">リストをTSV出力する。タイトルヘッダ、１カラム目にheaddingを出力可
+
+:param ll       :list, [[row1,row2,row3,],[row1,row2,row3,],[row1,row2,row3,],]
+:param header   :list, CSVヘッダ
+:param headding :str,
+</pre><pre class="fragment">headerの出力
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01441">1441</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afba04726b4663e2a7d3ec4d4804af277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afba04726b4663e2a7d3ec4d4804af277">&#9670;&nbsp;</a></span>is_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.is_port </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Cisco access-listのPORT番号が、合致するか否かを検査
+
+:param  port  :str, テスト対象のPORT番号。数字
+:param  ope   :str, eq/range/gt/lt/established or null
+:param  range :str, テスト対象のPORT範囲。like 'xxx yyy'
+:return :bool
+----
+port    ope     range       is_port
+CASE1   value   OPE     value       check : rangeをチェック
+CASE2   ANY     OPE     value       False : any &gt; value なのでFalse
+CASE3   value   ANY     --          True  : value &lt; any なのでTrue
+CASE4   ANY     ANY     --          True  : any = any   なのでTrue
+CASE21  EST     EST     --          True  : EST == EST
+CASE22  EST     OPE    value        False : EST != not est
+CASE23  else    EST     --          False : not est != establieshed
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01184">1184</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2d26ded29b0a795000470f2f9d9186cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d26ded29b0a795000470f2f9d9186cb">&#9670;&nbsp;</a></span>is_prot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.is_prot </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tprot</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fprot</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<pre class="fragment">プロトコルが一致するか
+
+:param  tprot:str, test-port
+:param  fprot:str, acl-port
+:return :bool
+
+チェック概要
+    tprot   fprot       is_prot PORTCK
+    ip      ip          ok      no
+    eigrp   ip,eigrp    ok      no
+    ospf    ip,ospf     ok      no
+    tcp     ip          ok      no
+    udp     ip          ok      no
+    hoge    ip          ng      no
+    hoge    hoge        ok      no
+----
+    tcp     tcp         ok      yes
+    tcp     !tcp        ng      -
+    udp     udp         ok      yes
+    udp     !udp        ng      -
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01262">1262</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4248a8d77fdc84c340d4d9d1f5b2790e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4248a8d77fdc84c340d4d9d1f5b2790e">&#9670;&nbsp;</a></span>ismatch_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ismatch_acl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>testptn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>aclobjs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tfonly</em> = <code>False</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>testptnの項目数チェック </p>
+<pre class="fragment">ACLフィルタを格納した辞書を受け取り、テストする
+
+:param testptn :str, テスト対象の通信パターン.[ACL名, プロトコル, 送信元IP, 送信元PORT, 送信先IP, 送信先PORT]
+:param aclobjs :dic Aclobj, Coisco Configをパースした辞書、parsed2aclで作成
+       aclobjs[ acl名 ] = [ (Aclobj),(Aclobj),() ]
+:param tfonly  :bool, True/False（access-listに合致したか否か）のみ返却か、合致したaclも返却するか
+:return : list,
+  [
+  bool   : is_match
+  str    : acl名 or ERR/DENY
+  str    : aclのaction(permit/deny/'')
+  Aclobj : 合致したacl-statement
+  ]
+:modify: 2019/08/04,性能対策
+  namedtupleは関数間IFのみで使用、関数内は変数に代入して使用する
+</pre><p> testptnの単項目チェック(PROTOCOL) testptnの単項目チェック(SRC-IP,DST-IP) testptnの単項目チェック(SRC-PORT)</p>
+<p>any, established, \d+ testptnの単項目チェック(DST-PORT)</p>
+<p>any, established, \d+ ACL分を繰り返し検査 </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00676">676</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1ecfc2994e306a0ae4a8670e651f8258"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ecfc2994e306a0ae4a8670e651f8258">&#9670;&nbsp;</a></span>logsplit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.logsplit </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>otdir</em> = <code>'./'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>otfbase</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Ciscoの各種照会コマンドログをコマンド単位で分割する
+fnameを分割し、fname.ext.txtを作成する。extは、Split_Header[]で指定され、ドットを含む。
+
+:param fname   :str, コマンドログのファイル名
+:param otdir   :str, 出力先ディレクトリ
+:param otfbase :str, 出力ファイルのファイル名ベース（デフォルトは入力ファイル名）
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01043">1043</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4cc7b93a2ff3e94d32f2387530c89895"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cc7b93a2ff3e94d32f2387530c89895">&#9670;&nbsp;</a></span>norm_ipmask()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.norm_ipmask </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ipmask</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">'ip-address wildcard-mask'を正規化する
+
+:param ipmask :str, like 'ip wildmask'
+:return :2*str ip-address, wildcard-mask
+
+変換概要
+[ERR]
+    ''          ''                          !ERR! /-1
+[any] ipmask    norm_ipmask                 ipwild2ip
+    any         0.0.0.0 255.255.255.255     0.0.0.0/0
+    
+[host]              norm_ipmask             ipwild2ip
+    w.x.y.z         w.x.y.z 0.0.0.0         w.x.y.z/32
+    host w.x.y..z   w.x.y.z 0.0.0.0         w.x.y.z/32
+    
+[network]           norm_ipmask             ipwild2ip
+    w.x.y.z, wildcard bits W.X.Y.Z          
+            w.x.y.z W.X.Y.Z         w.x.y.z/nn
+    w.x.y.z W.X.Y.Z w.x.y.z W.X.Y.Z         w.x.y.z/nn
+[ERROE]
+    ELSE(ERROR) -&gt; None
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01126">1126</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a4d6ef30a6341006802ebacf2d3fa5fc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d6ef30a6341006802ebacf2d3fa5fc1">&#9670;&nbsp;</a></span>parse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.parse </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>confobj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>templ</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tdir</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Cisco Confをntc_templatesでパースし、ntc_templatesの形式で返却
+confはtemplにあったもの
+
+:param  confobj :list, templにあったもの
+:param  templ   :str, テンプレート名
+:param  tdir    :str, テンプレートのディレクトリ
+:return :list, テンプレート形式のリスト。confobjをテンプレートで解析した結果
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00831">831</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aadf519d7468e4b3d2237e3b189d3514c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aadf519d7468e4b3d2237e3b189d3514c">&#9670;&nbsp;</a></span>parse_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.parse_acl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>confobj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tdir</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Cisco Confをntc_templatesでパースし、ntc_templatesの形式で返却
+confは、[show ip access-list]
+
+:param confobj :list, 'show ip access-list'の結果を読みこんだリスト
+:param tdir    :str, テンプレートのディレクトリ
+:return :list, テンプレート形式のリスト
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00805">805</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af4bf12c19b9be216a0a2c8c9ae8f0459"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4bf12c19b9be216a0a2c8c9ae8f0459">&#9670;&nbsp;</a></span>parse_racl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.parse_racl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>confobj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tdir</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">Cisco Confをntc_templatesでパースし、ntc_templatesの形式で返却。
+confは、[show runのaccess-list部分]
+
+:param confobj :list, 'show run'のaccess-list部分を読みこんだリスト
+:param tdir    :str, テンプレートのディレクトリ
+:return :list, テンプレート形式のリスト
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00787">787</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a8b07c128e0344d13bb92a318a25ab625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b07c128e0344d13bb92a318a25ab625">&#9670;&nbsp;</a></span>parsed2acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.parsed2acl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>acls</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">parse_acl()を編集する。wildcard-maskを/nnに変換、PORT番号のMnemonicを数値化
+
+:param  acls  :list, parse_acl()でテンプレート化したリスト
+:return :dic Aclobj,
+  dic[ acl-name ] = [ Aclobj, Aclobj, ] を返却する。
+  Aclobj = [name, no, action, protocol, src, srcport, srcrange, dst, dstport, dstrange]
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00867">867</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6043d2a3f369ecd76cdbd636e6c2e035"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6043d2a3f369ecd76cdbd636e6c2e035">&#9670;&nbsp;</a></span>read_conf()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.read_conf </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fname</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">ファイルを読込み、リストで返却する
+:param str fname : ファイル名
+:return list     : .read()で返却されたリスト。ファイル全体を返却。
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00776">776</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6e940ba9e9159eef2513342466e2fb11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e940ba9e9159eef2513342466e2fb11">&#9670;&nbsp;</a></span>set_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.set_acl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fname</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tdir</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">confnameを入力し、template(acl)でパースしたリストを返却
+:param  fname :str, confname
+:param  tdir  :str, templateのディレクトリ
+:return :list, 'acl'でparseしたリスト
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01301">1301</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad5accc7ec3e821ff02e9cdf3f06b1355"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5accc7ec3e821ff02e9cdf3f06b1355">&#9670;&nbsp;</a></span>set_parsed()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.set_parsed </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fname</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>templ</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tdir</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">confnameを入力し、templateでパースしたリストを返却
+:param fname :str, confname
+:param templ :str, template-NAME
+:param tdir  :str, templateのディレクトリ
+:return :list, tenpateでparseしたリスト
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01292">1292</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="af6338783bf6b3879a1e522d534602a96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6338783bf6b3879a1e522d534602a96">&#9670;&nbsp;</a></span>set_racl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.set_racl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>fname</em> = <code>None</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>tdir</em> = <code>None</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">confnameを入力し、template(racl)でパースしたリストを返却
+:param  fname :str, confname
+:param  tdir  :str, templateのディレクトリ
+:return list :list, 'racl'でparseしたリスト
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01309">1309</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ad48b822b0ee1c57c37e671a1b380d0bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad48b822b0ee1c57c37e671a1b380d0bb">&#9670;&nbsp;</a></span>ut_is_ipinnet()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_is_ipinnet </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>net</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver for ut_is_ipinnet
+
+:param expect :bool, UT結果の期待値
+:param ip     :str, ip-address   'w.x.y.z'
+:param net    :str, network like 'W.X.Y.Z/L'
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01368">1368</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a2e1e78dbb799c91a8174c09aab2ca30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e1e78dbb799c91a8174c09aab2ca30b">&#9670;&nbsp;</a></span>ut_is_ipinnetw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_is_ipinnetw </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ip</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>net</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver for ut_is_ipinnet
+
+:param expect :bool, UT結果の期待値
+:param ip     :str, ip-address   'w.x.y.z'
+:param net    :str, network like 'W.X.Y.Z/s.t.u.v'
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01352">1352</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9cec3d73733c16ef6bb8d83724454b32"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cec3d73733c16ef6bb8d83724454b32">&#9670;&nbsp;</a></span>ut_is_port()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_is_port </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>ope</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver for is_port()
+
+:param expect :bool, UT結果の期待値
+:param port   :str, port
+:param ope    :str, ope
+:param range  :str, range
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01340">1340</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a9708d882f46a66cee6ae8c47766ef50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9708d882f46a66cee6ae8c47766ef50b">&#9670;&nbsp;</a></span>ut_ismatch_acl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_ismatch_acl </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>aclobj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver for ismatch_acl
+
+:param expect :bool, UT結果の期待値
+:param test   :str,  test-pattern with aclname。'WAN-out eigrp 10.246.0.1 any 10.246.0.1 any'
+:param aclobj :list,　.parsed2acl(confobj)の返却
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01383">1383</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ae3ecec0b7d2f27e81faee975998bd860"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae3ecec0b7d2f27e81faee975998bd860">&#9670;&nbsp;</a></span>ut_ismatch_acl2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_ismatch_acl2 </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>aclname</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>aclobj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver for ismatch_acl2
+aclname,testを別パラメタ
+
+:param expect  :bool, UT結果の期待値
+:param aclname :str,  aclobjからaclnameをチェック対象とする。'WAN-out'
+:param test    :str,  test-pattern。'ip    10.246.0.1 any 10.246.0.1 any'
+:param aclobj  :list, .parsed2acl(confobj)の返却
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01394">1394</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac5a745b22a0fb24ebcfc2a77bf430429"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a745b22a0fb24ebcfc2a77bf430429">&#9670;&nbsp;</a></span>ut_ismatch_aclext()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_ismatch_aclext </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>a_aclobj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver _ismatch_aclext
+
+:param expect   :bool, UT結果の期待値
+:param test     :str,
+:param a_aclobj :namedobj Aclobj
+  Aclobj('_dmy', '60', 'permit', 'tcp', '10.246.0.0/17', '', '', '172.20.1.0/24', '', '', '')
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01421">1421</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a82616f58ed71035bc1b443e934692361"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82616f58ed71035bc1b443e934692361">&#9670;&nbsp;</a></span>ut_ismatch_aclstd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def CTextFsm.CTextFsm.ut_ismatch_aclstd </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>expect</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>test</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>a_aclobj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">UT-driver for _ismatch_aclstd
+
+:param expect   :bool, UT結果の期待値
+:param test     :str, 'WAN-out tcp 10.246.0.100 any 172.20.1.0 80'
+:param a_aclobj :namedtuple Aclobj
+  Aclobj('_dmy', '60', 'permit', '', '10.246.0.0/17', '', '', '172.20.1.0/24', '', '', 'log')
+</pre> 
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l01408">1408</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="ae4a6e9fb950ddd34ce0078bbbce4bb61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4a6e9fb950ddd34ce0078bbbce4bb61">&#9670;&nbsp;</a></span>aclnames</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextFsm.CTextFsm.aclnames</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>dic:aclobjのキー一覧 </p>
+<p>src-Port</p>
+<p>src-range Modifierを、(dstport, dstrange, other)に分解する hiroshi aclobjの返却 </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00502">502</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afaf1b7c90c7fc6173ecc700966132c5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf1b7c90c7fc6173ecc700966132c5c">&#9670;&nbsp;</a></span>confname</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextFsm.CTextFsm.confname</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>CiscoConfigのファイル名 </p>
+<p>open cisco-cfg(showrun) </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00498">498</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="acb48a0e8aa2360c087892d749792389a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb48a0e8aa2360c087892d749792389a">&#9670;&nbsp;</a></span>Csv_Header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary CTextFsm.CTextFsm.Csv_Header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  {</div><div class="line">        <span class="stringliteral">&#39;racl&#39;</span>: [<span class="stringliteral">&#39;ACLNAME&#39;</span>, <span class="stringliteral">&#39;ACLTYPE&#39;</span>, <span class="stringliteral">&#39;COMMENT&#39;</span>, <span class="stringliteral">&#39;ACTION&#39;</span>, <span class="stringliteral">&#39;PROTOCOL&#39;</span>, <span class="stringliteral">&#39;SHOST&#39;</span>, <span class="stringliteral">&#39;SANY&#39;</span>, <span class="stringliteral">&#39;SNETWORK&#39;</span>, <span class="stringliteral">&#39;SWILDCARD&#39;</span>,</div><div class="line">                 <span class="stringliteral">&#39;SPORTMATCH&#39;</span>, <span class="stringliteral">&#39;SPORT&#39;</span>, <span class="stringliteral">&#39;SPORTRANGESTART&#39;</span>, <span class="stringliteral">&#39;SPORTRANGEEND&#39;</span>, <span class="stringliteral">&#39;DHOST&#39;</span>, <span class="stringliteral">&#39;DANY&#39;</span>, <span class="stringliteral">&#39;DNETWORK&#39;</span>, <span class="stringliteral">&#39;DWILDCARD&#39;</span>,</div><div class="line">                 <span class="stringliteral">&#39;DPORTMATCH&#39;</span>, <span class="stringliteral">&#39;DPORT&#39;</span>, <span class="stringliteral">&#39;DPORTRANGESTART&#39;</span>, <span class="stringliteral">&#39;DPORTRANGEEND&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;acl&#39;</span>: [<span class="stringliteral">&#39;NAME&#39;</span>, <span class="stringliteral">&#39;SN&#39;</span>, <span class="stringliteral">&#39;ACTION&#39;</span>, <span class="stringliteral">&#39;PROTOCOL&#39;</span>, <span class="stringliteral">&#39;SOURCE&#39;</span>, <span class="stringliteral">&#39;PORT&#39;</span>, <span class="stringliteral">&#39;RANGE&#39;</span>, <span class="stringliteral">&#39;DESTINATION&#39;</span>, <span class="stringliteral">&#39;MODIFIER&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;int&#39;</span>: [<span class="stringliteral">&#39;INTERFACE&#39;</span>, <span class="stringliteral">&#39;LINK_STATUS&#39;</span>, <span class="stringliteral">&#39;PROTOCOL_STATUS&#39;</span>, <span class="stringliteral">&#39;HARDWARE_TYPE&#39;</span>, <span class="stringliteral">&#39;ADDRESS&#39;</span>, <span class="stringliteral">&#39;BIA&#39;</span>, <span class="stringliteral">&#39;DESCRIPTION&#39;</span>,</div><div class="line">                <span class="stringliteral">&#39;IP_ADDRESS&#39;</span>, <span class="stringliteral">&#39;MTU&#39;</span>, <span class="stringliteral">&#39;DUPLEX&#39;</span>, <span class="stringliteral">&#39;SPEED&#39;</span>, <span class="stringliteral">&#39;BANDWIDTH&#39;</span>, <span class="stringliteral">&#39;DELAY&#39;</span>, <span class="stringliteral">&#39;ENCAPSULATION&#39;</span>, <span class="stringliteral">&#39;LAST_INPUT&#39;</span>,</div><div class="line">                <span class="stringliteral">&#39;LAST_OUTPUT&#39;</span>, <span class="stringliteral">&#39;LAST_OUTPUT_HANG&#39;</span>, <span class="stringliteral">&#39;QUEUE_STRATEGY&#39;</span>, <span class="stringliteral">&#39;INPUT_RATE&#39;</span>, <span class="stringliteral">&#39;OUTPUT_RATE&#39;</span>, <span class="stringliteral">&#39;INPUT_PACKETS&#39;</span>,</div><div class="line">                <span class="stringliteral">&#39;OUTPUT_PACKETS&#39;</span>, <span class="stringliteral">&#39;INPUT_ERRORS&#39;</span>, <span class="stringliteral">&#39;OUTPUT_ERRORS&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;intstatus&#39;</span>: [<span class="stringliteral">&#39;PORT&#39;</span>, <span class="stringliteral">&#39;NAME&#39;</span>, <span class="stringliteral">&#39;STATUS&#39;</span>, <span class="stringliteral">&#39;VLAN&#39;</span>, <span class="stringliteral">&#39;DUPLEX&#39;</span>, <span class="stringliteral">&#39;SPEED&#39;</span>, <span class="stringliteral">&#39;TYPE&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;eigrptop&#39;</span>: [<span class="stringliteral">&#39;AS&#39;</span>, <span class="stringliteral">&#39;ROUTER_ID&#39;</span>, <span class="stringliteral">&#39;CODE&#39;</span>, <span class="stringliteral">&#39;ROUTE&#39;</span>, <span class="stringliteral">&#39;MASK&#39;</span>, <span class="stringliteral">&#39;SUCCESSORS&#39;</span>, <span class="stringliteral">&#39;FD&#39;</span>, <span class="stringliteral">&#39;TAG&#39;</span>, <span class="stringliteral">&#39;SERNO&#39;</span>, <span class="stringliteral">&#39;FD_AD&#39;</span>, <span class="stringliteral">&#39;IF&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;eigrpnei&#39;</span>: [<span class="stringliteral">&#39;AS&#39;</span>, <span class="stringliteral">&#39;ADDRESS&#39;</span>, <span class="stringliteral">&#39;INTERFACE&#39;</span>, <span class="stringliteral">&#39;HOLD&#39;</span>, <span class="stringliteral">&#39;UPTIME&#39;</span>, <span class="stringliteral">&#39;SRTT&#39;</span>, <span class="stringliteral">&#39;RTO&#39;</span>, <span class="stringliteral">&#39;Q_CNT&#39;</span>, <span class="stringliteral">&#39;SEQ_NUM&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;vlan&#39;</span>: [<span class="stringliteral">&#39;VLAN_ID&#39;</span>, <span class="stringliteral">&#39;NAME&#39;</span>, <span class="stringliteral">&#39;STATUS&#39;</span>, <span class="stringliteral">&#39;INTERFACES&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;iprou&#39;</span>: [<span class="stringliteral">&#39;PROTCOL&#39;</span>, <span class="stringliteral">&#39;TYPE&#39;</span>, <span class="stringliteral">&#39;NETWORK&#39;</span>, <span class="stringliteral">&#39;MASK&#39;</span>, <span class="stringliteral">&#39;AD&#39;</span>, <span class="stringliteral">&#39;METRIC&#39;</span>, <span class="stringliteral">&#39;NEXT-IP&#39;</span>, <span class="stringliteral">&#39;NEXT-IF&#39;</span>, <span class="stringliteral">&#39;UPTIME&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;net4&#39;</span>: [<span class="stringliteral">&#39;NAME&#39;</span>, <span class="stringliteral">&#39;SN&#39;</span>, <span class="stringliteral">&#39;ACTION&#39;</span>, <span class="stringliteral">&#39;PROTOCOL&#39;</span>, <span class="stringliteral">&#39;SRC&#39;</span>, <span class="stringliteral">&#39;SPORT&#39;</span>, <span class="stringliteral">&#39;SRANGE&#39;</span>, <span class="stringliteral">&#39;DST&#39;</span>, <span class="stringliteral">&#39;DPORT&#39;</span>, <span class="stringliteral">&#39;DRANGE&#39;</span>, <span class="stringliteral">&#39;OTHER&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;int2&#39;</span>: [<span class="stringliteral">&#39;INTERFACE&#39;</span>, <span class="stringliteral">&#39;LINK_STATUS&#39;</span>, <span class="stringliteral">&#39;PROTOCOL_STATUS&#39;</span>, <span class="stringliteral">&#39;ADDRESS&#39;</span>, <span class="stringliteral">&#39;DESCRIPTION&#39;</span>, <span class="stringliteral">&#39;IP_ADDRESS&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;rnat&#39;</span>: [<span class="stringliteral">&#39;INOUT_POOL&#39;</span>, <span class="stringliteral">&#39;PROTOCOL&#39;</span>, <span class="stringliteral">&#39;SOURCE&#39;</span>, <span class="stringliteral">&#39;FROM_IP&#39;</span>, <span class="stringliteral">&#39;FROM_PORT&#39;</span>, <span class="stringliteral">&#39;TO_IP&#39;</span>, <span class="stringliteral">&#39;TO_PORT&#39;</span>, <span class="stringliteral">&#39;MASK&#39;</span>, <span class="stringliteral">&#39;ACL&#39;</span>,</div><div class="line">                 <span class="stringliteral">&#39;POOL_NAME&#39;</span>, <span class="stringliteral">&#39;POOL_SIP&#39;</span>, <span class="stringliteral">&#39;POOL_EIP&#39;</span>, <span class="stringliteral">&#39;POOL_MASK&#39;</span>, <span class="stringliteral">&#39;RMAP_NAME&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;cdpnei&#39;</span>: [<span class="stringliteral">&#39;NEIGHBOR&#39;</span>, <span class="stringliteral">&#39;LOCAL_INTERFACE&#39;</span>, <span class="stringliteral">&#39;CAPABILITY&#39;</span>, <span class="stringliteral">&#39;PLATFORM&#39;</span>, <span class="stringliteral">&#39;NEIGHBOR_INTERFACE&#39;</span>],</div><div class="line">        <span class="stringliteral">&#39;rint&#39;</span>: [<span class="stringliteral">&#39;INTERFACE&#39;</span>, <span class="stringliteral">&#39;DESC&#39;</span>, <span class="stringliteral">&#39;IPADR&#39;</span>, <span class="stringliteral">&#39;IPMASK&#39;</span>, <span class="stringliteral">&#39;SHUT&#39;</span>, <span class="stringliteral">&#39;ACLG&#39;</span>, <span class="stringliteral">&#39;ACLDIR&#39;</span>]</div><div class="line">    }</div></div><!-- fragment -->
+<p>テンプレートで解析したリストをcsv出力用するヘッダタイトル </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00445">445</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac535afde8ac9c209d0a4c3ecee65e4b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac535afde8ac9c209d0a4c3ecee65e4b0">&#9670;&nbsp;</a></span>DbgLevel</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list CTextFsm.CTextFsm.DbgLevel</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  [</div><div class="line">        0,  <span class="comment"># LV0   何も出力しない。</span></div><div class="line">        0,  <span class="comment"># LV1    ismatch_aclで、テストパターン毎に情報を出力</span></div><div class="line">        0,  <span class="comment"># LV2    ismatch_aclで、access-list毎に情報を出力</span></div><div class="line">        0,  <span class="comment"># LV3    複数ファイル検索で、検索対象ファイル名を出力</span></div><div class="line">        0  <span class="comment"># LV4</span></div><div class="line">    ]</div></div><!-- fragment -->
+<p>DBGログの出力レベル </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00486">486</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="ac148270354b58b267ac87e23761b20e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac148270354b58b267ac87e23761b20e4">&#9670;&nbsp;</a></span>IfAction</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary CTextFsm.CTextFsm.IfAction</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  {</div><div class="line">        <span class="stringliteral">&#39;permit&#39;</span>: 0,</div><div class="line">        <span class="stringliteral">&#39;deny&#39;</span>: 1</div><div class="line">    }</div></div><!-- fragment -->
+<p>Aclのactionに許可される語句 </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00467">467</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a6c193f4c315d94b59475cb6f1debefe6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c193f4c315d94b59475cb6f1debefe6">&#9670;&nbsp;</a></span>IfIpProtocol</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary CTextFsm.CTextFsm.IfIpProtocol</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  {</div><div class="line">        <span class="stringliteral">&#39;ip&#39;</span>: 0,</div><div class="line">        <span class="stringliteral">&#39;icmp&#39;</span>: 1,</div><div class="line">        <span class="stringliteral">&#39;igmp&#39;</span>: 2,</div><div class="line">        <span class="stringliteral">&#39;tcp&#39;</span>: 6,</div><div class="line">        <span class="stringliteral">&#39;udp&#39;</span>: 17,</div><div class="line">        <span class="stringliteral">&#39;esp&#39;</span>: 50,</div><div class="line">        <span class="stringliteral">&#39;ahp&#39;</span>: 51,</div><div class="line">        <span class="stringliteral">&#39;eigrp&#39;</span>: 88,</div><div class="line">        <span class="stringliteral">&#39;ospf&#39;</span>: 89,</div><div class="line">        <span class="stringliteral">&#39;pim&#39;</span>: 103</div><div class="line">    }</div></div><!-- fragment -->
+<p>IP-Protocols、IPの上位プロトコルなので、IPのフィルタをチェックする </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00472">472</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a1e3f702dc6832495689001245994913a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e3f702dc6832495689001245994913a">&#9670;&nbsp;</a></span>parse_statement</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextFsm.CTextFsm.parse_statement</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>処理中のparsed-statement </p>
+<p>DBG-INF </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00508">508</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a38d02993201dbf1e37d4025693d9a225"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38d02993201dbf1e37d4025693d9a225">&#9670;&nbsp;</a></span>Port_mnemonic</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary CTextFsm.CTextFsm.Port_mnemonic</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  {</div><div class="line">        <span class="stringliteral">&#39;ftp-data&#39;</span>: 20,</div><div class="line">        <span class="stringliteral">&#39;ftp&#39;</span>: 21,</div><div class="line">        <span class="stringliteral">&#39;ssh&#39;</span>: 22,</div><div class="line">        <span class="stringliteral">&#39;telnet&#39;</span>: 23,</div><div class="line">        <span class="stringliteral">&#39;smtp&#39;</span>: 25,</div><div class="line">        <span class="stringliteral">&#39;domain&#39;</span>: 53,</div><div class="line">        <span class="stringliteral">&#39;bootps&#39;</span>: 67,</div><div class="line">        <span class="stringliteral">&#39;bootpc&#39;</span>: 68,</div><div class="line">        <span class="stringliteral">&#39;tftp&#39;</span>: 69,</div><div class="line">        <span class="stringliteral">&#39;www&#39;</span>: 80,</div><div class="line">        <span class="stringliteral">&#39;ntp&#39;</span>: 123,</div><div class="line">        <span class="stringliteral">&#39;netbios-ns&#39;</span>: 137,</div><div class="line">        <span class="stringliteral">&#39;netbios-dgm&#39;</span>: 138,</div><div class="line">        <span class="stringliteral">&#39;netbios_ssn&#39;</span>: 139,  <span class="comment"># 未確認</span></div><div class="line">        <span class="stringliteral">&#39;snmp&#39;</span>: 161,</div><div class="line">        <span class="stringliteral">&#39;snmptrap&#39;</span>: 162,</div><div class="line">        <span class="stringliteral">&#39;bgp&#39;</span>: 179,</div><div class="line">        <span class="stringliteral">&#39;https&#39;</span>: 443,</div><div class="line">        <span class="stringliteral">&#39;isakmp&#39;</span>: 500,</div><div class="line">        <span class="stringliteral">&#39;lpd&#39;</span>: 515</div><div class="line">    }</div></div><!-- fragment -->
+<p>PORT mnemonic </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00409">409</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="aaae27a35f146f70f11ec0d40df0c8cdb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaae27a35f146f70f11ec0d40df0c8cdb">&#9670;&nbsp;</a></span>Split_Header</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">list CTextFsm.CTextFsm.Split_Header</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  [</div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+run[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shrun&#39;</span>],  <span class="comment"># sh run</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+ip[ ]+access\-list[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shipacl&#39;</span>],  <span class="comment"># sh ip access-list</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+int[ ]+status[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shintstatus&#39;</span>],  <span class="comment"># sh int status</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+vlan[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shvlan&#39;</span>],  <span class="comment"># sh vlan</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+ip[ ]+int[ ]+brief[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shipintbrief&#39;</span>],  <span class="comment"># sh ip int brief</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+ip[ ]+rou[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shiprou&#39;</span>],  <span class="comment"># sh ip rou</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+ip[ ]+eigrp[ ]+top[ ]+all\-links[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shipeigrptop&#39;</span>],  <span class="comment"># sh eigrp top all-links</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+ip[ ]+eigrp[ ]+nei[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shipeigrpnei&#39;</span>],  <span class="comment"># sh eigrp nei</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+int[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shint&#39;</span>],  <span class="comment"># sh int</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+proc[ ]+cpu[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shproccpu&#39;</span>],  <span class="comment"># sh proc cpu</span></div><div class="line">        [<span class="stringliteral">r&#39;^.+\#[ ]*sh[ ]+cdp[ ]+nei[ ]*$&#39;</span>, <span class="stringliteral">&#39;.shcdpnei&#39;</span>]  <span class="comment"># sh cdp nei</span></div><div class="line"></div><div class="line">    ]</div></div><!-- fragment -->
+<p>namedtuple ciscoのcommand-logを分割するヘッダ </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00391">391</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="afb88b6e8121f75c289acca130ebf33ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb88b6e8121f75c289acca130ebf33ab">&#9670;&nbsp;</a></span>Templ_fname</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">dictionary CTextFsm.CTextFsm.Templ_fname</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>初期値:</b><div class="fragment"><div class="line">=  {</div><div class="line">        <span class="stringliteral">&#39;racl&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_running-config_partition_access-list.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;acl&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_access-list.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;int&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_interfaces.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;intstatus&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_interfaces_status.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;eigrptop&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_ip_eigrp_topology.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;eigrpnei&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_ip_eigrp_neighbors.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;vlan&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_vlan.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;iprou&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_ip_route.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;rnat&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_running-config_nat.template&#39;</span>,</div><div class="line">        <span class="stringliteral">&#39;cdpnei&#39;</span>: <span class="stringliteral">&#39;cisco_ios_show_cdp_neighbors.template&#39;</span></div><div class="line">    }</div></div><!-- fragment -->
+<p>ntc_templatesのファイル名 </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00432">432</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<a id="a821e94401ea692f24c0ee2f64d7a0a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a821e94401ea692f24c0ee2f64d7a0a04">&#9670;&nbsp;</a></span>testpattern</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CTextFsm.CTextFsm.testpattern</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>処理中のテストパターン </p>
+<p>DBG-INF</p>
+<p>20190804:性能対策のため、変数に代入して使用 単項目チェック(NAME) </p>
+
+<p class="definition"> <a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a> の <a class="el" href="CTextFsm_8py_source.html#l00504">504</a> 行目に定義があります。</p>
+
+</div>
+</div>
+<hr/>このクラス詳解は次のファイルから抽出されました:<ul>
+<li><a class="el" href="CTextFsm_8py_source.html">CTextFsm.py</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+2019年08月11日(日) 20時51分47秒作成 - My Project / 構成:  &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.15
+</small></address>
+</body>
+</html>
