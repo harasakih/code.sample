@@ -9,3 +9,6 @@
 *._*
 *.o
 *.pyc
+*.EXE
+*.OBJ
+a.out
