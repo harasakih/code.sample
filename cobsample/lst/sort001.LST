@@ -1,0 +1,340 @@
+NetCOBOL V12.2.0                           2021年06月05日(土) 14時41分19秒  0001                                        
+
+
+＊＊　指定翻訳オプション　＊＊
+
+
+NOMAIN,SOURCE,MESSAGE,DLOAD,MAIN(MAIN),XREF,COPY
+
+
+＊＊　確定翻訳オプション　＊＊
+
+
+  ALPHAL(ALL)             DUPCHAR(EXT)          NOMAP                     RSV(ALL)                SYNC(FJ)              
+  ASCOMP5(NONE)           ENCODE(SJIS,SJIS)       MESSAGE               NOSAI                     TAB(8)                
+  BINARY(WORD,MLBON)    NOEQUALS                  MF(NONE)                SCS(ACP)              NOTEST                  
+NOCHECK                   FILELIT(LIT)          NONAME                    SDS                     THREAD(SINGLE)        
+NOCONF                    FLAG(I)                 NCW(STD)              NOSHREXT                NOTRACE                 
+  CONVCHAR(ICONV)       NOFLAGSW                  NSP                     SMSIZE(0)             NOTRUNC                 
+  COPY(FULL)            NOINITVALUE               NSPCOMP(NSP)            SOURCE(1)               XREF(FULL)            
+NOCOUNT                   LANGLVL(85)           NONUMBER                  SQLGRP                  ZWB                   
+  CREATE(OBJ)             LINECOUNT(0)            OBJECT                  SRF(VAR,VAR)                                  
+  CURRENCY(\)             LINESIZE(0)           NOOPTIMIZE                SSIN(SYSIN)                                   
+  DLOAD                 NOLIST                    QUOTE                   SSOUT(SYSOUT)                                 
+NODNTB                    MAIN(MAIN)              RCS(ACP)                STD1(JIS2)                                    
+
+
+＊＊　ＣＯＰＹ情報　＊＊
+
+
+   修飾値      行番号  原文名
+
+
+        1          16  SORTREC                                                                                          
+
+
+     行番号 一連番号 A   B
+
+
+          1   000010 IDENTIFICATION   DIVISION.
+          2   000020 PROGRAM-ID.      FILEW.
+          3   000030 
+          4   000040 ENVIRONMENT      DIVISION.
+          5   000050 INPUT-OUTPUT     SECTION.
+          6   000060 FILE-CONTROL.
+          7   000070     SELECT  V-OTFILE  ASSIGN TO     VFILE
+          8   000080             ORGANIZATION  IS LINE   SEQUENTIAL.
+          9   000090 
+         10   000100 DATA             DIVISION.
+         11   000110 FILE             SECTION.
+         12   000120 FD      V-OTFILE
+         13   000130         RECORD    IS  VARYING IN SIZE
+         14   000140         DEPENDING ON  V-LL.
+         15   000150 01      V-REC01.
+         16   000160     COPY  SORTREC.
+        1-1 C 000010* VFILE.CBL
+        1-2 C 000020*
+        1-3 C 000030     07  DUMMYREC.
+        1-4 C 000040       08  KEYAREA.                           *> 1-36
+        1-5 C 000050       09    RECNO                        PIC  9(08).
+        1-6 C 000060       09    DELIM0                       PIC  X(1).
+        1-7 C 000070       09    KEY1                         PIC  9(08).
+        1-8 C 000080       09    DELIM1                       PIC  X(01).
+        1-9 C 000090       09    KEY2                         PIC  9(08).
+       1-10 C 000100       09    DELIM2                       PIC  X(01).
+       1-11 C 000110       09    KEY3                         PIC  9(08).
+       1-12 C 000120       09    DELIM3                       PIC  X(01).
+       1-13 C 000130       08  DATAAREA.                      *> 37-1024
+       1-14 C 000140       09    BODY                         PIC  X(988).
+       1-15 C 000150*
+       1-16 C 000160     07  REC1           REDEFINES       DUMMYREC.
+       1-17 C 000170       08  KEYAREA.                           *> 1-36
+       1-18 C 000180       09    FILLER                       PIC  9(08).
+       1-19 C 000190       09    FILLER                       PIC  X(1).
+       1-20 C 000200       09    FILLER                       PIC  9(08).
+       1-21 C 000210       09    FILLER                       PIC  X(01).
+       1-22 C 000220       09    FILLER                       PIC  9(08).
+       1-23 C 000230       09    FILLER                       PIC  X(01).
+       1-24 C 000240       09    FILLER                       PIC  9(08).
+       1-25 C 000250       09    FILLER                       PIC  X(01).
+       1-26 C 000260       08  DATAAREA.                      *> 37-1024
+       1-27 C 000270       09    BODY1                        PIC  X(988).
+       1-28 C 000280*
+       1-29 C 000290     07  REC2           REDEFINES       DUMMYREC.
+       1-30 C 000300       08  KEYAREA.                           *> 1-36
+       1-31 C 000310       09    FILLER                       PIC  9(08).
+       1-32 C 000320       09    FILLER                       PIC  X(1).
+       1-33 C 000330       09    FILLER                       PIC  9(08).
+       1-34 C 000340       09    FILLER                       PIC  X(01).
+       1-35 C 000350       09    FILLER                       PIC  9(08).
+       1-36 C 000360       09    FILLER                       PIC  X(01).
+       1-37 C 000370       09    FILLER                       PIC  9(08).
+       1-38 C 000380       09    FILLER                       PIC  X(01).
+       1-39 C 000390       08  DATAAREA.                      *> 37-160
+       1-40 C 000400       09    BODY2                        PIC  X(124).
+       1-41 C 000410 
+       1-42 C 000420*
+       1-43 C 000430     07  REC3           REDEFINES       DUMMYREC.
+       1-44 C 000440       08  KEYAREA.                           *> 1-36
+       1-45 C 000450       09    FILLER                       PIC  9(08).
+       1-46 C 000460       09    FILLER                       PIC  X(1).
+       1-47 C 000470       09    FILLER                       PIC  9(08).
+       1-48 C 000480       09    FILLER                       PIC  X(01).
+       1-49 C 000490       09    FILLER                       PIC  9(08).
+       1-50 C 000500       09    FILLER                       PIC  X(01).
+       1-51 C 000510       09    FILLER                       PIC  9(08).
+       1-52 C 000520       09    FILLER                       PIC  X(01).
+       1-53 C 000530       08  DATAAREA.                      *> 37-256
+       1-54 C 000540       09    BODY3                        PIC  X(220).
+         17   000170 
+         18   000180 WORKING-STORAGE  SECTION.
+         19   000190 01     CONSTANT-A.
+         20   000200   03   CN-LL1          PIC     9(08)   VALUE  1024.
+         21   000210   03   CN-LL2          PIC     9(08)   VALUE   160.
+         22   000220   03   CN-LL3          PIC     9(08)   VALUE   320.
+         23   000230*
+         24   000240 01     WORK-A.
+         25   000250   03   V-LL            PIC     9(04)   COMP.
+         26   000260   03   II              PIC     9(08)   COMP.
+         27   000270*
+         28   000280   03   N-RECS          PIC     9(13)   COMP.
+         29   000290   03   N-KEYS1         PIC     9(08)   COMP  VALUE    10.  *> TEN
+         30   000300   03   N-KEYS2         PIC     9(08)   COMP  VALUE 10000.  *> KOBAN
+         31   000310   03   N-KEYS3-1       PIC     9(08)   COMP  VALUE    20.  *> TORIMEI
+         32   000320   03   N-KEYS3-2       PIC     9(08)   COMP  VALUE     2.  *> FUZOKU
+         33   000330 
+         34   000340   03   X-KEYS1                         PIC     X(04).
+         35   000350   03   R-KEYS1   REDEFINES  X-KEYS1    PIC     9999.
+         36   000360   03   X-KEYS2                         PIC     X(08).
+         37   000370   03   R-KEYS2   REDEFINES  X-KEYS2    PIC     99999999.
+         38   000380   03   X-KEYS3-1                       PIC     X(04).
+         39   000390   03   R-KEYS3-1 REDEFINES  X-KEYS3-1  PIC     9999.
+         40   000400   03   X-KEYS3-2                       PIC     X(04).
+         41   000410   03   R-KEYS3-2 REDEFINES  X-KEYS3-2  PIC     9999.
+         42   000420 
+         43   000430   03   I-RECS          PIC     9(13)   COMP.
+         44   000440   03   I-KEYS1         PIC     9(08)   COMP.
+         45   000450   03   I-KEYS2         PIC     9(08)   COMP.
+         46   000460   03   I-KEYS3         PIC     9(08)   COMP.
+         47   000470 
+         48   000480   03   ISEOF           PIC     9(04)   COMP.
+         49   000490   03   RANSU           PIC     9V99999999.
+         50   000500 
+         51   000501 01  TIMEVAL-A.
+         52   000502   03   TIMEVAL         PIC     9(08).
+         53   000503   03   TIME1           PIC     9(08).
+         54   000504   03   TIME2           PIC     9(08).
+         55   000505 
+         56   000506 
+         57   000507 
+         58   000510 LINKAGE          SECTION.
+         59   000520 01 EXEC-PARM-A.
+         60   000530   03   EXEC-LL         PIC  S9(04)  COMP-5.
+         61   000540   03   EXEC-PARM       PIC  X(80).
+         62   000550 
+         63   000560 
+         64   000570 PROCEDURE        DIVISION  USING  EXEC-PARM-A.
+         65   000580 MAIN             SECTION.
+         66   000590*
+         67   000600     IF  EXEC-LL  NOT =  ZERO  THEN
+         68   000610       UNSTRING  EXEC-PARM  DELIMITED BY  ','  OR  ':'
+         69   000620         INTO    X-KEYS1  X-KEYS2  X-KEYS3-1  X-KEYS3-2
+         70   000630       END-UNSTRING
+         71   000640 
+         72   000650       MOVE  R-KEYS1      TO  N-KEYS1
+         73   000660       MOVE  R-KEYS2      TO  N-KEYS2
+         74   000670       MOVE  R-KEYS3-1    TO  N-KEYS3-1
+         75   000680       MOVE  R-KEYS3-2    TO  N-KEYS3-2
+         76   000690 
+         77   000700     END-IF
+         78   000710 
+         79   000720     DISPLAY 'SORT-DATA MAKE'
+         80   000730     DISPLAY '  USAGE: SORT001 "N1,N2,N3-1,N3-2"'
+         81   000740     DISPLAY '    N1=9999 AS TEN.  N2=99999999 AS KOZA per TEN'
+         82   000750     DISPLAY '    N3-1=9999 AS MEISAI per KOZA,  N3-2=9999 AS FUZOKU per KOZA'
+         83   000760     DISPLAY 'KEYS1 * (KEYS2 + KEYS2*(KEYS3-1 + KEYS3-2))'
+         84   000770     DISPLAY N-KEYS1 '*' '(' N-KEYS2 '+' N-KEYS2 '*' '(' N-KEYS3-1 '+' N-KEYS3-2 '))' 
+         85   000780     COMPUTE N-RECS = N-KEYS1 * (N-KEYS2 + N-KEYS2 * (N-KEYS3-1 + N-KEYS3-2))
+         86   000790     DISPLAY N-RECS
+         87   000800 
+         88   000801     ACCEPT  TIME1  FROM  TIME.
+         89   000810     PERFORM  SORTD-MAKE.
+         90   000811     ACCEPT  TIME2  FROM  TIME.
+         91   000812 
+         92   000813     DISPLAY  'START :' TIME1.
+         93   000814     DISPLAY  'END   :' TIME2.
+         94   000815 
+         95   000820     EXIT PROGRAM.
+         96   000830 MAIN-EX.
+         97   000840/
+         98   000850 SORTD-MAKE  SECTION.
+         99   000860 
+        100   000870     OPEN  OUTPUT  V-OTFILE
+        101   000871 
+        102   000880     MOVE  ZERO    TO  I-RECS
+        103   000890     MOVE  ':'     TO  DELIM0
+        104   000900     MOVE  ','     TO  DELIM1  DELIM2  DELIM3
+        105   000910   
+        106   000920* TEN-LOOG
+        107   000930     PERFORM TEST BEFORE VARYING  I-KEYS1
+        108   000940       FROM  1  BY  1  UNTIL I-KEYS1  >  N-KEYS1 
+        109   000950*
+        110   000960       MOVE  I-KEYS1  TO  KEY1 
+        111   000970* KOBAN-LOOP
+        112   000980       PERFORM  TEST BEFORE  VARYING  I-KEYS2
+        113   000990         FROM  1  BY  1  UNTIL  I-KEYS2  >  N-KEYS2 
+        114   001000*
+        115   001010         MOVE  I-KEYS2     TO  KEY2 
+        116   001020         MOVE  ZERO        TO  KEY3 
+        117   001030         MOVE  SPACE       TO  BODY1 
+        118   001040         MOVE  'KOZA'      TO  BODY1 
+        119   001050** KOZA-WRITE
+        120   001060         MOVE  CN-LL1      TO  V-LL 
+        121   001070         PERFORM           SORTD-WRITE
+        122   001080* MEISAI-LOOP
+        123   001090         PERFORM  TEST  BEFORE  VARYING  I-KEYS3
+        124   001100           FROM  1  BY  1  UNTIL  I-KEYS3  >  N-KEYS3-1 
+        125   001110*
+        126   001120           COMPUTE  RANSU = FUNCTION RANDOM 
+        127   001130           MOVE  RANSU(2:8)  TO  KEY3 
+        128   001140           MOVE  SPACE       TO  BODY2 
+        129   001150           MOVE  'MEISAI'    TO  BODY2 
+        130   001160** MEISAI-WRITE
+        131   001170           MOVE  CN-LL2     TO  V-LL 
+        132   001180           PERFORM           SORTD-WRITE
+        133   001190         END-PERFORM
+        134   001200* FUZOKU-LOOP
+        135   001210         PERFORM  TEST  BEFORE  VARYING  I-KEYS3
+        136   001220           FROM  1  BY  1  UNTIL  I-KEYS3  >  N-KEYS3-2 
+        137   001230*
+        138   001240           MOVE  I-KEYS3     TO  KEY3 
+        139   001250           MOVE  SPACE       TO  BODY3 
+        140   001260           MOVE  'FUZOKU'    TO  BODY3 
+        141   001270** FOZOKU-WRITE
+        142   001280           MOVE  CN-LL3      TO  V-LL 
+        143   001290           PERFORM           SORTD-WRITE 
+        144   001300         END-PERFORM
+        145   001310       END-PERFORM
+        146   001320     END-PERFORM
+        147   001330 
+        148   001340     CLOSE  V-OTFILE
+        149   001350*
+        150   001360     EXIT SECTION.
+        151   001370 SORTD-MAKE-E.
+        152   001380/
+        153   001390 SORTD-WRITE    SECTION.
+        154   001400     ADD   1       TO  I-RECS
+        155   001410     MOVE  I-RECS  TO  RECNO
+        156   001420     WRITE  V-REC01
+        157   001430*
+        158   001440     EXIT SECTION.
+        159   001450 SORTD-WRITE-E.
+        160   001460/
+        161   001470 EXIT-PROGRAM.
+
+
+     定義行　名標 　　　　　　　　　　　　　　　　属性と参照行                 A:ARGUMENT D:DATA P:PERFORM R:REFER S:SET
+
+
+       1-14  BODY                           
+       1-27  BODY1                           117S 118S
+       1-40  BODY2                           128S 129S
+       1-54  BODY3                           139S 140S
+         20  CN-LL1                          120R
+         21  CN-LL2                          131R
+         22  CN-LL3                          142R
+         19  CONSTANT-A                     
+       1-13  DATAAREA                       
+       1-26  DATAAREA                       
+       1-39  DATAAREA                       
+       1-53  DATAAREA                       
+        1-6  DELIM0                          103S
+        1-8  DELIM1                          104S
+       1-10  DELIM2                          104S
+       1-12  DELIM3                          104S
+        1-3  DUMMYREC                        1-16D 1-29D 1-43D
+         60  EXEC-LL                         67R
+         61  EXEC-PARM                       68R
+         59  EXEC-PARM-A                     64R
+        161  EXIT-PROGRAM                   
+          2  FILEW                          
+         44  I-KEYS1                         107S 108R 110R
+         45  I-KEYS2                         112S 113R 115R
+         46  I-KEYS3                         123S 124R 135S 136R 138R
+         43  I-RECS                          102S 154S 155R
+         26  II                             
+         48  ISEOF                          
+        1-7  KEY1                            110S
+        1-9  KEY2                            115S
+       1-11  KEY3                            116S 127S 138S
+        1-4  KEYAREA                        
+       1-17  KEYAREA                        
+       1-30  KEYAREA                        
+       1-44  KEYAREA                        
+         65  MAIN                           
+         96  MAIN-EX                        
+         29  N-KEYS1                         72S 84R 85R 108R
+         30  N-KEYS2                         73S 84R 84R 85R 85R 113R
+         31  N-KEYS3-1                       74S 84R 85R 124R
+         32  N-KEYS3-2                       75S 84R 85R 136R
+         28  N-RECS                          85S 86R
+         35  R-KEYS1                         72R
+         37  R-KEYS2                         73R
+         39  R-KEYS3-1                       74R
+         41  R-KEYS3-2                       75R
+         49  RANSU                           126S 127R
+       1-16  REC1                           
+       1-29  REC2                           
+       1-43  REC3                           
+        1-5  RECNO                           155S
+         98  SORTD-MAKE                      89P
+        151  SORTD-MAKE-E                   
+        153  SORTD-WRITE                     121P 132P 143P
+        159  SORTD-WRITE-E                  
+         53  TIME1                           88S 92R
+         54  TIME2                           90S 93R
+         52  TIMEVAL                        
+         51  TIMEVAL-A                      
+         25  V-LL                            14D 120S 131S 142S
+         12  V-OTFILE                        7D 100R 148R
+         15  V-REC01                         156R
+         24  WORK-A                         
+         34  X-KEYS1                         35D 69S
+         36  X-KEYS2                         37D 69S
+         38  X-KEYS3-1                       39D 69S
+         40  X-KEYS3-2                       41D 69S
+
+
+＊＊　プログラム特性リスト　＊＊
+
+　ファイル名 = .\soc\sort001.cob
+　ソース名　 = FILEW
+　翻訳日付　 = 2021年06月05日(土) 14時41分19秒
+
+　　原始プログラムのレコード数　　　　　　　　　=        215 レコード
+　　目的プログラムの大きさ（ＣＯＤＥサイズ）　　=       7378 バイト
+　　目的プログラムの大きさ（ＤＡＴＡサイズ）　　=       1648 バイト
+　　制御レベル　　　　　　　　　　　　　　　　　=       0101 レベル
+　　翻訳に要した時間　　　　　　　　　　　　　　=       0.35 秒
+
+　最大重大度コード = I

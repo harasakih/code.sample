@@ -1,0 +1,158 @@
+NetCOBOL V12.2.0                           2021年06月05日(土) 00時09分55秒  0001                                        
+
+
+＊＊　指定翻訳オプション　＊＊
+
+
+NOMAIN,SOURCE,MESSAGE,DLOAD,MAIN(MAIN),XREF,COPY
+
+
+＊＊　確定翻訳オプション　＊＊
+
+
+  ALPHAL(ALL)             DUPCHAR(EXT)          NOMAP                     RSV(ALL)                SYNC(FJ)              
+  ASCOMP5(NONE)           ENCODE(SJIS,SJIS)       MESSAGE               NOSAI                     TAB(8)                
+  BINARY(WORD,MLBON)    NOEQUALS                  MF(NONE)                SCS(ACP)              NOTEST                  
+NOCHECK                   FILELIT(LIT)          NONAME                    SDS                     THREAD(SINGLE)        
+NOCONF                    FLAG(I)                 NCW(STD)              NOSHREXT                NOTRACE                 
+  CONVCHAR(ICONV)       NOFLAGSW                  NSP                     SMSIZE(0)             NOTRUNC                 
+  COPY(FULL)            NOINITVALUE               NSPCOMP(NSP)            SOURCE(1)               XREF(FULL)            
+NOCOUNT                   LANGLVL(85)           NONUMBER                  SQLGRP                  ZWB                   
+  CREATE(OBJ)             LINECOUNT(0)            OBJECT                  SRF(VAR,VAR)                                  
+  CURRENCY(\)             LINESIZE(0)           NOOPTIMIZE                SSIN(SYSIN)                                   
+  DLOAD                 NOLIST                    QUOTE                   SSOUT(SYSOUT)                                 
+NODNTB                    MAIN(MAIN)              RCS(ACP)                STD1(JIS2)                                    
+
+
+     行番号 一連番号 A   B
+
+
+          1   000010 IDENTIFICATION         DIVISION.
+          2   000020 PROGRAM-ID.            NSPCOMP.
+          3   000030*
+          4   000040 ENVIRONMENT            DIVISION.
+          5   000050*
+          6   000060 DATA                   DIVISION.
+          7   000070 WORKING-STORAGE        SECTION.
+          8   000080*
+          9   000090 01  WORK-AREA-A.
+         10   000100     03  NSP            PIC  N(2) VALUE SPACE.
+         11   000110     03  ASP            PIC  X(2) VALUE SPACE.
+         12   000120*     03  ER-N-ASX       PIC  N(1) VALUE   '  '.     *> err 半角空白, N項目のVALUEが誤り
+         13   000130     03  OK-N-ASN       PIC  N(1) VALUE NC'　'.     *> compile-ok  NC+全角空白
+         14   000140*     03  ER-N-ASN       PIC  N(1) VALUE NC'  '.     *> err NC+半角空白, 日本語にできない文字がある
+         15   000150*
+         16   000160     03  X-NSP                    PIC  X(6) VALUE '１　Ａ'.
+         17   000170     03  N-NSP  REDEFINES  X-NSP  PIC  N(3).
+         18   000180     03  X-ASP                    PIC  X(6) VALUE '１  Ａ'.
+         19   000190     03  N-ASP  REDEFINES  X-ASP  PIC  N(3).
+         20   000200/
+         21   000210 PROCEDURE              DIVISION .
+         22   000220*
+         23   000230 MAIN-SEC               SECTION.
+         24   000240     DISPLAY 'NSP' NSP.
+         25   000250     DISPLAY 'ASP' ASP.
+         26   000260*
+         27   000270     IF NSP = ALL NC'　'  THEN
+         28   000280       DISPLAY 'ANY:NSP is ALL NC-SP'
+         29   000290     ELSE
+         30   000300       DISPLAY 'NSP not ALL NC-SP'
+         31   000310     END-IF.
+         32   000320* COMPILE-ERROR
+         33   000330*     IF NSP = '　'  THEN
+         34   000340*       DISPLAY 'NSP is NSP'
+         35   000350*     ELSE
+         36   000360*       DISPLAY 'NSP not NSP'
+         37   000370*     END-IF.
+         38   000380 
+         39   000390     IF NSP = NC'　'  THEN
+         40   000400       DISPLAY 'ANY:NSP is NC-SP'
+         41   000410     ELSE
+         42   000420       DISPLAY 'NSP not NC-SP'
+         43   000430     END-IF.
+         44   000440 
+         45   000450     IF NSP = SPACE THEN
+         46   000460       DISPLAY 'ANY:NSP is SPACE'
+         47   000470     ELSE
+         48   000480       DISPLAY 'NSP not SPACE'
+         49   000490     END-IF.
+         50   000500 
+         51   000510     IF ASP = ALL ' ' THEN
+         52   000520       DISPLAY 'ANY:ASP is ALL ASP'
+         53   000530     ELSE
+         54   000540       DISPLAY 'ASP not ALL ASP'
+         55   000550     END-IF.
+         56   000560 
+         57   000570     IF ASP = ' ' THEN
+         58   000580       DISPLAY 'ANY:ASP is ASP'
+         59   000590     ELSE
+         60   000600       DISPLAY 'ASP not ASP'
+         61   000610     END-IF.
+         62   000620 
+         63   000630     IF ASP = SPACE THEN
+         64   000640       DISPLAY 'ANY:ASP is SPACE'
+         65   000650     ELSE
+         66   000660       DISPLAY 'ASP not SPACE'
+         67   000670     END-IF.
+         68   000680/
+         69   000690     DISPLAY 'N-NSP' N-NSP.
+         70   000700     DISPLAY 'N-ASP' N-ASP.
+         71   000710     DISPLAY 'X-NSP' X-NSP.
+         72   000720     DISPLAY 'X-ASP' X-ASP.
+         73   000730*
+         74   000740     IF N-NSP = N-ASP THEN
+         75   000750       DISPLAY 'ASP:N-NSP eq N-ASP'
+         76   000760     ELSE
+         77   000770       DISPLAY 'NSP:N-NSP not N-ASP'
+         78   000780     END-IF.
+         79   000790 
+         80   000800     IF X-NSP = X-ASP THEN
+         81   000810       DISPLAY 'X-NSP eq X-ASP'
+         82   000820     ELSE
+         83   000830       DISPLAY 'NSP,ASP:X-NSP not X-ASP'
+         84   000840     END-IF.
+         85   000850 
+         86   000860/
+         87   000870*     MOVE  X'2020'  TO  NSP.               *> compile-error
+         88   000880     MOVE  SPACE    TO  NSP.                *> compile-ok
+         89   000890*     MOVE  '  '     TO  NSP.               *> compile-error ASP,ASP
+         90   000900*     MOVE  'あ'     TO  NSP.               *> compile-error 'xx'
+         91   000910     MOVE NC'あ'    TO  NSP.
+         92   000920 
+         93   000921     MOVE  N-ASP  TO  N-NSP.
+         94   000922     DISPLAY  'N-NSP' N-NSP
+         95   000923 
+         96   000930     CONTINUE.
+         97   000940 MAIN-SEC-E.     
+         98   000950     EXIT PROGRAM.
+
+
+     定義行　名標 　　　　　　　　　　　　　　　　属性と参照行                 A:ARGUMENT D:DATA P:PERFORM R:REFER S:SET
+
+
+         11  ASP                             25R 51R 57R 63R
+         23  MAIN-SEC                       
+         97  MAIN-SEC-E                     
+         19  N-ASP                           70R 74R 93R
+         17  N-NSP                           69R 74R 93S 94R
+         10  NSP                             24R 27R 39R 45R 88S 91S
+          2  NSPCOMP                        
+         13  OK-N-ASN                       
+          9  WORK-AREA-A                    
+         18  X-ASP                           19D 72R 80R
+         16  X-NSP                           17D 71R 80R
+
+
+＊＊　プログラム特性リスト　＊＊
+
+　ファイル名 = .\soc\nsp.cob
+　ソース名　 = NSPCOMP
+　翻訳日付　 = 2021年06月05日(土) 00時09分55秒
+
+　　原始プログラムのレコード数　　　　　　　　　=         98 レコード
+　　目的プログラムの大きさ（ＣＯＤＥサイズ）　　=       4528 バイト
+　　目的プログラムの大きさ（ＤＡＴＡサイズ）　　=        220 バイト
+　　制御レベル　　　　　　　　　　　　　　　　　=       0101 レベル
+　　翻訳に要した時間　　　　　　　　　　　　　　=       0.23 秒
+
+　最大重大度コード = I

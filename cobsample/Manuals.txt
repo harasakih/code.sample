@@ -1,0 +1,11 @@
+C:\Program Files (x86)\NetCOBOL\Manual
+
+cobwm32		メッセージ集
+cobwr32			文法書
+
+cobwsd32		NetCOBOL Studio ユーザーズガイド
+cobwstart32		入門ガイド
+cobwu32		ユーザーズガイド
+
+pcobwu			PowerCOBOLユーザーズガイド
+

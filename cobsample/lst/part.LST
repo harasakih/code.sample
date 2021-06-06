@@ -1,0 +1,112 @@
+NetCOBOL V12.2.0                           2021年06月05日(土) 00時05分15秒  0001                                        
+
+
+＊＊　指定翻訳オプション　＊＊
+
+
+NOMAIN,SOURCE,MESSAGE,DLOAD,MAIN(MAIN),XREF,COPY
+
+
+＊＊　確定翻訳オプション　＊＊
+
+
+  ALPHAL(ALL)             DUPCHAR(EXT)          NOMAP                     RSV(ALL)                SYNC(FJ)              
+  ASCOMP5(NONE)           ENCODE(SJIS,SJIS)       MESSAGE               NOSAI                     TAB(8)                
+  BINARY(WORD,MLBON)    NOEQUALS                  MF(NONE)                SCS(ACP)              NOTEST                  
+NOCHECK                   FILELIT(LIT)          NONAME                    SDS                     THREAD(SINGLE)        
+NOCONF                    FLAG(I)                 NCW(STD)              NOSHREXT                NOTRACE                 
+  CONVCHAR(ICONV)       NOFLAGSW                  NSP                     SMSIZE(0)             NOTRUNC                 
+  COPY(FULL)            NOINITVALUE               NSPCOMP(NSP)            SOURCE(1)               XREF(FULL)            
+NOCOUNT                   LANGLVL(85)           NONUMBER                  SQLGRP                  ZWB                   
+  CREATE(OBJ)             LINECOUNT(0)            OBJECT                  SRF(VAR,VAR)                                  
+  CURRENCY(\)             LINESIZE(0)           NOOPTIMIZE                SSIN(SYSIN)                                   
+  DLOAD                 NOLIST                    QUOTE                   SSOUT(SYSOUT)                                 
+NODNTB                    MAIN(MAIN)              RCS(ACP)                STD1(JIS2)                                    
+
+
+     行番号 一連番号 A   B
+
+
+          1   000010 IDENTIFICATION         DIVISION.
+          2   000020 PROGRAM-ID.            PART.
+          3   000030*
+          4   000040 ENVIRONMENT            DIVISION.
+          5   000050*
+          6   000060 DATA                   DIVISION.
+          7   000070 WORKING-STORAGE        SECTION.
+          8   000080*
+          9   000090 01  WORK-AREA-A.
+         10   000100     03  X2020          PIC  X(2) VALUE X'2020'.
+         11   000110     03  X8140          PIC  X(2) VALUE X'8140'.
+         12   000120*
+         13   000130     03  N-STR          PIC  N(4) VALUE NC'１２　４'.
+         14   000140     03  X-STR          PIC  X(4) VALUE '１２'.
+         15   000150*
+         16   000160*  X'xx'はＮ項目に不可なので、Ｘで設定したＮで再定義する
+         17   000170*
+         18   000180     03  X-X2020                      PIC X(2)  VALUE  X'2020'.
+         19   000190     03  N-X2020    REDEFINES X-X2020 PIC N(1).
+         20   000200     03  X-X8140                      PIC X(2)  VALUE  X'8140'.
+         21   000210     03  N-X8140    REDEFINES X-X8140 PIC N(1).
+         22   000220/
+         23   000230 PROCEDURE              DIVISION .
+         24   000240*
+         25   000250 MAIN-SEC               SECTION.
+         26   000260*
+         27   000270     IF N-STR(2:1) = NC'２'  THEN
+         28   000280       DISPLAY 'ANY:N-STR true'
+         29   000290     ELSE
+         30   000300       DISPLAY 'N-STR false'
+         31   000310     END-IF.
+         32   000320*
+         33   000330     DISPLAY 'N-X2020' N-X2020.
+         34   000340     DISPLAY 'N-X8140' N-X8140.
+         35   000350     IF N-X2020 = N-X8140  THEN
+         36   000360       DISPLAY 'ASP:N-X2020 eq N-X8140'
+         37   000370     ELSE
+         38   000380       DISPLAY 'NSP:X-X2020 not X-X8140'
+         39   000390     END-IF.
+         40   000400*
+         41   000410* compile-error IF N = X
+         42   000420*     IF N-STR(2:1) = X-STR(3:2) THEN
+         43   000430*       DISPLAY 'N-STR = X-STR true'
+         44   000440*     ELSE
+         45   000450*       DISPLAY 'N-STR = X-STR false'
+         46   000460*     END-IF.
+         47   000470 
+         48   000480*
+         49   000490     CONTINUE.
+         50   000500 MAIN-SEC-E.
+         51   000510     EXIT PROGRAM.
+
+
+     定義行　名標 　　　　　　　　　　　　　　　　属性と参照行                 A:ARGUMENT D:DATA P:PERFORM R:REFER S:SET
+
+
+         25  MAIN-SEC                       
+         50  MAIN-SEC-E                     
+         13  N-STR                           27R
+         19  N-X2020                         33R 35R
+         21  N-X8140                         34R 35R
+          2  PART                           
+          9  WORK-AREA-A                    
+         14  X-STR                          
+         18  X-X2020                         19D
+         20  X-X8140                         21D
+         10  X2020                          
+         11  X8140                          
+
+
+＊＊　プログラム特性リスト　＊＊
+
+　ファイル名 = .\soc\part.cob
+　ソース名　 = PART
+　翻訳日付　 = 2021年06月05日(土) 00時05分15秒
+
+　　原始プログラムのレコード数　　　　　　　　　=         51 レコード
+　　目的プログラムの大きさ（ＣＯＤＥサイズ）　　=       2359 バイト
+　　目的プログラムの大きさ（ＤＡＴＡサイズ）　　=        220 バイト
+　　制御レベル　　　　　　　　　　　　　　　　　=       0101 レベル
+　　翻訳に要した時間　　　　　　　　　　　　　　=       0.19 秒
+
+　最大重大度コード = I

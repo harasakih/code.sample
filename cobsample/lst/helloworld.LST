@@ -1,0 +1,77 @@
+NetCOBOL V12.2.0                           2021年06月05日(土) 00時09分48秒  0001                                        
+
+
+＊＊　指定翻訳オプション　＊＊
+
+
+NOMAIN,SOURCE,MESSAGE,DLOAD,MAIN(MAIN),XREF,COPY
+
+000010 @OPTIONS CHECK(NUMERIC)
+
+
+＊＊　確定翻訳オプション　＊＊
+
+
+  ALPHAL(ALL)             DUPCHAR(EXT)          NOMAP                     RSV(ALL)                SYNC(FJ)              
+  ASCOMP5(NONE)           ENCODE(SJIS,SJIS)       MESSAGE               NOSAI                     TAB(8)                
+  BINARY(WORD,MLBON)    NOEQUALS                  MF(NONE)                SCS(ACP)              NOTEST                  
+  CHECK(1,NUMERIC)        FILELIT(LIT)          NONAME                    SDS                     THREAD(SINGLE)        
+NOCONF                    FLAG(I)                 NCW(STD)              NOSHREXT                NOTRACE                 
+  CONVCHAR(ICONV)       NOFLAGSW                  NSP                     SMSIZE(0)             NOTRUNC                 
+  COPY(FULL)            NOINITVALUE               NSPCOMP(NSP)            SOURCE(1)               XREF(FULL)            
+NOCOUNT                   LANGLVL(85)           NONUMBER                  SQLGRP                  ZWB                   
+  CREATE(OBJ)             LINECOUNT(0)            OBJECT                  SRF(VAR,VAR)                                  
+  CURRENCY(\)             LINESIZE(0)           NOOPTIMIZE                SSIN(SYSIN)                                   
+  DLOAD                 NOLIST                    QUOTE                   SSOUT(SYSOUT)                                 
+NODNTB                    MAIN(MAIN)              RCS(ACP)                STD1(JIS2)                                    
+
+
+     行番号 一連番号 A   B
+
+
+          2   000011 IDENTIFICATION         DIVISION.
+          3   000020 PROGRAM-ID.            COBMAIN.
+          4   000030*
+          5   000040 ENVIRONMENT            DIVISION.
+          6   000050*
+          7   000060 DATA                   DIVISION.
+          8   000070 WORKING-STORAGE        SECTION.
+          9   000080*
+         10   000090 01  WORK-AREA-A.
+         11   000100     03  SR-NAME                  PIC  X(08).
+         12   000180/
+         13   000200 PROCEDURE              DIVISION .
+         14   000230*
+         15   000240 MAIN-SEC               SECTION.
+         16   000250     MOVE               0        TO        PROGRAM-STATUS.
+         17   000300     DISPLAY 'Hello World'.
+         18   000420     CONTINUE.
+         19   000440 MAIN-SEC-E.
+         20   000450     EXIT PROGRAM.
+
+
+     定義行　名標 　　　　　　　　　　　　　　　　属性と参照行                 A:ARGUMENT D:DATA P:PERFORM R:REFER S:SET
+
+
+          3  COBMAIN                        
+         15  MAIN-SEC                       
+         19  MAIN-SEC-E                     
+          3  PROGRAM-STATUS                  16S
+         11  SR-NAME                        
+         10  WORK-AREA-A                    
+
+
+＊＊　プログラム特性リスト　＊＊
+
+　ファイル名 = .\soc\helloworld.cob
+　ソース名　 = COBMAIN
+　翻訳日付　 = 2021年06月05日(土) 00時09分48秒
+
+　　原始プログラムのレコード数　　　　　　　　　=         20 レコード
+　　目的プログラムの大きさ（ＣＯＤＥサイズ）　　=       1764 バイト
+　　目的プログラムの大きさ（ＤＡＴＡサイズ）　　=        208 バイト
+　　デバッグ用領域の大きさ　　　　　　　　　　　=        180 バイト
+　　制御レベル　　　　　　　　　　　　　　　　　=       0101 レベル
+　　翻訳に要した時間　　　　　　　　　　　　　　=       0.23 秒
+
+　最大重大度コード = I

@@ -1,0 +1,195 @@
+NetCOBOL V12.2.0                           2021年06月05日(土) 00時09分09秒  0001                                        
+
+
+＊＊　指定翻訳オプション　＊＊
+
+
+NOMAIN,SOURCE,MESSAGE,DLOAD,MAIN(MAIN),XREF,COPY
+
+
+＊＊　確定翻訳オプション　＊＊
+
+
+  ALPHAL(ALL)             DUPCHAR(EXT)          NOMAP                     RSV(ALL)                SYNC(FJ)              
+  ASCOMP5(NONE)           ENCODE(SJIS,SJIS)       MESSAGE               NOSAI                     TAB(8)                
+  BINARY(WORD,MLBON)    NOEQUALS                  MF(NONE)                SCS(ACP)              NOTEST                  
+NOCHECK                   FILELIT(LIT)          NONAME                    SDS                     THREAD(SINGLE)        
+NOCONF                    FLAG(I)                 NCW(STD)              NOSHREXT                NOTRACE                 
+  CONVCHAR(ICONV)       NOFLAGSW                  NSP                     SMSIZE(0)             NOTRUNC                 
+  COPY(FULL)            NOINITVALUE               NSPCOMP(NSP)            SOURCE(1)               XREF(FULL)            
+NOCOUNT                   LANGLVL(85)           NONUMBER                  SQLGRP                  ZWB                   
+  CREATE(OBJ)             LINECOUNT(0)            OBJECT                  SRF(VAR,VAR)                                  
+  CURRENCY(\)             LINESIZE(0)           NOOPTIMIZE                SSIN(SYSIN)                                   
+  DLOAD                 NOLIST                    QUOTE                   SSOUT(SYSOUT)                                 
+NODNTB                    MAIN(MAIN)              RCS(ACP)                STD1(JIS2)                                    
+
+
+＊＊　ＣＯＰＹ情報　＊＊
+
+
+   修飾値      行番号  原文名
+
+
+        1          18  VFILE                                                                                            
+        2          22  FFILE                                                                                            
+
+
+     行番号 一連番号 A   B
+
+
+          1   000010 IDENTIFICATION   DIVISION.
+          2   000020 PROGRAM-ID.      FILEIO.
+          3   000030 
+          4   000040 ENVIRONMENT      DIVISION.
+          5   000050 INPUT-OUTPUT     SECTION.
+          6   000060 FILE-CONTROL.
+          7   000070     SELECT  V-OTFILE  ASSIGN TO     VFILE
+          8   000080             ORGANIZATION  IS    SEQUENTIAL.
+          9   000090     SELECT  F-OTFILE  ASSIGN TO     FFILE
+         10   000100             ORGANIZATION  IS    SEQUENTIAL.
+         11   000110 
+         12   000120 DATA             DIVISION.
+         13   000130 FILE             SECTION.
+         14   000140 FD      V-OTFILE
+         15   000150         RECORD    IS  VARYING IN SIZE
+         16   000160         DEPENDING ON  V-LL.
+         17   000170 01      V-REC01.
+         18   000180     COPY  VFILE.
+        1-1 C       * VFILE.CBL
+        1-2 C       *
+        1-3 C            07  VFILE.
+        1-4 C              09  NUM1                         PIC  9(04).
+        1-5 C              09  REC-DATA                     PIC  X(72).
+        1-6 C              09  NUM2                         PIC  ZZZ9.
+        1-7 C              09  SPACK                        PIC  S9(01) COMP-3.
+        1-8 C              09  UPACK                        PIC   9(01) COMP-3.
+        1-9 C              09  SZONE                        PIC  S9(02).
+       1-10 C              09  UZONE                        PIC   9(02).
+       1-11 C              09  NCH                          PIC   N(05).
+       1-12 C              09  SHUDAN.
+       1-13 C                11  GROUP-1                    PIC  X(01).
+       1-14 C              09  SHUDAN2.
+       1-15 C                11  COMP0                      PIC  S9(04) COMP.
+       1-16 C                11  COMP3                      PIC  S9(04) COMP-3.
+       1-17 C                11  COMP5                      PIC  S9(04) COMP-5.
+       1-18 C                11  BIN                        PIC  S9(04) BINARY.
+       1-19 C              09  FILLER                       PIC  X(4096).
+         19   000190 
+         20   000200 FD      F-OTFILE.
+         21   000240 01      F-REC01.
+         22   000250     COPY  FFILE.
+        2-1 C       * FFILE.CBL
+        2-2 C       *
+        2-3 C            07  VFILE.
+        2-4 C              09  NUM1                         PIC  9(04).
+        2-5 C              09  REC-DATA                     PIC  X(72).
+        2-6 C              09  NUM2                         PIC  ZZZ9.
+         23   000260 
+         24   000270 WORKING-STORAGE  SECTION.
+         25   000300 
+         26   000310 01     WORK-A.
+         27   000320   03   V-LL            PIC     9(04)   COMP.
+         28   000330   03   II              PIC     9(04)   COMP.
+         29   000340   03   N-RECORD        PIC     9(04)   COMP  VALUE  10.
+         30   000350   03   ISEOF           PIC     9(04)   COMP.
+         31   000360 
+         32   000370 PROCEDURE        DIVISION.
+         33   000380 MAIN             SECTION.
+         34   000390     PERFORM  V-SEC-R.
+         35   000400     PERFORM  F-SEC-R.
+         36   000410     EXIT PROGRAM.
+         37   000420 MAIN-EX.
+         38   000430/
+         39   000440 V-SEC-R  SECTION.
+         40   000450 
+         41   000460     OPEN  INPUT  V-OTFILE.
+         42   000470 
+         43   000480     DISPLAY 'VFILE'
+         44   000490     MOVE  0  TO  ISEOF.
+         45   000500     PERFORM TEST BEFORE  UNTIL  ISEOF = 1
+         46   000510       READ   V-OTFILE
+         47   000520         AT  END  GO TO V-SEC-R-EX
+         48   000530       END-READ
+         49   000540       DISPLAY  V-REC01(1:V-LL)
+         50   000550 
+         51   000560     END-PERFORM.
+         52   000570 
+         53   000580     CLOSE  V-OTFILE.
+         54   000590 
+         55   000600 V-SEC-R-EX.
+         56   000610/
+         57   000620 F-SEC-R  SECTION.
+         58   000630 
+         59   000640     OPEN  INPUT  F-OTFILE.
+         60   000650 
+         61   000660     DISPLAY 'FFILE'
+         62   000670     MOVE  0  TO  ISEOF.
+         63   000680     PERFORM TEST BEFORE  UNTIL  ISEOF = 1
+         64   000690       READ   F-OTFILE
+         65   000700         AT  END  GO TO F-SEC-R-EX
+         66   000710       END-READ
+         67   000720       DISPLAY  F-REC01
+         68   000730 
+         69   000740     END-PERFORM.
+         70   000750 
+         71   000760     CLOSE  F-OTFILE.
+         72   000770 
+         73   000780 F-SEC-R-EX.
+         74   000790 EXIT-PROGRAM.
+
+
+     定義行　名標 　　　　　　　　　　　　　　　　属性と参照行                 A:ARGUMENT D:DATA P:PERFORM R:REFER S:SET
+
+
+       1-18  BIN                            
+       1-15  COMP0                          
+       1-16  COMP3                          
+       1-17  COMP5                          
+         74  EXIT-PROGRAM                   
+         20  F-OTFILE                        9D 59R 64R 71R
+         21  F-REC01                         67R
+         57  F-SEC-R                         35P
+         73  F-SEC-R-EX                      65R
+          2  FILEIO                         
+       1-13  GROUP-1                        
+         28  II                             
+         30  ISEOF                           44S 45R 62S 63R
+         33  MAIN                           
+         37  MAIN-EX                        
+         29  N-RECORD                       
+       1-11  NCH                            
+        1-4  NUM1                           
+        2-4  NUM1                           
+        1-6  NUM2                           
+        2-6  NUM2                           
+        1-5  REC-DATA                       
+        2-5  REC-DATA                       
+       1-12  SHUDAN                         
+       1-14  SHUDAN2                        
+        1-7  SPACK                          
+        1-9  SZONE                          
+        1-8  UPACK                          
+       1-10  UZONE                          
+         27  V-LL                            16D 49R
+         14  V-OTFILE                        7D 41R 46R 53R
+         17  V-REC01                         49R
+         39  V-SEC-R                         34P
+         55  V-SEC-R-EX                      47R
+        1-3  VFILE                          
+        2-3  VFILE                          
+         26  WORK-A                         
+
+
+＊＊　プログラム特性リスト　＊＊
+
+　ファイル名 = .\soc\filer.cob
+　ソース名　 = FILEIO
+　翻訳日付　 = 2021年06月05日(土) 00時09分09秒
+
+　　原始プログラムのレコード数　　　　　　　　　=         99 レコード
+　　目的プログラムの大きさ（ＣＯＤＥサイズ）　　=       3105 バイト
+　　目的プログラムの大きさ（ＤＡＴＡサイズ）　　=       4816 バイト
+　　制御レベル　　　　　　　　　　　　　　　　　=       0101 レベル
+　　翻訳に要した時間　　　　　　　　　　　　　　=       0.30 秒
+
+　最大重大度コード = I
