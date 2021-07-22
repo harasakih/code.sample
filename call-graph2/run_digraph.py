@@ -1,5 +1,6 @@
-#!/usr/local/bin/python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
+#!/usr/bin/python
 """ GvKakeizuを利用して、edgeのネットワーク図を作成する
 """
 import sys
@@ -8,8 +9,8 @@ from Gvkakeizu import GvKakeizu
 
 def usage():
     """ usage """
-    print "usage:"
-    print "  %s PC|CP EDGE" % sys.argv[0]
+    print( "usage:" )
+    print( "  %s PC|CP EDGE" % sys.argv[0] )
 
 # --+----1----+----2----+----3
 # main

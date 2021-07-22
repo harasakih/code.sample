@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 ## !/usr/bin/python
 """ 家系図をhttpで表示

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 """ edgeにあってnodeinfにないものを検索する
 不明モジュールの検索
@@ -8,8 +8,8 @@ from Kakeizu import Kakeizu
 
 def usage():
     """ usage """
-    print "usage:"
-    print "  %s PC|CP EDGE-FILE NODE-FILE" % sys.argv[0]
+    print( "usage:" )
+    print( "  %s PC|CP EDGE-FILE NODE-FILE" % sys.argv[0] )
 
 argc = len(sys.argv)
 if argc != 4:
@@ -41,11 +41,11 @@ for key in KAKEIZU.parents:
         unknown[key] = 1
 
 for key in sorted(unknown.keys()):
-    print >> otfile, key
+    otfile.write( "%s\n" % key )
     if key in KAKEIZU.sison:
-        print >> otfile, "  mychild :%s" % KAKEIZU.sison[key]
+        otfile.write( "  mychild :%s\n" % KAKEIZU.sison[key] )
     if key in KAKEIZU.sosen:
-        print >> otfile, "  myparent:%s" % KAKEIZU.sosen[key]
+        otfile.write( "  myparent:%s\n" % KAKEIZU.sosen[key] )
 
 otfile.close()
 otfile2.close()

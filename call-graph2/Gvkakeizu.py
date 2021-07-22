@@ -1,4 +1,4 @@
-#!/usr/local/bin/python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 ## !/usr/bin/python
 """ 家系図をコンソールとpdfに表示
@@ -60,8 +60,9 @@ class GvKakeizu(Kakeizu):
                     socname = pgminf.split(";")[self.fnameidx]
                 else:
                     socname = child
-                self.diagraph.node(unicode(socname, 'utf-8'),
-                                   fontname=u"ＭＳ ゴシック")
+#                self.diagraph.node(unicode(socname, 'utf-8'),
+#                                   fontname=u"ＭＳ ゴシック")
+                self.diagraph.node(socname, fontname="ＭＳ ゴシック")
                 continue
 
             if stop is not None and re.match(stop, parent):
@@ -79,13 +80,10 @@ class GvKakeizu(Kakeizu):
                 soc_parent = pgminf.split(";")[self.fnameidx]
             else:
                 soc_parent = parent
-
-            self.diagraph.node(unicode(soc_parent, 'utf-8'),
-                               fontname=u"ＭＳ ゴシック")
-            self.diagraph.node(unicode(soc_child, 'utf-8'),
-                               fontname=u"ＭＳ ゴシック")
-            self.diagraph.edge(unicode(soc_parent, 'utf-8'),
-                               unicode(soc_child, 'utf-8'))
+# 2021.07.22 unicode -> notdefinen
+            self.diagraph.node(soc_parent, fontname="ＭＳ ゴシック")
+            self.diagraph.node(soc_child, fontname="ＭＳ ゴシック")
+            self.diagraph.edge(soc_parent, soc_child)
 
     def sosen_makedigraph(self, stop=None, gvformat=None):
         # :type (str, str)
@@ -105,8 +103,7 @@ class GvKakeizu(Kakeizu):
                     socname = pgminf.split(";")[self.fnameidx]
                 else:
                     socname = parent
-                self.diagraph.node(unicode(socname, 'utf-8'),
-                                   fontname=u"ＭＳ ゴシック")
+                self.diagraph.node(socname, fontname="ＭＳ ゴシック")
                 continue
 
             if stop is not None and re.match(stop, child):
@@ -125,12 +122,9 @@ class GvKakeizu(Kakeizu):
             else:
                 soc_parent = parent
 
-            self.diagraph.node(unicode(soc_parent, 'utf-8'),
-                               fontname=u"ＭＳ ゴシック")
-            self.diagraph.node(unicode(soc_child, 'utf-8'),
-                               fontname=u"ＭＳ ゴシック")
-            self.diagraph.edge(unicode(soc_child, 'utf-8'),
-                               unicode(soc_parent, 'utf-8'))
+            self.diagraph.node(soc_parent, fontname="ＭＳ ゴシック")
+            self.diagraph.node(soc_child, fontname="ＭＳ ゴシック")
+            self.diagraph.edge(soc_child, soc_parent)
 
     def make_digraph(self, stopper):
         # :type (str, str)
@@ -156,7 +150,8 @@ class GvKakeizu(Kakeizu):
         flg = self.search
         dotname = otdir + name + '.' + flg + '.dot'
         otfile = open(dotname, 'w')
-        print >> otfile, (self.diagraph.source.encode('utf-8'))
+#        print >> otfile, (self.diagraph.source.encode('utf-8'))
+        otfile.write(self.diagraph.source)
         self.diagraph.render(dotname, view=False)
 
     @staticmethod
@@ -172,13 +167,13 @@ class GvKakeizu(Kakeizu):
         dot = Digraph(comment=name, format=gvformat)
         for edge in edges:
             (_from, _to) = edge
-            dot.node(unicode(_from, 'utf-8'), fontname=u"ＭＳ ゴシック")
-            dot.node(unicode(_to, 'utf-8'),   fontname=u"ＭＳ ゴシック")
-            dot.edge(unicode(_from, 'utf-8'), unicode(_to, 'utf-8'))
+            dot.node(_from, fontname="ＭＳ ゴシック")
+            dot.node(_to,   fontname="ＭＳ ゴシック")
+            dot.edge(_from, _to)
 
         dotname = wkdir + name + '.dot'
         otfile = open(dotname, "w")
-        print >> otfile, (dot.source.encode('utf-8'))
+        otfile.write(dot.source)
         otfile.close()
         dot.render(dotname, view=False)
 

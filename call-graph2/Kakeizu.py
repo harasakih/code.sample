@@ -1,6 +1,6 @@
-#!/usr/local/bin/python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
-## !/usr/bin/python
+#!/usr/bin/python
 """ 家系図を処理するモジュール
 
 """
@@ -92,8 +92,9 @@ class Kakeizu(object):
         #   ジョブステップ毎のＤＤ文情報をcsvファイルから読込み、
         #   self.Dsn2Jonstep,self.Js2Ds_Sosenに溜め込んでから、
         #   DSNの親子関係を、self.sison[] と self.sosen[] にためる
+		# 2021.07.22 open-mode 'rb' -> 'rt'
 
-        csvfile = open(fname, 'rb')
+        csvfile = open(fname, 'rt')
         self.sison.clear()
         self.sosen.clear()
         self.parents.clear()
@@ -136,7 +137,7 @@ class Kakeizu(object):
                 else:
                     self.ds2js_sosen[key1] = jobname + "_" + jsno + ";"
             else:
-                print "io not corrent", io
+                print("io not corrent", io)
         csvfile.close()
 
         #
@@ -191,7 +192,9 @@ class Kakeizu(object):
         :param str fname: ｃｓｖファイルのファイル名
         :param str mode: PC=[親,子]の並び,CP=[子,親]の並び
         """
-        csvfile = open(fname, 'rb')
+		# 2021.07.22 open-mode 'rb' -> 'rt'
+
+        csvfile = open(fname, 'rt')
         self.sison.clear()
         self.sosen.clear()
         self.parents.clear()
@@ -213,11 +216,11 @@ class Kakeizu(object):
                     return -1
 
             if not parent:
-                print "parent is null", row
+                print("parent is null", row)
                 continue
 
             if not child:
-                print "child is null", row
+                print("child is null", row)
                 continue
 
             if parent in self.sison:
@@ -255,13 +258,14 @@ class Kakeizu(object):
         # change    2017/06/30 Nodeinfの値に、keyを追加
         #   変更前 nodeinf[ key ] = "item1;item2;item3; ... ;"
         #   変更後 nodeinf[ key ] = "key;item1;item2;item3; ... ;"
+		# 2021.07.22 open-mode 'rb' -> 'rt'
 
         if fname is None or fname == "":
             return
 
         self.nodemidashi = midashi
         self.nodeinf.clear()
-        csvfile = open(fname, 'rb')
+        csvfile = open(fname, 'rt')
         csvreader = csv.reader(csvfile, delimiter='\t')
         for row in csvreader:
             if not row or row[0][0:1] == '#':           # コメント＆空行
@@ -286,6 +290,7 @@ class Kakeizu(object):
         # note   一つのノードに、「／」と「；」でセパレートされた情報を保持
         #   nodeinf2[ key ] = "item1_1;item1_2;item1_3; / item2-1;item2-2;item2-3; /"
         #   例  pgmid -> ＮＤＢ名;日本語;CRUD / ＮＤＢ名;日本語;CRUD /
+		# 2021.07.22 open-mode 'rb' -> 'rt'
 
         if fname is None or fname == "":
             return
@@ -293,7 +298,7 @@ class Kakeizu(object):
         self.nodemidashi2 = midashi
         self.nodeinf2.clear()
 
-        csvfile = open(fname, 'rb')
+        csvfile = open(fname, 'rt')
         csvreader = csv.reader(csvfile, delimiter='\t')
         for row in csvreader:
             if not row or row[0][0:1] == '#':		# コメント＆空行
@@ -671,29 +676,29 @@ class Kakeizu(object):
         """ 家系図をCUI表示する
         """
         if self.search == "sison":
-            print self.sison_disptree()
-            print self.visited_inq()
-            print self.visited2_inq()
+            print( self.sison_disptree() )
+            print( self.visited_inq() )
+            print( self.visited2_inq() )
         elif self.search == "sosen":
-            print self.sosen_disptree()
-            print self.visited_inq()
-            print self.visited2_inq()
+            print( self.sosen_disptree() )
+            print( self.visited_inq() )
+            print( self.visited2_inq() )
 
     def dbgprint(self):
         """ デバック情報表示 """
 
-        print "<DBG>self.sison[]"
+        print( "<DBG>self.sison[]" )
         for sison in sorted(self.sison):
-            print sison, self.sison[sison]
+            print( sison, self.sison[sison] )
 
-        print "<DBG>self.sosen[]"
+        print( "<DBG>self.sosen[]" )
         for sosen in sorted(self.sosen):
-            print sosen, self.sosen[sosen]
+            print( sosen, self.sosen[sosen] )
 
-        print "<DBG>nodeinf"
+        print( "<DBG>nodeinf" )
         for node in sorted(self.nodeinf):
             pgminf = self.nodeinf[node]
-            print node, pgminf
+            print( node, pgminf )
 
     @staticmethod
     def str2list(s):

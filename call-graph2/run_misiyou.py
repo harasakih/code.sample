@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/local/bin/python3
 # -*- coding: utf-8 -*-
 """ nodeinfにあってedgeにないnodeを検索する
 未使用モジュールの検索
@@ -8,8 +8,8 @@ from Kakeizu import Kakeizu
 
 def usage():
     """ usage """
-    print "usage:"
-    print "  %s PC|CP EDGE-FILE NODE-FILE" % sys.argv[0]
+    print( "usage:" )
+    print( "  %s PC|CP EDGE-FILE NODE-FILE" % sys.argv[0] )
 
 argc = len(sys.argv)
 if argc != 4:
@@ -39,7 +39,7 @@ for key, val in KAKEIZU.nodeinf.items():
         continue
 
     cnt = cnt + 1
-    print >> otfile, who, rumor
+    otfile.write( "%s %s" % (who, rumor) )
 
 otfile.close()
 otfile2.close()
